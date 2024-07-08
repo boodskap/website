@@ -115,6 +115,10 @@ Routes.prototype.init = function () {
         res.render('pricing.html',{layout:''});
     });
 
+    self.app.get('/pricing-inr', function (req, res) {
+        res.render('pricing-inr.html',{layout:''});
+    });
+
     self.app.get('/contact-us', function (req, res) {
         res.render('contact-us',{layout:''});
     });

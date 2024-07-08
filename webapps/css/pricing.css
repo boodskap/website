@@ -1,0 +1,154 @@
+.pricingTableSection .planHeaderBg .header-cell{
+    text-align: center;
+}
+
+.pricingTableSection .planHeaderBg div{
+    color:white;
+}
+
+.pricingTableSection .card {
+    background-color: white;
+    border: 0.8px dashed #cd2122;
+    padding: 5px 10px 5px 10px;
+}
+
+.pricingTableSection .card .priceText{
+    font-size: 30px;
+    color: #434343 !important;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.pricingTableSection .card .normalText{
+    font-size: 18px;
+    color: #6b6b6b;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.pricingTableSection .helpText{
+    font-size: 14px;
+    color: #cd2122;
+    font-weight: 600;
+    line-height: 1.65;
+}
+
+.pricingTableSection .heading{
+    color: #6b6b6b;
+    font-size: 16px;
+    line-height: 1.65;
+    font-weight: 700;
+}
+
+.pricingTableSection .content{
+    font-weight: 400;
+    color: #6b6b6b;
+    font-size: 16px;
+    line-height: 1.65;
+}
+
+.pricingTableSection .inner-cell{
+    font-weight: 400;
+    color: #6b6b6b;
+    font-size: 16px;
+    line-height: 1.65;
+}
+
+.pricingTableSection .inner-content{
+    border-bottom: 1px solid #e6e7e8;
+    text-align: left !important;
+    padding: 0px 5px 0px 5px;
+}
+
+.pricing-table-element .plan-column ul li:nth-child(odd):not(:first-child) {
+    background-color: white !important;
+}
+
+.zoom-container {
+    transition: transform 0.4s ease;
+}
+
+.zoom-container:hover {
+    transform: scale(1.02);
+}
+
+.headerBg1{
+    background-color: #F26161;
+}
+.headerBg2{
+    background-color: #F03939;
+}
+.headerBg3{
+    background-color: #EA0909;
+}
+.headerBg4{
+    background-color: #cd2122;
+}
+
+.actionTabBtn{
+    text-shadow: none;
+    padding: 4px 12px;
+    line-height: 1.6;
+    box-shadow: none;
+    font-size: 16px;
+    font-weight: 700;
+    border-style: solid;
+    border-radius: 0px;
+    -webkit-transition: background-color .15s ease-out;
+    transition: background-color .15s ease-out;    background-color: #cd2122;
+    color: #fff;
+}
+
+.actionTabBtn{
+    background-color: #F03939 !important;
+}
+.actionTabBtn:hover {
+    background-color: #cd2122 !important;
+}
+.actionTabBtn:active {
+    background-color: #cd2122 !important;
+}
+
+#monthlyBtn{
+    color:black !important
+}
+#monthlyBtn:hover{
+    color:white !important
+}
+
+.tableSection table {
+    border-collapse: collapse;
+    background-color: white;
+}
+.tableSection th, td {
+    border: 1px solid #9a9c9b;
+    padding: 8px;
+    text-align: left;
+}
+.tableSection th {
+    background-color: white;
+}
+
+.tableSection .tablePrimaryText{
+    color: #cd2122;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.tableSection .tableSecondaryText{
+    color: #6b6b6b;
+    font-size: 16px;
+}
+
+.tableSection a{
+    color: #6b6b6b; 
+}
+.tableSection a:hover {
+    text-decoration: underline; 
+    color: #cd2122;
+}
+
+.pricingTableSection .signUpBtn{
+    padding: 12px 25px !important;
+    border-width: 3px !important;
+}
