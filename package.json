@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "node boodskap-website-node.js"
+    "start": "node boodskap-io-website-node.js"
   },
   "private": true,
   "dependencies": {
