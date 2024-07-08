@@ -95,6 +95,9 @@ Routes.prototype.init = function () {
     self.app.get('/company', function (req, res) {
         res.render('company.html',{layout:''});
     });
+    self.app.get('/services', function (req, res) {
+        res.render('services.html',{layout:''});
+    });
     self.app.get('/about-us', function (req, res) {
         res.render('company.html',{layout:''});
     });
