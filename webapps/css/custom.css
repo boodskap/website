@@ -23,6 +23,10 @@
         width:100%
     }
 
+    .moduleCustomImg{
+        width:100%
+    }
+
     .process_box img{
         width:100% !important;
     }
@@ -55,6 +59,9 @@
     /* For desktop  */
     .moduleImg{
         width:50%
+    }
+    .moduleCustomImg{
+        width:35%
     }
     .topMenu {
         background-color: #333;
@@ -404,4 +411,16 @@ div.laptop-wrapper video:focus{
     font-weight: bold;
     border-left: 3px solid #cd2122;
 
+}
+
+/* #zn-res-menu li>a {
+    color: black !important;
+} */
+
+.topMenu div p a {
+    color: black ;
+}
+
+#zn-res-menu li>a {
+    color: black ;
 }
