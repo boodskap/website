@@ -1,55 +1,67 @@
 <style>
+    @media (min-width: 320px) and (max-width:768px) {
+        .site-header-wrapper {
+            background-color: white !important;
+        }
+    }
+
+
+    @media (min-width: 320px) and (max-width:768px) {
+        .zn-res-trigger::after {
+            color: #6b6b6b !important;
+            box-shadow: 0 8px 0 #6b6b6b, 0 16px 0 #6b6b6b;
+            background: #6b6b6b !important;
+        }
+    }
+
     .site-header .kl-header-bg {
-    background: none !important;
-}
+        background: none !important;
+    }
 
-.site-logo img {
-    max-height: 48px !important;
-}
 
-body.sticky-header .site-header[data-header-style="1"].header--is-sticked .site-header-main-wrapper {
-    height: 75px !important;
-}
 
-.site-header {
-     /* background: rgb(206 17 38)  !important; */
-    /* background-color: #f4f4f4 !important; */
-    background-color: #fff !important;
-    border-bottom:1px solid #eee;
-    /* background-color: #717171 !important; */
-    /* box-shadow: 0px 8px 19px 0px rgba(0, 0, 0, 0.1); */
-    box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
-}
+    .site-header {
+
+        background-color: #fff !important;
+        border-bottom: 1px solid #eee;
+
+        box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
+    }
 </style>
+
 <header id="header" class="site-header cta_button" data-header-style="1">
     <!-- Header background -->
     <div class="kl-header-bg"></div>
     <!--/ Header background -->
 
     <!-- Header wrapper -->
-    <div class="site-header-wrapper">
-        <!-- <div class="site-header-top-wrapper">
+    <div class="site-header-wrapper" style="background-color: white;">
+        <div class="site-header-top-wrapper">
             <div class="siteheader-container container">
                 <div class="site-header-row site-header-top d-flex justify-content-between">
                     <div class="site-header-top-left d-flex">
                         <ul class="topnav social-icons sc--clean align-self-center">
                             <li>
-                                <a href="https://www.facebook.com/boodskapiot/" target="_blank" title="Facebook">
+                                <a href="https://www.facebook.com/boodskapiot/" style="color: #6b6b6b !important;"
+                                    target="_blank" title="Facebook">
                                     <i class="fab fa-facebook-f"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://twitter.com/boodskapIOT" target="_blank" title="Twitter">
+                                <a href="https://twitter.com/boodskapIOT" style="color: #6b6b6b !important;"
+                                    target="_blank" title="Twitter">
                                     <i class="fab fa-twitter"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.linkedin.com/company/16180585/" target="_blank" title="Linkedin">
+                                <a href="https://www.linkedin.com/company/16180585/" style="color: #6b6b6b !important;"
+                                    target="_blank" title="Linkedin">
                                     <i class="fab fa-linkedin"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.youtube.com/channel/UC1yOEmlV7mBfKI1aHSMk3GQ" target="_blank" title="Youtube">
+                                <a href="https://www.youtube.com/channel/UC1yOEmlV7mBfKI1aHSMk3GQ"
+                                    style="color: #6b6b6b !important;" target="_blank" title="Youtube">
                                     <i class="fab fa-youtube"></i>
                                 </a>
                             </li>
@@ -59,21 +71,24 @@ body.sticky-header .site-header[data-header-style="1"].header--is-sticked .site-
                         </div>
 
                         <div class="kl-header-toptext align-self-center">
-                            <span class="topnav-item--text">QUESTIONS? CALL: </span>
-                            <a href="tel:+18332663752" class="fw-bold" title="+1 (833)266-3752">+1 (833) BOODSKAp</a>
-                            <i class="phone-header fas fa-phone ml-5 visible-xs visible-sm visible-md"></i>
+                            <span class="topnav-item--text" style="color: #6b6b6b !important;">QUESTIONS? CALL: </span>
+                            <a href="tel:+18332663752" style="color: #6b6b6b !important;" class="fw-bold"
+                                title="+1 (833)266-3752">+1 (833) BOODSKAp</a>
+                            <i class="phone-header fas fa-phone ml-5 visible-xs visible-sm visible-md"
+                                style="color: #6b6b6b !important;"></i>
 
-                         
+
                         </div>
                     </div>
-                   
+
                     <div class="site-header-top-right d-flex">
-                   
+
 
                         <div class="topnav login--panel align-self-center">
                             <a class="topnav-item" href="https://platform.boodskap.io" target="_blank">
-                                <i class="login-icon fas fa-sign-in-alt visible-xs xs-icon"></i>
-                                <span class="topnav-item--text">LOGIN</span>
+                                <i class="login-icon fas fa-sign-in-alt visible-xs xs-icon"
+                                    style="color: #6b6b6b !important;"></i>
+                                <span class="topnav-item--text" style="color: #6b6b6b !important;">LOGIN</span>
                             </a>
                         </div>
 
@@ -81,13 +96,13 @@ body.sticky-header .site-header[data-header-style="1"].header--is-sticked .site-
                         <div id="search" class="header-search align-self-center">
                             <a href="#" class="searchBtn "><span class="fas fa-search white-icon"></span></a>
                             <div class="search-container">
-                                <form id="searchform" class="header-searchform"
-                                      action="https://www.google.com/search" method="get" target="_blank">
+                                <form id="searchform" class="header-searchform" action="https://www.google.com/search"
+                                    method="get" target="_blank">
                                     <input id="q" name="q" maxlength="20" class="inputbox" type="text" size="20"
-                                           value="SEARCH ..." onblur="if (this.value=='') this.value='SEARCH ...';"
-                                           onfocus="if (this.value=='SEARCH ...') this.value='';">
+                                        value="SEARCH ..." onblur="if (this.value=='') this.value='SEARCH ...';"
+                                        onfocus="if (this.value=='SEARCH ...') this.value='';">
                                     <button type="submit" id="searchsubmit"
-                                            class="searchsubmit fas fa-search white-icon"></button>
+                                        class="searchsubmit fas fa-search white-icon"></button>
                                 </form>
                             </div>
                         </div>
@@ -96,7 +111,7 @@ body.sticky-header .site-header[data-header-style="1"].header--is-sticked .site-
 
                 <div class="separator site-header-separator"></div>
             </div>
-        </div> -->
+        </div>
 
         <!-- Header Main wrapper -->
         <div class="site-header-main-wrapper d-flex">
@@ -112,7 +127,9 @@ body.sticky-header .site-header[data-header-style="1"].header--is-sticked .site-
                             <h1 class="site-logo logo" id="logo">
                                 <a href="/" title="">
                                     <img src="/images/assets/boodskap-logo.png" class="logo-img" alt="Boodskap"
-                                         title="Boodskap Inc.,"/>
+                                        title="Boodskap Inc.," />
+                                    <!-- <img src="/images/boodskap-logo-bold.png" class="logo-img" alt="Boodskap"
+                                         title="Boodskap Inc.,"/> -->
                                 </a>
                             </h1>
                             <!--/ Logo -->
@@ -124,10 +141,11 @@ body.sticky-header .site-header[data-header-style="1"].header--is-sticked .site-
                                         <div class="col-sm-6 left-side d-flex">
                                             <div class="align-self-center">
                                                 <div class="infocard-wrapper text-center">
-                                                    <img src="/images/boodskap-logo.png" class="mb-25 anim--grayscale" alt="Boodskap"
-                                                         title="Boodskap" style="filter: grayscale(100%);"/>
+                                                    <img src="/images/boodskap-logo.png" class="mb-25 anim--grayscale"
+                                                        alt="Boodskap" title="Boodskap"
+                                                        style="filter: grayscale(100%);" />
                                                     <h4 class="text-center">
-                                                        <i>Network Of Things</i>
+                                                        <i>IoT Platform</i>
                                                     </h4>
                                                 </div>
                                                 <!--/ infocard-wrapper -->
@@ -151,7 +169,7 @@ body.sticky-header .site-header[data-header-style="1"].header--is-sticked .site-
                                                 <p>
                                                     <strong>Boodskap Labs Pvt Ltd</strong><br>
                                                     #46/1A2A, Vinnamangalam,<br>
-                                                    Chengalpattu 603107, 
+                                                    Chengalpattu 603107,
                                                     Tamil Nadu - India <br>
                                                 </p>
                                             </div>
@@ -159,29 +177,35 @@ body.sticky-header .site-header[data-header-style="1"].header--is-sticked .site-
                                             </div>
                                             <div class="custom contact-details">
                                                 <p>
-                                                    <a href="mailto:info@boodskap.io"><i class="fa fa-envelope"></i> info@boodskap.io</a><br>
-                                                    <a href="tel:+18332663752" title="+1 (833)266-3752"><i class="fa fa-phone"></i> +1 (833) BOODSKAp</a>
+                                                    <a href="mailto:info@boodskap.io"><i class="fa fa-envelope"></i>
+                                                        info@boodskap.io</a><br>
+                                                    <a href="tel:+18332663752" title="+1 (833)266-3752"><i
+                                                            class="fa fa-phone"></i> +1 (833) BOODSKAp</a>
                                                 </p>
                                             </div>
                                             <!-- Social links clean style -->
                                             <ul class="social-icons sc--clean">
                                                 <li>
-                                                    <a href="https://www.facebook.com/boodskapiot/" target="_blank" title="Facebook">
+                                                    <a href="https://www.facebook.com/boodskapiot/" target="_blank"
+                                                        title="Facebook">
                                                         <i class="fab fa-facebook-f"></i>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="https://twitter.com/boodskapIOT" target="_blank" title="Twitter">
+                                                    <a href="https://twitter.com/boodskapIOT" target="_blank"
+                                                        title="Twitter">
                                                         <i class="fab fa-twitter"></i>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="https://www.linkedin.com/company/16180585/" target="_blank" title="Linkedin">
+                                                    <a href="https://www.linkedin.com/company/16180585/" target="_blank"
+                                                        title="Linkedin">
                                                         <i class="fab fa-linkedin"></i>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="https://www.youtube.com/channel/UC1yOEmlV7mBfKI1aHSMk3GQ" target="_blank" title="Youtube">
+                                                    <a href="https://www.youtube.com/channel/UC1yOEmlV7mBfKI1aHSMk3GQ"
+                                                        target="_blank" title="Youtube">
                                                         <i class="fab fa-youtube"></i>
                                                     </a>
                                                 </li>
@@ -209,8 +233,8 @@ body.sticky-header .site-header[data-header-style="1"].header--is-sticked .site-
                         <!-- Main Menu wrapper -->
                         <div class="main-menu-wrapper">
                             <!-- Responsive menu trigger -->
-                            <div id="zn-res-menuwrapper">
-                                <a href="#" class="zn-res-trigger "></a>
+                            <div id="zn-res-menuwrapper" class="mobresponsivemenu">
+                                <a href="#" class="zn-res-trigger mobresponsivemenu"></a>
                             </div>
                             <!--/ responsive menu trigger -->
 
@@ -224,13 +248,15 @@ body.sticky-header .site-header[data-header-style="1"].header--is-sticked .site-
                                         <div class="mobMenu">
 
                                             <p title="">
-                                                <a href="http://readme.boodskap.io/docs" target="_blank" >Documentation</a>
+                                                <a href="http://readme.boodskap.io/docs"
+                                                    target="_blank">Documentation</a>
                                             </p>
                                             <!-- <p title="">
                                                 <a href="https://github.com/BoodskapPlatform" target="_blank" >Libraries</a>
                                             </p> -->
                                             <p title="">
-                                                <a href="https://www.youtube.com/channel/UC1yOEmlV7mBfKI1aHSMk3GQ" target="_blank" >Video Tutorials</a>
+                                                <a href="https://www.youtube.com/channel/UC1yOEmlV7mBfKI1aHSMk3GQ"
+                                                    target="_blank">Video Tutorials</a>
                                             </p>
                                             <!-- <p title="">
                                                 <a href="https://hub.docker.com/r/boodskapiot/platform" target="_blank">Download Platform</a>
@@ -244,13 +270,15 @@ body.sticky-header .site-header[data-header-style="1"].header--is-sticked .site-
                                         </div>
                                         <ul class="sub-menu clearfix">
                                             <li title="">
-                                                <a href="http://readme.boodskap.io/docs" target="_blank" >Documentation</a>
+                                                <a href="http://readme.boodskap.io/docs"
+                                                    target="_blank">Documentation</a>
                                             </li>
                                             <!-- <li title="">
                                                 <a href="https://github.com/BoodskapPlatform" target="_blank" >Libraries</a>
                                             </li> -->
                                             <li title="">
-                                                <a href="https://www.youtube.com/channel/UC1yOEmlV7mBfKI1aHSMk3GQ" target="_blank" >Video Tutorials</a>
+                                                <a href="https://www.youtube.com/channel/UC1yOEmlV7mBfKI1aHSMk3GQ"
+                                                    target="_blank">Video Tutorials</a>
                                             </li>
                                             <!-- <li title="">
                                                 <a href="https://hub.docker.com/r/boodskapiot/platform" target="_blank">Download Platform</a>
@@ -264,7 +292,7 @@ body.sticky-header .site-header[data-header-style="1"].header--is-sticked .site-
                                         </ul>
                                     </li>
                                     <li class="menu-item-has-children topMenu">
-                                        <a href="/products">Products</a>
+                                        <a href="/products">Solutions</a>
                                         <div class="mobMenu">
 
                                             <p title="Facility Management">
@@ -292,7 +320,7 @@ body.sticky-header .site-header[data-header-style="1"].header--is-sticked .site-
                                                 <a href="/products/heart-rate-monitoring-system">HEALTH MONITORING</a>
                                             </p>
                                             <p title="WORKFORCE Management">
-                                                <a href="/products/taams" >WORKFORCE MANAGEMENT</a>
+                                                <a href="/products/taams">WORKFORCE MANAGEMENT</a>
                                             </p>
                                             <p title="Industrial Tank Remote Monitoring & Control">
                                                 <a href="/products/tank-monitoring-system">TANK MONITORING</a>
@@ -330,7 +358,7 @@ body.sticky-header .site-header[data-header-style="1"].header--is-sticked .site-
                                                 <a href="/products/heart-rate-monitoring-system">HEALTH MONITORING</a>
                                             </li>
                                             <li title="WORKFORCE Management">
-                                                <a href="/products/taams" >WORKFORCE MANAGEMENT</a>
+                                                <a href="/products/taams">WORKFORCE MANAGEMENT</a>
                                             </li>
                                             <li title="Industrial Tank Remote Monitoring & Control">
                                                 <a href="/products/tank-monitoring-system">TANK MONITORING</a>
@@ -361,9 +389,9 @@ body.sticky-header .site-header[data-header-style="1"].header--is-sticked .site-
                                             <li><a href="/solutions/transportation">TRANSPORTATION</a></li>
                                         </ul>
                                     </li>-->
-<!--                                    <li class="menu-item-has-children topMenu">-->
-    <li class="topMenu"><a href="/services">Services</a>
-    </li>
+                                    <!--                                    <li class="menu-item-has-children topMenu">-->
+                                    <li class="topMenu"><a href="/services">Services</a>
+                                    </li>
                                     <li class="topMenu">
                                         <a href="/company">Company</a>
                                         <!--<ul class="sub-menu clearfix">
@@ -393,16 +421,16 @@ body.sticky-header .site-header[data-header-style="1"].header--is-sticked .site-
                     <div class="site-header-main-right d-flex justify-content-end align-items-center">
 
                         <!-- Call to action ribbon Free Quote (Contact form pop-up element) -->
-                        <div class="quote-ribbon"  onclick="window.open('https://platform.boodskap.io/','_blank')">
-                            <a href="https://platform.boodskap.io/" class="ctabutton kl-cta-ribbon"
-                               title="" target="_blank">
+                        <div class="quote-ribbon" onclick="window.open('https://platform.boodskap.io/','_blank')">
+                            <a href="https://platform.boodskap.io/" class="ctabutton kl-cta-ribbon" title=""
+                                target="_blank">
                                 <strong>TRY</strong>NOW
-                                <svg  version="1.1" class="trisvg" xmlns="http://www.w3.org/2000/svg"
-                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                     preserveaspectratio="none" width="14px" height="5px" viewbox="0 0 14 5"
-                                     enable-background="new 0 0 14 5" xml:space="preserve">
-											<polygon fill-rule="nonzero" points="14 0 7 5 0 0"></polygon>
-										</svg>
+                                <svg version="1.1" class="trisvg" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    preserveaspectratio="none" width="14px" height="5px" viewbox="0 0 14 5"
+                                    enable-background="new 0 0 14 5" xml:space="preserve">
+                                    <polygon fill-rule="nonzero" points="14 0 7 5 0 0"></polygon>
+                                </svg>
                             </a>
                         </div>
                         <!--/ Call to action ribbon Free Quote (Contact form pop-up element) -->
