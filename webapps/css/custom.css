@@ -412,3 +412,15 @@ div.laptop-wrapper video:focus{
     border-left: 3px solid #cd2122;
 
 }
+
+/* #zn-res-menu li>a {
+    color: black !important;
+} */
+
+.topMenu div p a {
+    color: black ;
+}
+
+#zn-res-menu li>a {
+    color: black ;
+}
