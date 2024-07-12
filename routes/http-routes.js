@@ -15,7 +15,7 @@ Routes.prototype.init = function () {
     var self = this;
 
     self.app.get('/', function (req, res) {
-        res.render('home.html',{layout:''});
+        res.render('home-v2.html',{layout:''});
     });
 
     self.app.get('/platform', function (req, res) {
