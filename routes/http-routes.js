@@ -95,6 +95,9 @@ Routes.prototype.init = function () {
     self.app.get('/company', function (req, res) {
         res.render('company.html',{layout:''});
     });
+    self.app.get('/services', function (req, res) {
+        res.render('services.html',{layout:''});
+    });
     self.app.get('/about-us', function (req, res) {
         res.render('company.html',{layout:''});
     });
@@ -113,6 +116,10 @@ Routes.prototype.init = function () {
 
     self.app.get('/pricing', function (req, res) {
         res.render('pricing.html',{layout:''});
+    });
+
+    self.app.get('/pricing-inr', function (req, res) {
+        res.render('pricing-inr.html',{layout:''});
     });
 
     self.app.get('/contact-us', function (req, res) {
