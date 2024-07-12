@@ -1,0 +1,55 @@
+.btn-outlined {
+	color: #000 !important;
+	border-width: 2px;
+	text-shadow: none;
+	padding: 7px 20px;
+	line-height: 1.6;
+	box-shadow: none;
+	font-size: 14px;
+	font-weight: 700;
+	border-style: solid;
+	border-radius: 3px;
+	border-color: #cd2122 !important;
+	-webkit-transition: all .1s ease-in-out;
+	transition: all .1s ease-in-out;
+}
+
+.btn-outlined:hover {
+	background-color: #cd2122 !important;
+	color: #fff !important;
+}
+
+.point-section ul>li::before {
+	color: #cd2122;
+	content: "\f0da";
+	display: inline-block;
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	margin-left: -1rem;
+	width: 1rem;
+}
+
+.cardBgSection{
+        border-radius: 5px;
+        /* background-color: #ededed; */
+        border:1px solid #ededed;
+        box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.cardTitle{
+    margin-top: 0;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.image-border-section {
+	margin: 1rem;
+	border-width: 1.5px;
+	border-style: solid;
+	border-color: #ededed;
+    border-radius: 5px;
+	box-shadow: none;
+	height: 95%;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.1);
+}
