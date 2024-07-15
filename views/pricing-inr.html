@@ -83,18 +83,44 @@
                     <div style="height: 20px;"></div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-12 button-container">
-                <button class="btn actionTabBtn mt-30  mr-2" id="yearlyBtn"
-                    onclick="scrollToDiv('yearlyDiv','yearlyBtn')">YEARLY</button>
-                <button class="btn actionTabBtn mt-30" id="monthlyBtn"
-                    onclick="scrollToDiv('monthlyDiv','monthlyBtn')">MONTHLY</button>
-            </div>
-            <div class="col-sm-12 col-md-12">
-                <div class="text-right">
-                    <a href="/pricing"><u>Pricing in USD&nbsp;</u><i class="fas fa-external-link-alt ml-1" style="color: #6b6b6b !important;font-size: 14px;"></i></a>
+
+
+            <!-- <div class="col-sm-12 col-md-12 button-container text-right">
+                <button class="btn actionTabBtn priceTypeBtn mt-30" id="usdBtn" onclick="showPageBased('usdBtn')">$
+                    USD</button>
+                <button class="btn actionTabBtn priceTypeBtn mt-30" id="inrBtn" onclick="showPageBased('inrBtn')">₹ 
+                    INR</button>
+                <button class="btn actionTabBtn priceTypeBtn mt-30" id="eurBtn" onclick="showPageBased('eurBtn')">€
+                    EUR</button>
+                <button class="btn actionTabBtn priceTypeBtn mt-30" id="aedBtn" onclick="showPageBased('aedBtn')">dh
+                    AED</button>
+                <button class="btn actionTabBtn priceTypeBtn mt-30 mr-15" id="chfBtn"
+                    onclick="showPageBased('chfBtn')">CHF</button>
+                <button class="btn actionTabBtn dateTypeBtn mt-30" id="yearlyBtn"
+                    onclick="showTypeBased('yearlyDivSection','yearlyBtn')">YEARLY</button>
+                <button class="btn actionTabBtn dateTypeBtn mt-30" id="monthlyBtn"
+                    onclick="showTypeBased('monthlyDivSection','monthlyBtn')">MONTHLY</button>
+            </div> -->
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-8 col-lg-6 button-container"> 
+                        <button class="btn actionTabBtn priceTypeBtn mt-30" id="usdBtn" onclick="showPageBased('usdBtn')">$  USD</button>
+                        <button class="btn actionTabBtn priceTypeBtn mt-30" id="inrBtn" onclick="showPageBased('inrBtn')">₹ INR</button>
+                        <button class="btn actionTabBtn priceTypeBtn mt-30" id="eurBtn" onclick="showPageBased('eurBtn')">€ EUR</button>
+                        <button class="btn actionTabBtn priceTypeBtn mt-30" id="aedBtn" onclick="showPageBased('aedBtn')">dh AED</button>
+                        <button class="btn actionTabBtn priceTypeBtn mt-30 mr-15" id="chfBtn" onclick="showPageBased('chfBtn')">CHF</button>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-6  button-container btnDateSection">
+                        <button class="btn actionTabBtn dateTypeBtn mt-30" id="yearlyBtn"
+                            onclick="showTypeBased('yearlyDivSection','yearlyBtn')">YEARLY</button>
+                        <button class="btn actionTabBtn dateTypeBtn mt-30" id="monthlyBtn"
+                            onclick="showTypeBased('monthlyDivSection','monthlyBtn')">MONTHLY</button>
+                    </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-12" id="yearlyDiv">
+
+            <div class="col-sm-12 col-md-12 yearlyDivSection pricingSection mt-3" id="yearlyDiv">
                 <div class="pricing-table-element pricingTableSection" data-columns="4">
                     <div class="plan-column zoom-container">
                         <ul>
@@ -107,9 +133,9 @@
                             <li class="subscription-price">
                                 <div class="inner-content m-1">
                                     <div class="card">
-                                        <p><span class="priceText">₹0</span><span class="normalText">/month</span></p>
+                                        <p><span class="priceText">₹ 0</span><span class="normalText">/month</span></p>
                                         <p class="normalText">1 free license included +</p>
-                                        <p class="mb-0"><span class="priceText">₹80</span><span
+                                        <p class="mb-0"><span class="priceText">₹ 80</span><span
                                                 class="normalText">/device/month</span></p>
                                     </div>
                                     <p class="helpText mb-0 mt-2">Suitable for individuals, students and R&D
@@ -188,9 +214,10 @@
                             <li class="subscription-price">
                                 <div class="inner-content m-1">
                                     <div class="card">
-                                        <p><span class="priceText">₹14,999</span><span class="normalText">/month</span></p>
+                                        <p><span class="priceText">₹ 14,999</span><span class="normalText">/month</span>
+                                        </p>
                                         <p class="normalText">5 free license included +</p>
-                                        <p class="mb-0"><span class="priceText">₹80</span><span
+                                        <p class="mb-0"><span class="priceText">₹ 80</span><span
                                                 class="normalText">/device/month</span></p>
                                     </div>
                                     <p class="helpText mb-4 mt-2">Has got everything you need to get your solution out
@@ -277,9 +304,10 @@
                             <li class="subscription-price">
                                 <div class="inner-content m-1">
                                     <div class="card">
-                                        <p><span class="priceText">₹38,999</span><span class="normalText">/month</span></p>
+                                        <p><span class="priceText">₹ 38,999</span><span class="normalText">/month</span>
+                                        </p>
                                         <p class="normalText">25 free license included +</p>
-                                        <p class="mb-0"><span class="priceText">₹80</span><span
+                                        <p class="mb-0"><span class="priceText">₹ 80</span><span
                                                 class="normalText">/device/month</span></p>
                                     </div>
                                     <p class="helpText mb-4 mt-2">Experience the complete IoT Digital Twin. Best suited
@@ -372,10 +400,11 @@
                             <li class="subscription-price">
                                 <div class="inner-content m-1">
                                     <div class="card">
-                                        <p><span class="priceText">₹1,18,999</span><span class="normalText">/month</span>
+                                        <p><span class="priceText">₹ 1,18,999</span><span
+                                                class="normalText">/month</span>
                                         </p>
                                         <p class="normalText">50 free license included +</p>
-                                        <p class="mb-0"><span class="priceText">₹80</span><span
+                                        <p class="mb-0"><span class="priceText">₹ 80</span><span
                                                 class="normalText">/device/month</span></p>
                                     </div>
                                     <p class="helpText mb-4 mt-2">Enterprise grade IoT Digital Twin. Best suited for
@@ -465,7 +494,7 @@
 
                 </div>
             </div>
-            <div class="col-sm-12 col-md-12 tableSection addonSection mt-2">
+            <div class="col-sm-12 col-md-12 tableSection addonSection  yearlyDivSection pricingSection">
                 <h2 class="tablePrimaryText font-weight-bold" style="font-size: 24px !important;">Addons</h2>
                 <table>
                     <colgroup>
@@ -483,7 +512,7 @@
                             <p class="tablePrimaryText mb-0">Data Points</p>
                             <p class="tablePrimaryText mb-1">Qty<span class="tableSecondaryText">: 50000</span></p>
                         </td>
-                        <td class="tableSecondaryText">₹80</td>
+                        <td class="tableSecondaryText">₹ 80</td>
                         <td class="tableSecondaryText">Additional data points can be utilized by all devices, it's like
                             a common pool, first come first served. One quantity will get you 50000 more data points
                         </td>
@@ -493,7 +522,7 @@
                             <p class="tablePrimaryText mb-0">Device Library</p>
                             <p class="tablePrimaryText mb-1">Qty<span class="tableSecondaryText">: 10</span></p>
                         </td>
-                        <td class="tableSecondaryText">₹80</td>
+                        <td class="tableSecondaryText">₹ 80</td>
                         <td class="tableSecondaryText">One quantity will allow you to add 10 more device libraries</td>
                     </tr>
                     <tr>
@@ -501,7 +530,7 @@
                             <p class="tablePrimaryText mb-0">Device Parameter</p>
                             <p class="tablePrimaryText mb-1">Qty<span class="tableSecondaryText">: 10</span></p>
                         </td>
-                        <td class="tableSecondaryText">₹80</td>
+                        <td class="tableSecondaryText">₹ 80</td>
                         <td class="tableSecondaryText">One quantity will allow you to add 10 more device parameters. A
                             maximum of 1024 parameters can be added to a device library</td>
                     </tr>
@@ -510,7 +539,7 @@
                             <p class="tablePrimaryText mb-0">Dashboard</p>
                             <p class="tablePrimaryText mb-1">Qty<span class="tableSecondaryText">: 10</span></p>
                         </td>
-                        <td class="tableSecondaryText">₹80</td>
+                        <td class="tableSecondaryText">₹ 80</td>
                         <td class="tableSecondaryText">One quantity will allow you to add 10 more dashboards</td>
                     </tr>
 
@@ -521,7 +550,7 @@
                             <p class="tablePrimaryText mb-0">Device</p>
                             <p class="tablePrimaryText mb-1">Qty<span class="tableSecondaryText">: 1</span></p>
                         </td>
-                        <td class="tableSecondaryText">₹80</td>
+                        <td class="tableSecondaryText">₹ 80</td>
                         <td class="tableSecondaryText">One quantity will allow you to add 1 more device</td>
                     </tr>
 
@@ -530,7 +559,7 @@
                             <p class="tablePrimaryText mb-0">User</p>
                             <p class="tablePrimaryText mb-1">Qty<span class="tableSecondaryText">: 1</span></p>
                         </td>
-                        <td class="tableSecondaryText">₹80</td>
+                        <td class="tableSecondaryText">₹ 80</td>
                         <td class="tableSecondaryText">One quantity will allow you to add 1 more user</td>
                     </tr>
                     <tr>
@@ -538,7 +567,7 @@
                             <p class="tablePrimaryText mb-0">Client</p>
                             <p class="tablePrimaryText mb-1">Qty<span class="tableSecondaryText">: 1</span></p>
                         </td>
-                        <td class="tableSecondaryText">₹2000</td>
+                        <td class="tableSecondaryText">₹ 2000</td>
                         <td class="tableSecondaryText">One quantity will allow you to add 1 more sub-account</td>
                     </tr>
                     <tr>
@@ -546,13 +575,13 @@
                             <p class="tablePrimaryText mb-0">Archival</p>
                             <p class="tablePrimaryText mb-1">Qty<span class="tableSecondaryText">: 1 Year</span></p>
                         </td>
-                        <td class="tableSecondaryText">₹7900</td>
+                        <td class="tableSecondaryText">₹ 7950</td>
                         <td class="tableSecondaryText">One quantity will allow you to extend the device data
                             availability for 1 more year</td>
                     </tr>
                 </table>
             </div>
-            <div class="col-sm-12 col-md-12" style="margin-top:60px !important" id="monthlyDiv">
+            <div class="col-sm-12 col-md-12 d-none monthlyDivSection pricingSection mt-3" id="monthlyDiv">
                 <div class="pricing-table-element pricingTableSection" data-columns="4">
                     <div class="plan-column zoom-container">
                         <ul>
@@ -565,9 +594,9 @@
                             <li class="subscription-price">
                                 <div class="inner-content m-1">
                                     <div class="card">
-                                        <p><span class="priceText">₹0</span><span class="normalText">/month</span></p>
+                                        <p><span class="priceText">₹ 0</span><span class="normalText">/month</span></p>
                                         <p class="normalText">1 free license included +</p>
-                                        <p class="mb-0"><span class="priceText">₹99</span><span
+                                        <p class="mb-0"><span class="priceText">₹ 99</span><span
                                                 class="normalText">/device/month</span></p>
                                     </div>
                                     <p class="helpText mb-0 mt-2">Suitable for individuals, students and R&D
@@ -642,9 +671,10 @@
                             <li class="subscription-price">
                                 <div class="inner-content m-1">
                                     <div class="card">
-                                        <p><span class="priceText">₹16,999</span><span class="normalText">/month</span></p>
+                                        <p><span class="priceText">₹ 16,999</span><span class="normalText">/month</span>
+                                        </p>
                                         <p class="normalText">5 free license included +</p>
-                                        <p class="mb-0"><span class="priceText">₹99</span><span
+                                        <p class="mb-0"><span class="priceText">₹ 99</span><span
                                                 class="normalText">/device/month</span></p>
                                     </div>
                                     <p class="helpText mb-4 mt-2">Has got everything you need to get your solution out
@@ -693,7 +723,8 @@
                             </li>
                             <li>
                                 <div class="inner-content m-1">
-                                    <p class="content mb-1 mt-0"><span style="color:#cd2122">*</span>Can purchase an additional plan</p>
+                                    <p class="content mb-1 mt-0"><span style="color:#cd2122">*</span>Can purchase an
+                                        additional plan</p>
                                     <p class="heading mb-1 mt-4">White Labeling:</p>
                                     <p class="content mb-1"><span style="color:#cd2122">*</span>Supported</p>
                                     <p class="heading mb-1">Private Cloud:</p>
@@ -726,9 +757,10 @@
                             <li class="subscription-price">
                                 <div class="inner-content m-1">
                                     <div class="card">
-                                        <p><span class="priceText">₹40,999</span><span class="normalText">/month</span></p>
+                                        <p><span class="priceText">₹ 40,999</span><span class="normalText">/month</span>
+                                        </p>
                                         <p class="normalText">25 free license included +</p>
-                                        <p class="mb-0"><span class="priceText">₹99</span><span
+                                        <p class="mb-0"><span class="priceText">₹ 99</span><span
                                                 class="normalText">/device/month</span></p>
                                     </div>
                                     <p class="helpText mb-4 mt-2">Experience the complete IoT Digital Twin. Best suited
@@ -817,10 +849,11 @@
                             <li class="subscription-price">
                                 <div class="inner-content m-1">
                                     <div class="card">
-                                        <p><span class="priceText">₹1,20,999</span><span class="normalText">/month</span>
+                                        <p><span class="priceText">₹ 1,20,999</span><span
+                                                class="normalText">/month</span>
                                         </p>
                                         <p class="normalText">50 free license included +</p>
-                                        <p class="mb-0"><span class="priceText">₹99</span><span
+                                        <p class="mb-0"><span class="priceText">₹ 99</span><span
                                                 class="normalText">/device/month</span></p>
                                     </div>
                                     <p class="helpText mb-4 mt-2">Enterprise grade IoT Digital Twin. Best suited for
@@ -906,7 +939,7 @@
 
                 </div>
             </div>
-            <div class="col-sm-12 col-md-12 tableSection addonSection mt-2">
+            <div class="col-sm-12 col-md-12 tableSection addonSection mt-2 monthlyDivSection d-none pricingSection">
                 <h2 class="tablePrimaryText font-weight-bold" style="font-size: 24px !important;">Addons</h2>
                 <table>
                     <colgroup>
@@ -924,8 +957,9 @@
                             <p class="tablePrimaryText mb-0">Data Points</p>
                             <p class="tablePrimaryText mb-1">Qty<span class="tableSecondaryText">: 50000</span></p>
                         </td>
-                        <td class="tableSecondaryText">₹99</td>
-                        <td class="tableSecondaryText">Additional data points can be utilized by all devices, it's like a common pool, first come first served. One quantity will get you 50000 more data points
+                        <td class="tableSecondaryText">₹ 99</td>
+                        <td class="tableSecondaryText">Additional data points can be utilized by all devices, it's like
+                            a common pool, first come first served. One quantity will get you 50000 more data points
                         </td>
                     </tr>
                     <tr>
@@ -933,7 +967,7 @@
                             <p class="tablePrimaryText mb-0">Device Library</p>
                             <p class="tablePrimaryText mb-1">Qty<span class="tableSecondaryText">: 10</span></p>
                         </td>
-                        <td class="tableSecondaryText">₹99</td>
+                        <td class="tableSecondaryText">₹ 99</td>
                         <td class="tableSecondaryText">One quantity will allow you to add 10 more device libraries</td>
                     </tr>
                     <tr>
@@ -941,16 +975,17 @@
                             <p class="tablePrimaryText mb-0">Device Parameter</p>
                             <p class="tablePrimaryText mb-1">Qty<span class="tableSecondaryText">: 10</span></p>
                         </td>
-                        <td class="tableSecondaryText">₹99</td>
-                        <td class="tableSecondaryText">One quantity will allow you to add 10 more device parameters. A maximum of 1024 parameters can be added to a device library</td>
+                        <td class="tableSecondaryText">₹ 99</td>
+                        <td class="tableSecondaryText">One quantity will allow you to add 10 more device parameters. A
+                            maximum of 1024 parameters can be added to a device library</td>
                     </tr>
                     <tr>
                         <td>
                             <p class="tablePrimaryText mb-0">Dashboard</p>
                             <p class="tablePrimaryText mb-1">Qty<span class="tableSecondaryText">: 10</span></p>
                         </td>
-                        <td class="tableSecondaryText">₹99</td>
-                        <td class="tableSecondaryText">	
+                        <td class="tableSecondaryText">₹ 99</td>
+                        <td class="tableSecondaryText">
                             One quantity will allow you to add 10 more dashboards</td>
                     </tr>
                     <tr>
@@ -958,7 +993,7 @@
                             <p class="tablePrimaryText mb-0">Device</p>
                             <p class="tablePrimaryText mb-1">Qty<span class="tableSecondaryText">: 1</span></p>
                         </td>
-                        <td class="tableSecondaryText">₹99</td>
+                        <td class="tableSecondaryText">₹ 99</td>
                         <td class="tableSecondaryText">One quantity will allow you to add 1 more device</td>
                     </tr>
                     <tr>
@@ -966,7 +1001,7 @@
                             <p class="tablePrimaryText mb-0">User</p>
                             <p class="tablePrimaryText mb-1">Qty<span class="tableSecondaryText">: 1</span></p>
                         </td>
-                        <td class="tableSecondaryText">₹99</td>
+                        <td class="tableSecondaryText">₹ 99</td>
                         <td class="tableSecondaryText">One quantity will allow you to add 1 more user</td>
                     </tr>
                     <tr>
@@ -974,7 +1009,7 @@
                             <p class="tablePrimaryText mb-0">Client</p>
                             <p class="tablePrimaryText mb-1">Qty<span class="tableSecondaryText">: 1</span></p>
                         </td>
-                        <td class="tableSecondaryText">₹2800</td>
+                        <td class="tableSecondaryText">₹ 2800</td>
                         <td class="tableSecondaryText">One quantity will allow you to add 1 more sub-account</td>
                     </tr>
                     <tr>
@@ -982,7 +1017,7 @@
                             <p class="tablePrimaryText mb-0">Archival</p>
                             <p class="tablePrimaryText mb-1">Qty<span class="tableSecondaryText">: 1 Year</span></p>
                         </td>
-                        <td class="tableSecondaryText">₹9999</td>
+                        <td class="tableSecondaryText">₹ 9999</td>
                         <td class="tableSecondaryText">One quantity will allow you to extend the device data
                             availability for 1 more year</td>
                     </tr>
@@ -997,46 +1032,57 @@
                     </colgroup>
                     <tr>
                         <td class="tableSecondaryText">Data Points</td>
-                        <td class="tableSecondaryText">Data point is a specific piece of information collected from IoT devices, such as sensor readings, device status, or user interactions, which is used for analysis and decision-making.
+                        <td class="tableSecondaryText">Data point is a specific piece of information collected from IoT
+                            devices, such as sensor readings, device status, or user interactions, which is used for
+                            analysis and decision-making.
                         </td>
                     </tr>
 
                     <tr>
                         <td class="tableSecondaryText">Device Library</td>
-                        <td class="tableSecondaryText">Device library describes the architecture and functionality of a connected device, detailing how it communicates, what are all the parameters (data) it communicates, etc.
+                        <td class="tableSecondaryText">Device library describes the architecture and functionality of a
+                            connected device, detailing how it communicates, what are all the parameters (data) it
+                            communicates, etc.
                         </td>
                     </tr>
                     <tr>
                         <td class="tableSecondaryText">Device Parameter</td>
-                        <td class="tableSecondaryText">Device parameter is a measurable attribute or setting of an IoT device, such as temperature, humidity, or battery level, that can be monitored or controlled remotely.
+                        <td class="tableSecondaryText">Device parameter is a measurable attribute or setting of an IoT
+                            device, such as temperature, humidity, or battery level, that can be monitored or controlled
+                            remotely.
                         </td>
                     </tr>
                     <tr>
                         <td class="tableSecondaryText">Dashboard</td>
-                        <td class="tableSecondaryText">Dashboard is a user interface that provides real-time monitoring, control, and data visualization of connected devices and systems
+                        <td class="tableSecondaryText">Dashboard is a user interface that provides real-time monitoring,
+                            control, and data visualization of connected devices and systems
                         </td>
                     </tr>
                     <tr>
                         <td class="tableSecondaryText">Device</td>
-                        <td class="tableSecondaryText">	
-                            Device is a physical object embedded with sensors, software, and connectivity to exchange data with other devices and systems over the internet
+                        <td class="tableSecondaryText">
+                            Device is a physical object embedded with sensors, software, and connectivity to exchange
+                            data with other devices and systems over the internet
                         </td>
                     </tr>
                     <tr>
                         <td class="tableSecondaryText">User</td>
-                        <td class="tableSecondaryText">User is an individual or entity that utilizes software systems to manage, monitor, and control IoT devices and data.
+                        <td class="tableSecondaryText">User is an individual or entity that utilizes software systems to
+                            manage, monitor, and control IoT devices and data.
                         </td>
                     </tr>
                     <tr>
                         <td class="tableSecondaryText">Client</td>
-                        <td class="tableSecondaryText">	
-                            Client account allows users or devices under a separate account to access, manage, and interact with IoT services and data, often with specific permissions and roles
+                        <td class="tableSecondaryText">
+                            Client account allows users or devices under a separate account to access, manage, and
+                            interact with IoT services and data, often with specific permissions and roles
                         </td>
                     </tr>
                     <tr>
                         <td class="tableSecondaryText">Archival</td>
-                        <td class="tableSecondaryText">	
-Data archival refers to the process of systematically deleting device data from to optimize storage and maintain performance.
+                        <td class="tableSecondaryText">
+                            Data archival refers to the process of systematically deleting device data from to optimize
+                            storage and maintain performance.
                         </td>
                     </tr>
                 </table>
@@ -1044,25 +1090,29 @@ Data archival refers to the process of systematically deleting device data from 
             <div class="col-sm-12 col-md-12 tableSection whiteLabelSection mt-4">
                 <h2 class="tablePrimaryText font-weight-bold" style="font-size: 24px !important;">White Labeling</h2>
                 <table style="width: 100%;">
-                   
+
                     <tr>
-                        <td class="tableSecondaryText">Standard license can't remove powered by logo during application startup</td>
+                        <td class="tableSecondaryText">Standard license can't remove powered by logo during application
+                            startup</td>
                     </tr>
                     <tr>
-                        
-                        <td class="tableSecondaryText">Professional & Enterprise licenses can have 100% white labeled solutions built
+
+                        <td class="tableSecondaryText">Professional & Enterprise licenses can have 100% white labeled
+                            solutions built
                         </td>
                     </tr>
                 </table>
             </div>
             <div class="col-sm-12 col-md-12 tableSection deploySection mt-4">
-                <h2 class="tablePrimaryText font-weight-bold" style="font-size: 24px !important;">Private Cloud / On Premise Deployments</h2>
+                <h2 class="tablePrimaryText font-weight-bold" style="font-size: 24px !important;">Private Cloud / On
+                    Premise Deployments</h2>
                 <table style="width: 100%;">
-                   
+
                     <tr>
-                        <td class="tableSecondaryText">Contact Us <a data-fr-linked="true" href="mailto:info@boodskap.io" id="isPasted">info@boodskap.io</a></td>
+                        <td class="tableSecondaryText">Contact Us <a data-fr-linked="true"
+                                href="mailto:info@boodskap.io" id="isPasted">info@boodskap.io</a></td>
                     </tr>
-                    
+
                 </table>
             </div>
         </div>
@@ -1117,9 +1167,33 @@ Data archival refers to the process of systematically deleting device data from 
 
 
 <script>
-    function scrollToDiv(divId, btnId) {
-        document.getElementById(divId).scrollIntoView({ behavior: 'smooth' });
-        $(".actionTabBtn").removeClass('active');
-        $("#" + btnId).addClass('active');
+    $("#yearlyBtn").addClass('activeClass');
+    $(".yearlyDivSection").removeClass('d-none');
+    $("#inrBtn").addClass('activeClass');
+    function showTypeBased(divClass, btnId) {
+        $(".pricingSection").addClass('d-none')
+        $("." + divClass).removeClass('d-none');
+        $(".dateTypeBtn").removeClass('activeClass');
+        $("#" + btnId).addClass('activeClass');
+    }
+
+    function showPageBased(btnId) {
+        $(".priceTypeBtn").removeClass('activeClass');
+        $("#" + btnId).addClass('activeClass');
+        if (btnId == 'usdBtn') {
+            window.location.href = "/pricing";
+        }
+        else if (btnId == 'inrBtn') {
+            window.location.href = "/pricing-inr";
+        }
+        else if (btnId == 'eurBtn') {
+            window.location.href = "/pricing-eur";
+        }
+        else if (btnId == 'aedBtn') {
+            window.location.href = "/pricing-dh-aed";
+        }
+        else if (btnId == 'chfBtn') {
+            window.location.href = "/pricing-chf";
+        }
     }
 </script>

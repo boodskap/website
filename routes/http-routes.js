@@ -122,6 +122,20 @@ Routes.prototype.init = function () {
         res.render('pricing-inr.html',{layout:''});
     });
 
+    self.app.get('/pricing-eur', function (req, res) {
+        res.render('pricing-eur.html',{layout:''});
+    });
+
+    self.app.get('/pricing-dh-aed', function (req, res) {
+        res.render('pricing-aed.html',{layout:''});
+    });
+
+    self.app.get('/pricing-chf', function (req, res) {
+        res.render('pricing-chf.html',{layout:''});
+    });
+
+  
+
     self.app.get('/contact-us', function (req, res) {
         res.render('contact-us',{layout:''});
     });
