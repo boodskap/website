@@ -1117,9 +1117,10 @@ Data archival refers to the process of systematically deleting device data from 
 
 
 <script>
+     $("#yearlyBtn").addClass('activeClass');
     function scrollToDiv(divId, btnId) {
         document.getElementById(divId).scrollIntoView({ behavior: 'smooth' });
-        $(".actionTabBtn").removeClass('active');
-        $("#" + btnId).addClass('active');
+        $(".actionTabBtn").removeClass('activeClass');
+        $("#" + btnId).addClass('activeClass');
     }
 </script>
