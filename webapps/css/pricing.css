@@ -99,22 +99,40 @@
     color: #fff;
 }
 
-.actionTabBtn{
+/* .actionTabBtn{
     background-color: #F03939 !important;
 }
 .actionTabBtn:hover {
     background-color: #cd2122 !important;
 }
-.actionTabBtn:active {
+.activeClass {
     background-color: #cd2122 !important;
+    color:white !important
+} */
+
+
+.actionTabBtn{
+    color:#cd2122!important;
+    background-color: transparent  !important;
+    border : 1px solid #cd2122 !important;
+}
+.actionTabBtn:hover {
+    background-color: #cd2122 !important;
+    color:white !important;
+    border : 1px solid #cd2122 !important;
+}
+.activeClass {
+    background-color: #cd2122 !important;
+    color:white !important;
+    border : 1px solid #cd2122 !important;
 }
 
-#monthlyBtn{
+/* #monthlyBtn{
     color:black !important
 }
 #monthlyBtn:hover{
     color:white !important
-}
+} */
 
 .tableSection table {
     border-collapse: collapse;
