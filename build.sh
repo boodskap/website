@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build -t boodskapiot/website .
+docker build -t boodskapiot/website:1.0.2 .
