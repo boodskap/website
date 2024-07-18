@@ -6,6 +6,11 @@
     color: white;
 }
 
+.page-subheader .ph-content-wrap {
+    width: 100%;
+    height: 200px !important; 
+    min-height: 200px !important;
+}
 .pricingTableSection .card {
     background-color: white;
     border: 0.8px dashed #cd2122;
