@@ -424,3 +424,9 @@ div.laptop-wrapper video:focus{
 #zn-res-menu li>a {
     color: black ;
 }
+
+.page-subheader .ph-content-wrap {
+    width: 100%;
+    height: 250px !important; 
+    min-height: 250px !important;
+}
