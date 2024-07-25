@@ -15,7 +15,6 @@ function renderResponse(response) {
 
 function sendEmail() {
     $(".sentMessage").html('');
-
     if(g_response) {
         $(".submitBtn").attr('disabled','disabled');
 
@@ -35,6 +34,7 @@ function sendEmail() {
             body_text: content,
             auth : g_response
         }
+
 
         $.ajax({
             type: 'POST',
