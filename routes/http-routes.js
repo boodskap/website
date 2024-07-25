@@ -281,7 +281,7 @@ Routes.prototype.init = function () {
                 // from: '"' + fromName + '" <' + fromEmail + '>', 
                 from:self.app.conf.email.fromEmail,
                 to: self.app.conf.email.toEmail, 
-                subject: subject, 
+                subject: fromName +' is trying to contact you',
                 html: content, 
             }, function (err, stat) {
                 if (err) {
