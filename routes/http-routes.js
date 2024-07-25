@@ -29,7 +29,6 @@ Routes.prototype.init = function () {
     self.app.get('/products', function (req, res) {
         res.render('products.html',{layout:''});
     });
-
     self.app.get('/products/:id', function (req, res) {
 
         var id = req['params']['id']
@@ -78,6 +77,57 @@ Routes.prototype.init = function () {
         }
         else if(id === 'smart-farming-system'){
                 res.render('products/smart-farming-system.html',{layout:''});
+        }
+        else{
+            res.redirect("/404");
+        }
+
+
+    });
+
+    self.app.get('/industries', function (req, res) {
+        res.render('industries.html',{layout:''});
+    });
+
+    self.app.get('/industries/:id', function (req, res) {
+        var id = req['params']['id']
+
+       
+        if(id === 'predictive-maintenance'){
+            res.render('industries/predictive.html',{layout:''});
+        }
+        else if(id === 'asset-tracking'){
+            res.render('industries/ioTAssetTracking.html',{layout:''});
+        }
+        else if(id === 'condition-monitoring'){
+            res.render('industries/ioTConditionMonitoring.html',{layout:''});
+        }
+        else if(id === 'energy-management'){
+            res.render('industries/ioTEnergyManagement.html',{layout:''});
+        }
+        else if(id === 'supply-chain'){
+            res.render('industries/ioTSupplyChain.html',{layout:''});
+        }
+        else if(id === 'quality-control'){
+            res.render('industries/ioTQualityControl.html',{layout:''});
+        }
+        else if(id === 'remote-monitoring'){
+            res.render('industries/ioTRemoteMonitoring.html',{layout:''});
+        }
+        else if(id === 'worker-safety'){
+            res.render('industries/ioTWorkerSafety.html',{layout:''});
+        }
+        else if(id === 'smart-manufacturing'){
+            res.render('industries/ioTSmartManufacturing.html',{layout:''});
+        }
+        else if(id === 'blog-1'){
+            res.render('industries/blog1.html',{layout:''});
+        }
+        else if(id === 'blog-2'){
+            res.render('industries/blog2.html',{layout:''});
+        }
+        else if(id === 'blog-3'){
+            res.render('industries/blog3.html',{layout:''});
         }
         else{
             res.redirect("/404");
