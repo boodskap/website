@@ -12,14 +12,14 @@
                         <div class="cf_response"></div>
 
                         <div class="col-sm-12 col-md-6 kl-fancy-form">
-                            <input type="text" name="name" id="cf_name" class="form-control" placeholder="Please enter your name" value="" tabindex="1" maxlength="35" required>
+                            <input type="text" name="name" id="cf_name" class="form-control" placeholder="Please enter your name" value="" tabindex="1" maxlength="35" required onkeyup="emptySpaceCheck(this);" onkeypress="emptySpaceCheck(this);">
                             <label class="control-label">
                                 FULL NAME
                             </label>
                         </div>
 
                         <div class="col-sm-12 col-md-6 kl-fancy-form">
-                            <input type="text" name="cname" id="cf_cname" class="form-control" placeholder="Please enter your company name" value="" tabindex="1" maxlength="35" required>
+                            <input type="text" name="cname" id="cf_cname" class="form-control" placeholder="Please enter your company name" value="" tabindex="1" maxlength="35" required onkeyup="emptySpaceCheck(this);" onkeypress="emptySpaceCheck(this);">
                             <label class="control-label">
                                 COMPANY NAME
                             </label>
@@ -27,35 +27,37 @@
 
 
                         <div class="col-sm-12 col-md-6 kl-fancy-form">
-                            <input type="text" name="email" id="cf_email" class="form-control h5-email" placeholder="Please enter your email address" value="" tabindex="1" maxlength="35" required>
+                            <input type="text" name="email" id="cf_email" class="form-control h5-email" placeholder="Please enter your email address" value="" tabindex="1" maxlength="35" required onkeyup="emptySpaceCheck(this);" onkeypress="emptySpaceCheck(this);">
                             <label class="control-label">
                                 EMAIL
                             </label>
                         </div>
 
                         <div class="col-sm-12 col-md-6 kl-fancy-form">
-                            <input type="text" name="phone" id="cf_phone" class="form-control" placeholder="Please enter your mobile number" value="" required>
+                            <input type="text" name="phone" id="cf_phone" class="form-control" placeholder="Please enter your mobile number" value="" required onkeyup="emptySpaceCheck(this);" onkeypress="emptySpaceCheck(this);">
                             <label class="control-label">
                                 MOBILE NUMBER <small>(with country code)</small>
                             </label>
                         </div>
 
                         <div class="col-sm-12 kl-fancy-form">
-                            <input type="text" name="subject" id="cf_subject" class="form-control" placeholder="Enter the subject message" value="" tabindex="1" maxlength="35" required>
+                            <input type="text" name="subject" id="cf_subject" class="form-control" placeholder="Enter the subject message" value="" tabindex="1" maxlength="35" required onkeyup="emptySpaceCheck(this);" onkeypress="emptySpaceCheck(this);">
                             <label class="control-label">
                                 SUBJECT
                             </label>
                         </div>
 
                         <div class="col-sm-12 kl-fancy-form">
-                            <textarea name="message" id="cf_message" class="form-control" cols="30" rows="10" placeholder="Your message" tabindex="4" required></textarea>
+                            <textarea name="message" id="cf_message" class="form-control" cols="30" rows="10" placeholder="Your message" tabindex="4" required onkeyup="emptySpaceCheck(this);" onkeypress="emptySpaceCheck(this);"></textarea>
                             <label class="control-label">
                                 MESSAGE
                             </label>
                         </div>
 
                         <div class="col-md-12 col-sm-12 col-xs-12">
-                            <div class="g-recaptcha" data-sitekey="6LcTHzYUAAAAAPyUiSBluM0T2hzL74s3gT0wDAlX" data-callback="renderResponse"></div>
+                            <!-- 6LeSxa4nAAAAANMWKp3xaVaKN-h0-kK-DVy8dp43 -->
+                            <!-- 6LcTHzYUAAAAAPyUiSBluM0T2hzL74s3gT0wDAlX -->
+                            <div class="g-recaptcha pl-0" data-sitekey="6LcTHzYUAAAAAPyUiSBluM0T2hzL74s3gT0wDAlX" data-callback="renderResponse"></div>
 
                         </div>
 
@@ -85,5 +87,5 @@
 
 <script src='https://www.google.com/recaptcha/api.js'></script>
 
-
+<script type="text/javascript" src="/controllers/util.js"></script>
 <script type="text/javascript" src="/controllers/contact-us.js"></script>
