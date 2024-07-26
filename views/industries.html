@@ -102,7 +102,10 @@
 </section>
 <!--end home section -->
 
+
 <!--begin section-grey -->
+
+
 <section class="section-grey section-top-border" id="about">
 
     <!--begin container -->
@@ -294,6 +297,7 @@
 
 </section>
 <!--end section-grey -->
+<%- include pricing-section.html %>
 
 <!--begin section-white -->
 <section class="section-white section-top-border">
@@ -456,14 +460,14 @@
                 <h3>Frequently Asked Questions</h3>
 
                 <!--begin accordion -->
-                <div class="accordion" id="accordionFAQ">
+                <div class="accordion faq" id="accordionFAQ">
 
                     <!--begin card -->
                     <div class="card">
                         
                         <div class="card-header" id="headingOne">
                             <h5 class="mb-0">
-                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <button class="btn btn-link faq" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                              What is Boodskap.io?
                             </button>
                             </h5>
@@ -484,7 +488,7 @@
 
                         <div class="card-header" id="headingTwo">
                             <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <button class="btn btn-link collapsed faq" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                               What features does Boodskap.io offer?
                             </button>
                             </h5>
@@ -505,7 +509,7 @@
 
                         <div class="card-header" id="headingThree">
                             <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <button class="btn btn-link collapsed faq" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                               Is Boodskap.io suitable for my industry?
                             </button>
                             </h5>
@@ -525,7 +529,7 @@
 
                         <div class="card-header" id="headingFour">
                             <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            <button class="btn btn-link collapsed faq" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                               How does Boodskap.io ensure data security?
 
                             </button>
@@ -1011,7 +1015,7 @@
                         <!--end success_box -->
                         
                         <!--begin newsletter-form -->
-                        <form id="newsletter-form" class="newsletter-form" action="php/newsletter.php" method="post">
+                        <form id="newsletter-form" class="newsletter-form">
 
                             <input id="email_newsletter" type="email" name="nf_email" placeholder="Enter Your Email Address">  
 

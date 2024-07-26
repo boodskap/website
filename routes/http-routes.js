@@ -184,11 +184,21 @@ Routes.prototype.init = function () {
         res.render('pricing-aed.html', { layout: '' });
     });
 
-    self.app.get('/pricing-chf', function (req, res) {
-        res.render('pricing-chf.html', { layout: '' });
-    });
-
-
+    // self.app.get('/pricing-section', function (req, res) {
+    //     res.render('pricing-section.html',{layout:''});
+    // });
+    // self.app.get('/pricing-inr-section', function (req, res) {
+    //     res.render('pricing-inr-section.html',{layout:''});
+    // });
+    // self.app.get('/pricing-eur-section', function (req, res) {
+    //     res.render('pricing-eur-section.html',{layout:''});
+    // });
+    // self.app.get('/pricing-aed-section', function (req, res) {
+    //     res.render('pricing-aed-section.html',{layout:''});
+    // });
+    // self.app.get('/pricing-chf-section', function (req, res) {
+    //     res.render('pricing-chf-section.html',{layout:''});
+    // });  
 
     self.app.get('/contact-us', function (req, res) {
         res.render('contact-us', { layout: '' });
