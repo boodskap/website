@@ -220,55 +220,7 @@ Routes.prototype.init = function () {
 
     //Elastic Email
     self.app.post('/sendemail', function (req, res) {
-        // if(req.body.auth) {
 
-        //     var r = request.post(
-        //         'https://www.google.com/recaptcha/api/siteverify',
-        //         function (error, response, body) {
-
-        //             console.log(new Date() + " | Google Response ",body);
-
-        //             if (!error && JSON.parse(body).success) {
-        //                 var from = req.body.from;
-        //                 var fromName = req.body.fromName;
-        //                 var to = req.body.to;
-        //                 var content = req.body.body_text;
-
-        //                 var msg = {
-        //                     from: from,
-        //                     from_name: fromName,
-        //                     to: self.app.conf.email[to],
-        //                     subject: 'Message From Booodskap.io : ' + to,
-        //                     body_html: content
-        //                 };
-
-        //                 console.log(new Date() + "| Email Request ", msg)
-
-        //                 self.app.emailClient.mailer.send(msg, function (err, result) {
-        //                     if (err) {
-        //                         console.log(new Date() + "| error in mail sent =>",err)
-        //                         res.json({status: false, error: err});
-        //                     } else {
-        //                         console.log(new Date() + "| mail sent successfully ")
-        //                         res.json({status: true, result: result});
-        //                     }
-
-        //                 });
-        //             }
-        //             else {
-        //                 console.log(new Date() + ' | Invalid Access!')
-        //                 res.sendStatus(401);
-        //             }
-        //         });
-
-        //     var form = r.form();
-        //     form.append('secret', self.app.conf.captcha.key);
-        //     form.append('response', req.body.auth);
-        // }
-        // else{
-        //     console.log(new Date() + ' | Invalid Access!')
-        //     res.sendStatus(401);
-        // }
       
         if (req.body.auth) {
             var fromEmail = req.body.from;
@@ -276,13 +228,96 @@ Routes.prototype.init = function () {
             var to = req.body.to;
             var content = req.body.body_text;
             var subject = req.body.subject;
-            var userEmailContent = `<p style="color:black">Dear `+fromName+`,</p>
-
-            <p style="color:black">Thank you for reaching out to us. We appreciate your interest and will get back to you shortly with a response to your inquiry.</p>
-        
-            <p style="color:black">Best regards,<br>
-            Boodskap Support<br>
-            <a href="mailto:info@boodskap.io">info@boodskap.io</a></p>`
+           
+    var userEmailContent = `<head>
+    <style>
+       body {
+       font-family: 'Playfair Display', serif;
+       font-family: 'Roboto', sans-serif;
+       }
+       .container {
+       width: 100%;
+       background: #E6E6E6;
+       }
+       .industrySection {
+       width: 80%;
+       margin: 0 auto;
+       background: #fff;
+       border: 1px solid #ccc;
+       /*padding: 27px 0px 0px 0px;*/
+       box-sizing: border-box;
+       }
+       .contentSection{
+       padding:20px 30px 10px 30px;
+       }
+       .cards {
+       margin-top: 10px;
+       background-color: #fcefef;
+       width: 80%;
+       margin: auto;
+       }
+       .cards img {
+       max-width: 65%;
+       height: auto;
+       margin:3px 0;
+       }
+       .footer-label {
+       color: #cd2122;
+       font-size: 15px;
+       font-weight: 600;
+       width: 100%;
+       text-align: right;
+       margin-right: 10px;
+       margin-top: 13px;
+       }
+       .text-black{
+       color:black;
+       }
+       @media (max-width: 768px) {
+       .cards img {
+       max-width: 50%;
+       }
+       .footer-label {
+       font-size: 13px;
+       }
+       }
+       @media (max-width: 468px) {
+       .footer-label {
+       font-size: 11px;
+       margin-top: 8px;
+       }
+       .title{
+       font-weight:bold;  color:black;
+       }
+       }
+    </style>
+ </head>
+ <body>
+    <div class="container">
+       <div class="header" style="text-align:center;padding-top:20px !important">
+          <img src="https://boodskap.io/images/assets/boodskap-logo.png"  width="200"  />
+       </div>
+       <div class="industrySection">
+          <div class="contentSection">
+             <p class="text-black">Dear `+fromName+`,</p>
+             <p class="text-black">Thank you for reaching out to us. We appreciate your interest and will get back to you shortly with a response to your inquiry.</p>
+             <p class="text-black">Best regards,<br>
+                Boodskap Support<br>
+                <a href="mailto:info@boodskap.io">info@boodskap.io</a> 
+                <a href="https://boodskap.io/" style="display:block">boodskap.io</a>
+                </p>
+          </div>
+       </div>
+       <div class="cards">
+          <div style="display: flex;">
+             <img src="https://boodskap.io/images/powered-by-boodskap.png" />
+             <label class="footer-label">
+             &copy; <span>`+new Date().getFullYear()+`</span>  All rights reserved
+             </label>
+          </div>
+       </div>
+    </div>
+ </body>`
             let transporter = nodemailer.createTransport(self.app.conf.email);
             let info = transporter.sendMail({
                 // from: '"' + fromName + '" <' + fromEmail + '>', 
@@ -323,11 +358,96 @@ Routes.prototype.init = function () {
         var content = req.body.body_text;
         var userName = req.body.userName;
         var userEmail = req.body.userEmail;
-        var userEmailContent = `<p style="color:black">Dear `+userName+`,</p>
-    <p style="color:black">Thank you for reaching out to us. We appreciate your interest and will get back to you shortly with a response to your inquiry.</p>
-    <p style="color:black">Best regards,<br>
-    Boodskap Support<br>
-    <a href="mailto:info@boodskap.io">info@boodskap.io</a></p>`
+  
+        var userEmailContent = `<head>
+        <style>
+           body {
+           font-family: 'Playfair Display', serif;
+           font-family: 'Roboto', sans-serif;
+           }
+           .container {
+           width: 100%;
+           background: #E6E6E6;
+           }
+           .industrySection {
+           width: 80%;
+           margin: 0 auto;
+           background: #fff;
+           border: 1px solid #ccc;
+           /*padding: 27px 0px 0px 0px;*/
+           box-sizing: border-box;
+           }
+           .contentSection{
+           padding:20px 30px 10px 30px;
+           }
+           .cards {
+           margin-top: 10px;
+           background-color: #fcefef;
+           width: 80%;
+           margin: auto;
+           }
+           .cards img {
+           max-width: 65%;
+           height: auto;
+           margin:3px 0;
+           }
+           .footer-label {
+           color: #cd2122;
+           font-size: 15px;
+           font-weight: 600;
+           width: 100%;
+           text-align: right;
+           margin-right: 10px;
+           margin-top: 13px;
+           }
+           .text-black{
+           color:black;
+           }
+           @media (max-width: 768px) {
+           .cards img {
+           max-width: 50%;
+           }
+           .footer-label {
+           font-size: 13px;
+           }
+           }
+           @media (max-width: 468px) {
+           .footer-label {
+           font-size: 11px;
+           margin-top: 8px;
+           }
+           .title{
+           font-weight:bold;  color:black;
+           }
+           }
+        </style>
+     </head>
+     <body>
+        <div class="container">
+           <div class="header" style="text-align:center;padding-top:20px !important">
+              <img src="https://boodskap.io/images/assets/boodskap-logo.png"  width="200"  />
+           </div>
+           <div class="industrySection">
+              <div class="contentSection">
+                 <p class="text-black">Dear `+userName+`,</p>
+                 <p class="text-black">Thank you for reaching out to us. We appreciate your interest and will get back to you shortly with a response to your inquiry.</p>
+                 <p class="text-black">Best regards,<br>
+                    Boodskap Support<br>
+                    <a href="mailto:info@boodskap.io">info@boodskap.io</a> 
+                    <a href="https://boodskap.io/" style="display:block">boodskap.io</a>
+                    </p>
+              </div>
+           </div>
+           <div class="cards">
+              <div style="display: flex;">
+                 <img src="https://boodskap.io/images/powered-by-boodskap.png" />
+                 <label class="footer-label">
+                 &copy; <span>`+new Date().getFullYear()+`</span>  All rights reserved
+                 </label>
+              </div>
+           </div>
+        </div>
+     </body>`
             let transporter = nodemailer.createTransport(self.app.conf.email);
             let info = transporter.sendMail({
                 from:self.app.conf.email.fromEmail,
@@ -365,11 +485,97 @@ Routes.prototype.init = function () {
         var content = req.body.body_text;
         var userName = req.body.name;
         var userEmail = req.body.email;
-        var userEmailContent = `<p style="color:black">Dear `+userName+`,</p>
-    <p style="color:black">Thank you for reaching out to us. We appreciate your interest and will get back to you shortly with a response to your inquiry.</p>
-    <p style="color:black">Best regards,<br>
-    Boodskap Support<br>
-    <a href="mailto:info@boodskap.io">info@boodskap.io</a></p>`
+
+
+    var userEmailContent = `<head>
+    <style>
+       body {
+       font-family: 'Playfair Display', serif;
+       font-family: 'Roboto', sans-serif;
+       }
+       .container {
+       width: 100%;
+       background: #E6E6E6;
+       }
+       .industrySection {
+       width: 80%;
+       margin: 0 auto;
+       background: #fff;
+       border: 1px solid #ccc;
+       /*padding: 27px 0px 0px 0px;*/
+       box-sizing: border-box;
+       }
+       .contentSection{
+       padding:20px 30px 10px 30px;
+       }
+       .cards {
+       margin-top: 10px;
+       background-color: #fcefef;
+       width: 80%;
+       margin: auto;
+       }
+       .cards img {
+       max-width: 65%;
+       height: auto;
+       margin:3px 0;
+       }
+       .footer-label {
+       color: #cd2122;
+       font-size: 15px;
+       font-weight: 600;
+       width: 100%;
+       text-align: right;
+       margin-right: 10px;
+       margin-top: 13px;
+       }
+       .text-black{
+       color:black;
+       }
+       @media (max-width: 768px) {
+       .cards img {
+       max-width: 50%;
+       }
+       .footer-label {
+       font-size: 13px;
+       }
+       }
+       @media (max-width: 468px) {
+       .footer-label {
+       font-size: 11px;
+       margin-top: 8px;
+       }
+       .title{
+       font-weight:bold;  color:black;
+       }
+       }
+    </style>
+ </head>
+ <body>
+    <div class="container">
+       <div class="header" style="text-align:center;padding-top:20px !important">
+          <img src="https://boodskap.io/images/assets/boodskap-logo.png"  width="200"  />
+       </div>
+       <div class="industrySection">
+          <div class="contentSection">
+             <p class="text-black">Dear `+userName+`,</p>
+             <p class="text-black">Thank you for reaching out to us. We appreciate your interest and will get back to you shortly with a response to your inquiry.</p>
+             <p class="text-black">Best regards,<br>
+                Boodskap Support<br>
+                <a href="mailto:info@boodskap.io">info@boodskap.io</a> 
+                <a href="https://boodskap.io/" style="display:block">boodskap.io</a>
+                </p>
+          </div>
+       </div>
+       <div class="cards">
+          <div style="display: flex;">
+             <img src="https://boodskap.io/images/powered-by-boodskap.png" />
+             <label class="footer-label">
+             &copy; <span>`+new Date().getFullYear()+`</span>  All rights reserved
+             </label>
+          </div>
+       </div>
+    </div>
+ </body>`
             let transporter = nodemailer.createTransport(self.app.conf.email);
             let info = transporter.sendMail({
                 from:self.app.conf.email.fromEmail,
