@@ -295,9 +295,31 @@ Routes.prototype.init = function () {
         } else {
             res.sendStatus(401);
         }
+    });
 
-       
 
+  
+
+
+
+    self.app.post('/sendaccessemail', function (req, res) {
+        var content = req.body.body_text;
+        var fromName = req.body.userName;
+            let transporter = nodemailer.createTransport(self.app.conf.email);
+            let info = transporter.sendMail({
+                from:self.app.conf.email.fromEmail,
+                to: self.app.conf.email.toEmail, 
+                subject: fromName +' is interested in Industrial IoT',
+                html: content, 
+            }, function (err, stat) {
+                if (err) {
+                    self.logger.error(err)
+                    res.json({ status: false, result: "Email Triggered Failed" })
+                } else {
+                    res.json({ status: true, result: "Email Triggered" })
+                    self.logger.info(subject, ", Email sent to ", to)
+                }
+            });
     });
 
 

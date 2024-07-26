@@ -174,7 +174,7 @@ function sendEmail() {
                 background: #E6E6E6;
             }
            
-            .ticketsapproved {
+            .contactSection {
                 width: 80%;
                 margin: 0 auto;
                 background: #fff;
@@ -182,18 +182,18 @@ function sendEmail() {
                 padding: 27px;
                 box-sizing: border-box;
             }
-            .ticketsapproved h1 {
+            .contactSection h1 {
                 color: #cd2122;
                 font-size: 25px;
                 margin-bottom: 8px;
                 margin-top: 0;
             }
-            .ticketsapproved table {
+            .contactSection table {
                 width: 100%;
                 border-collapse: collapse;
                 font-size: 14px;
             }
-            .ticketsapproved th, .ticketsapproved td {
+            .contactSection th, .contactSection td {
                 padding: 8px;
                 border: 1px solid #ccc;
             }
@@ -204,13 +204,14 @@ function sendEmail() {
                 margin: auto;
             }
             .cards img {
-                max-width: 70%;
+                max-width: 65%;
                 height: auto;
+                margin:3px 0;
             }
             .footer-label {
                 color: #cd2122;
-                font-size: 14px;
-                font-weight: 300;
+                 font-size: 15px;
+                font-weight: 600;
                 width: 100%;
                 text-align: right;
                 margin-right: 10px;
@@ -221,19 +222,19 @@ function sendEmail() {
           color:black;
         }
             @media (max-width: 768px) {
-                .ticketsapproved, .cards {
+                .contactSection, .cards {
                     width: 95%;
                 }
-                .ticketsapproved table, .ticketsapproved th, .ticketsapproved td {
+                .contactSection table, .contactSection th, .contactSection td {
                     display: block;
                     width: 100%;
                 }
-                .ticketsapproved th, .ticketsapproved td {
+                .contactSection th, .contactSection td {
                     box-sizing: border-box;
                     /*padding-left: 50%;*/
                     position: relative;
                 }
-                .ticketsapproved th::before, .ticketsapproved td::before {
+                .contactSection th::before, .contactSection td::before {
                     position: absolute;
                     left: 10px;
                     top: 8px;
@@ -267,7 +268,7 @@ function sendEmail() {
             <div class="header" style="text-align:center;padding-top:20px !important">
                 <img src="https://boodskap.io/images/assets/boodskap-logo.png"  width="200"  />
             </div>
-            <div class="ticketsapproved">
+            <div class="contactSection">
                 <h1>Contact Us</h1>
                 <table>
                     <tbody>
@@ -337,7 +338,7 @@ function sendEmail() {
                 $("#cf_message").val('')
 
                 $(".sentMessage").html('<div class="alert alert-success">\n' +
-                    '               <strong>Successfully Sent!</strong> We will revert you in 24hrs.' +
+                    '               <strong>Successfully Sent!</strong>' +
                     '            </div>')
 
                 $(".submitBtn").removeAttr('disabled');

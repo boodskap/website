@@ -59,14 +59,14 @@
                         <!--end success message -->
                         
                         <!--begin register form -->
-                        <form id="register-form" class="register-form register">                            
+                        <form action="javascript:void(0)" id="register-form" class="register-form register" onsubmit="sendAccessEmail()">                            
                 
-                            <input class="register-input white-input" required="" name="register_names" placeholder="Full Name*" type="text">                            
-                            <input class="register-input white-input" required="" name="register_email" placeholder="Email Address*" type="email">
-                            <input class="register-input white-input" required="" name="register_phone" placeholder="Phone Number*" type="text">
-                            <input class="register-input white-input" required="" name="register_phone" placeholder="Company Name*" type="text">
+                            <input class="register-input white-input" required="" name="register_names" placeholder="Full Name*" type="text" id="userName" onkeyup="emptySpaceCheck(this);" onkeypress="emptySpaceCheck(this);">                            
+                            <input class="register-input white-input" required="" name="register_email" placeholder="Email Address*" type="email" id="userEmail" onkeyup="emptySpaceCheck(this);" onkeypress="emptySpaceCheck(this);">
+                            <input class="register-input white-input" required="" name="register_phone" placeholder="Phone Number*" type="text" id="userPhoneNumber" onkeyup="emptySpaceCheck(this);" onkeypress="emptySpaceCheck(this);">
+                            <input class="register-input white-input" required="" name="register_phone" placeholder="Company Name*" type="text" id="userCompany" onkeyup="emptySpaceCheck(this);" onkeypress="emptySpaceCheck(this);">
 
-                            <select class="register-input white-input" required="" name="register_ticket">
+                            <select class="register-input white-input" required="" name="register_ticket"  id="userDevice">
 
                                 <option value=""># of Devices Required*</option>
                                 <option value="0-500">0-500</option>
@@ -77,7 +77,8 @@
 
                             </select>
                            
-                            <input value="Get Started With Boodskap" class="register-submit button-prim" type="submit">
+                            <input value="GET STARTED WITH BOODSKAP" class="btn btn-fullcolor submitBtn" type="submit" style="font-size: 14px;padding: 18px 0;width:100%;letter-spacing: 1px;">
+                            <div class="sentMessage mt-5"></div>
                               <div class="col">
                                 
                         </form>
@@ -1250,4 +1251,5 @@
 <script type="text/javascript" src="/js/plugins/_sliders/slick/slick.js"></script>
 
 <script type="text/javascript" src="/js/trigger/kl-slick-slider.js"></script>
+<script type="text/javascript" src="/controllers/industry.js"></script>
 
