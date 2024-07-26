@@ -340,7 +340,9 @@ function sendEmail() {
                 $(".sentMessage").html('<div class="alert alert-success">\n' +
                     '               <strong>Successfully Sent!</strong>' +
                     '            </div>')
-
+                    setTimeout(function() {
+                        $(".sentMessage").html("")
+                    }, 2000);
                 $(".submitBtn").removeAttr('disabled');
                 grecaptcha.reset();
             },
@@ -350,6 +352,9 @@ function sendEmail() {
                 $(".sentMessage").html('<div class="alert alert-danger">\n' +
                     '                <strong>Error!</strong> Something went wrong.\n' +
                     '            </div>')
+                    setTimeout(function() {
+                        $(".sentMessage").html("")
+                    }, 2000);
                 $(".submitBtn").removeAttr('disabled');
                 grecaptcha.reset()
             }

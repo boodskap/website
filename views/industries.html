@@ -1200,18 +1200,18 @@
                 <!--end success message -->
                 
                 <!--begin contact form -->
-                <form id="contact-form" class="contact">
+                <form id="contact-form" class="contact" action="javascript:void(0)" onsubmit="sendGetinTouchEmail()">
                 
-                    <input class="contact-input white-input" required="" name="contact_names" placeholder="Full Name*" type="text">
+                    <input class="contact-input white-input" required="" name="contact_names" placeholder="Full Name*" type="text" id="name" onkeyup="emptySpaceCheck(this);" onkeypress="emptySpaceCheck(this);">
 
-                    <input class="contact-input white-input" required="" name="contact_email" placeholder="Email Adress*" type="email">
+                    <input class="contact-input white-input" required="" name="contact_email" placeholder="Email Adress*" type="email" id="email" onkeyup="emptySpaceCheck(this);" onkeypress="emptySpaceCheck(this);">
 
-                    <input class="contact-input white-input" required="" name="contact_phone" placeholder="Phone Number*" type="text">
+                    <input class="contact-input white-input" required="" name="contact_phone" placeholder="Phone Number*" type="text" id="phone" onkeyup="emptySpaceCheck(this);" onkeypress="emptySpaceCheck(this);">
 
-                    <textarea class="contact-commnent white-input" rows="2" cols="20" name="contact_message" placeholder="Your Message..."></textarea>
+                    <textarea class="contact-commnent white-input" rows="2" cols="20" name="contact_message" placeholder="Your Message..." id="message" onkeyup="emptySpaceCheck(this);" onkeypress="emptySpaceCheck(this);"></textarea>
 
-                    <input value="Send Message" id="submit-button" class="button-prim contact-submit" type="submit">
-
+                    <input value="Send Message" id="submit-button" class="btn btn-fullcolor submitBtn" type="submit">
+                    <div class="sentMessage mt-5"></div>
                 </form>
                 <!--end contact form -->
                 

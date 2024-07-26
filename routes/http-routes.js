@@ -276,6 +276,13 @@ Routes.prototype.init = function () {
             var to = req.body.to;
             var content = req.body.body_text;
             var subject = req.body.subject;
+            var userEmailContent = `<p style="color:black">Dear `+fromName+`,</p>
+
+            <p style="color:black">Thank you for reaching out to us. We appreciate your interest and will get back to you shortly with a response to your inquiry.</p>
+        
+            <p style="color:black">Best regards,<br>
+            Boodskap Support<br>
+            <a href="mailto:info@boodskap.io">info@boodskap.io</a></p>`
             let transporter = nodemailer.createTransport(self.app.conf.email);
             let info = transporter.sendMail({
                 // from: '"' + fromName + '" <' + fromEmail + '>', 
@@ -288,8 +295,22 @@ Routes.prototype.init = function () {
                     self.logger.error(err)
                     res.json({ status: false, result: "Email Triggered Failed" })
                 } else {
-                    res.json({ status: true, result: "Email Triggered" })
-                    self.logger.info(subject, ", Email sent to ", to)
+                    // res.json({ status: true, result: "Email Triggered" })
+                    // self.logger.info(subject, ", Email sent to ", to)
+                    let userInfo = transporter.sendMail({
+                        from:self.app.conf.email.fromEmail,
+                        to: fromEmail, 
+                        subject: "Thank You for Reaching Boodskap – We'll Respond Shortly",
+                        html: userEmailContent, 
+                    }, function (err, stat) {
+                        if (err) {
+                            self.logger.error(err)
+                            res.json({ status: false, result: "User Email Triggered Failed" })
+                        } else {
+                            res.json({ status: true, result: "User Email Triggered" })
+                            self.logger.info(subject, ", User Email sent to ", to)
+                        }
+                    });
                 }
             });
         } else {
@@ -298,30 +319,88 @@ Routes.prototype.init = function () {
     });
 
 
-  
-
-
-
     self.app.post('/sendaccessemail', function (req, res) {
         var content = req.body.body_text;
-        var fromName = req.body.userName;
+        var userName = req.body.userName;
+        var userEmail = req.body.userEmail;
+        var userEmailContent = `<p style="color:black">Dear `+userName+`,</p>
+    <p style="color:black">Thank you for reaching out to us. We appreciate your interest and will get back to you shortly with a response to your inquiry.</p>
+    <p style="color:black">Best regards,<br>
+    Boodskap Support<br>
+    <a href="mailto:info@boodskap.io">info@boodskap.io</a></p>`
             let transporter = nodemailer.createTransport(self.app.conf.email);
             let info = transporter.sendMail({
                 from:self.app.conf.email.fromEmail,
                 to: self.app.conf.email.toEmail, 
-                subject: fromName +' is interested in Industrial IoT',
+                subject: userName +' is interested in Industrial IoT',
                 html: content, 
             }, function (err, stat) {
                 if (err) {
                     self.logger.error(err)
                     res.json({ status: false, result: "Email Triggered Failed" })
                 } else {
-                    res.json({ status: true, result: "Email Triggered" })
-                    self.logger.info(subject, ", Email sent to ", to)
+                    // res.json({ status: true, result: "Email Triggered" })
+                    // self.logger.info(subject, ", Email sent to ", to)
+                    let userInfo = transporter.sendMail({
+                        from:self.app.conf.email.fromEmail,
+                        to: userEmail, 
+                        subject: "Thank You for Reaching Boodskap – We'll Respond Shortly",
+                        html: userEmailContent, 
+                    }, function (err, stat) {
+                        if (err) {
+                            self.logger.error(err)
+                            res.json({ status: false, result: "User Email Triggered Failed" })
+                        } else {
+                            res.json({ status: true, result: "User Email Triggered" })
+                            self.logger.info(subject, ", User Email sent to ", to)
+                        }
+                    });
+                   
                 }
             });
     });
 
+
+    self.app.post('/sendgetintouchemail', function (req, res) {
+        var content = req.body.body_text;
+        var userName = req.body.name;
+        var userEmail = req.body.email;
+        var userEmailContent = `<p style="color:black">Dear `+userName+`,</p>
+    <p style="color:black">Thank you for reaching out to us. We appreciate your interest and will get back to you shortly with a response to your inquiry.</p>
+    <p style="color:black">Best regards,<br>
+    Boodskap Support<br>
+    <a href="mailto:info@boodskap.io">info@boodskap.io</a></p>`
+            let transporter = nodemailer.createTransport(self.app.conf.email);
+            let info = transporter.sendMail({
+                from:self.app.conf.email.fromEmail,
+                to: self.app.conf.email.toEmail, 
+                subject: userName +' wants to Get in touch with you',
+                html: content, 
+            }, function (err, stat) {
+                if (err) {
+                    self.logger.error(err)
+                    res.json({ status: false, result: "Email Triggered Failed" })
+                } else {
+                    // res.json({ status: true, result: "Email Triggered" })
+                    // self.logger.info(subject, ", Email sent to ", to)
+                    let userInfo = transporter.sendMail({
+                        from:self.app.conf.email.fromEmail,
+                        to: userEmail, 
+                        subject: "Thank You for Reaching Boodskap – We'll Respond Shortly",
+                        html: userEmailContent, 
+                    }, function (err, stat) {
+                        if (err) {
+                            self.logger.error(err)
+                            res.json({ status: false, result: "User Email Triggered Failed" })
+                        } else {
+                            res.json({ status: true, result: "User Email Triggered" })
+                            self.logger.info(subject, ", User Email sent to ", to)
+                        }
+                    });
+                   
+                }
+            });
+    });
 
     self.app.get('/404', function (req, res) {
         res.render('404.html', { layout: '', userRole: req.session.role });
@@ -334,4 +413,6 @@ Routes.prototype.init = function () {
 
 
 };
+
+
 
