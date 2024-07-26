@@ -59,14 +59,14 @@
                         <!--end success message -->
                         
                         <!--begin register form -->
-                        <form id="register-form" class="register-form register">                            
+                        <form action="javascript:void(0)" id="register-form" class="register-form register" onsubmit="sendAccessEmail()">                            
                 
-                            <input class="register-input white-input" required="" name="register_names" placeholder="Full Name*" type="text">                            
-                            <input class="register-input white-input" required="" name="register_email" placeholder="Email Address*" type="email">
-                            <input class="register-input white-input" required="" name="register_phone" placeholder="Phone Number*" type="text">
-                            <input class="register-input white-input" required="" name="register_phone" placeholder="Company Name*" type="text">
+                            <input class="register-input white-input" required="" name="register_names" placeholder="Full Name*" type="text" id="userName" onkeyup="emptySpaceCheck(this);" onkeypress="emptySpaceCheck(this);">                            
+                            <input class="register-input white-input" required="" name="register_email" placeholder="Email Address*" type="email" id="userEmail" onkeyup="emptySpaceCheck(this);" onkeypress="emptySpaceCheck(this);">
+                            <input class="register-input white-input" required="" name="register_phone" placeholder="Phone Number*" type="text" id="userPhoneNumber" onkeyup="emptySpaceCheck(this);" onkeypress="emptySpaceCheck(this);">
+                            <input class="register-input white-input" required="" name="register_phone" placeholder="Company Name*" type="text" id="userCompany" onkeyup="emptySpaceCheck(this);" onkeypress="emptySpaceCheck(this);">
 
-                            <select class="register-input white-input" required="" name="register_ticket">
+                            <select class="register-input white-input" required="" name="register_ticket"  id="userDevice">
 
                                 <option value=""># of Devices Required*</option>
                                 <option value="0-500">0-500</option>
@@ -77,7 +77,8 @@
 
                             </select>
                            
-                            <input value="Get Started With Boodskap" class="register-submit button-prim" type="submit">
+                            <input value="GET STARTED WITH BOODSKAP" class="btn btn-fullcolor submitBtn" type="submit" style="font-size: 14px;padding: 18px 0;width:100%;letter-spacing: 1px;">
+                            <div class="sentMessage mt-5"></div>
                               <div class="col">
                                 
                         </form>
@@ -101,7 +102,10 @@
 </section>
 <!--end home section -->
 
+
 <!--begin section-grey -->
+
+
 <section class="section-grey section-top-border" id="about">
 
     <!--begin container -->
@@ -293,6 +297,7 @@
 
 </section>
 <!--end section-grey -->
+<%- include pricing-section.html %>
 
 <!--begin section-white -->
 <section class="section-white section-top-border">
@@ -455,14 +460,14 @@
                 <h3>Frequently Asked Questions</h3>
 
                 <!--begin accordion -->
-                <div class="accordion" id="accordionFAQ">
+                <div class="accordion faq" id="accordionFAQ">
 
                     <!--begin card -->
                     <div class="card">
                         
                         <div class="card-header" id="headingOne">
                             <h5 class="mb-0">
-                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <button class="btn btn-link faq" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                              What is Boodskap.io?
                             </button>
                             </h5>
@@ -483,7 +488,7 @@
 
                         <div class="card-header" id="headingTwo">
                             <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <button class="btn btn-link collapsed faq" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                               What features does Boodskap.io offer?
                             </button>
                             </h5>
@@ -504,7 +509,7 @@
 
                         <div class="card-header" id="headingThree">
                             <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <button class="btn btn-link collapsed faq" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                               Is Boodskap.io suitable for my industry?
                             </button>
                             </h5>
@@ -524,7 +529,7 @@
 
                         <div class="card-header" id="headingFour">
                             <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            <button class="btn btn-link collapsed faq" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                               How does Boodskap.io ensure data security?
 
                             </button>
@@ -1010,7 +1015,7 @@
                         <!--end success_box -->
                         
                         <!--begin newsletter-form -->
-                        <form id="newsletter-form" class="newsletter-form" action="php/newsletter.php" method="post">
+                        <form id="newsletter-form" class="newsletter-form">
 
                             <input id="email_newsletter" type="email" name="nf_email" placeholder="Enter Your Email Address">  
 
@@ -1199,18 +1204,18 @@
                 <!--end success message -->
                 
                 <!--begin contact form -->
-                <form id="contact-form" class="contact">
+                <form id="contact-form" class="contact" action="javascript:void(0)" onsubmit="sendGetinTouchEmail()">
                 
-                    <input class="contact-input white-input" required="" name="contact_names" placeholder="Full Name*" type="text">
+                    <input class="contact-input white-input" required="" name="contact_names" placeholder="Full Name*" type="text" id="name" onkeyup="emptySpaceCheck(this);" onkeypress="emptySpaceCheck(this);">
 
-                    <input class="contact-input white-input" required="" name="contact_email" placeholder="Email Adress*" type="email">
+                    <input class="contact-input white-input" required="" name="contact_email" placeholder="Email Adress*" type="email" id="email" onkeyup="emptySpaceCheck(this);" onkeypress="emptySpaceCheck(this);">
 
-                    <input class="contact-input white-input" required="" name="contact_phone" placeholder="Phone Number*" type="text">
+                    <input class="contact-input white-input" required="" name="contact_phone" placeholder="Phone Number*" type="text" id="phone" onkeyup="emptySpaceCheck(this);" onkeypress="emptySpaceCheck(this);">
 
-                    <textarea class="contact-commnent white-input" rows="2" cols="20" name="contact_message" placeholder="Your Message..."></textarea>
+                    <textarea class="contact-commnent white-input" rows="2" cols="20" name="contact_message" placeholder="Your Message..." id="message" onkeyup="emptySpaceCheck(this);" onkeypress="emptySpaceCheck(this);"></textarea>
 
-                    <input value="Send Message" id="submit-button" class="button-prim contact-submit" type="submit">
-
+                    <input value="Send Message" id="submit-button" class="btn btn-fullcolor submitBtn" type="submit">
+                    <div class="sentMessage mt-5"></div>
                 </form>
                 <!--end contact form -->
                 
@@ -1250,4 +1255,5 @@
 <script type="text/javascript" src="/js/plugins/_sliders/slick/slick.js"></script>
 
 <script type="text/javascript" src="/js/trigger/kl-slick-slider.js"></script>
+<script type="text/javascript" src="/controllers/industry.js"></script>
 
