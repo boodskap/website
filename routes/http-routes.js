@@ -95,8 +95,7 @@ Routes.prototype.init = function () {
 
     self.app.get('/industries/:id', function (req, res) {
         var id = req['params']['id']
-
-
+// Industrial automation
         if (id === 'predictive-maintenance') {
             res.render('industries/predictive.html', { layout: '' });
         }
@@ -140,6 +139,63 @@ Routes.prototype.init = function () {
 
     });
 
+    self.app.get('/healthcare', function (req, res) {
+        res.render('industries/healthcare/healthcaremonitoring.html', { layout: '' });
+    });
+
+    self.app.get('/healthcare/:id', function (req, res) {
+        var id = req['params']['id']
+        
+        // Health Care Monitoring
+        
+        // if (id === 'healthcare-monitoring') {
+        //     res.render('industries/healthcare/healthcaremonitoring.html', { layout: '' });
+        // }
+        if (id === 'remote-patient-monitoring') {
+            res.render('industries/healthcare/remote-patient-monitoring.html', { layout: '' });
+        }
+        else if (id === 'chronic-design-management') {
+            res.render('industries/healthcare/chronic-design-management.html', { layout: '' });
+        }
+        else if (id === 'telemedicine') {
+            res.render('industries/healthcare/telemedicine.html', { layout: '' });
+        }
+        else if (id === 'fitness-wellness-monitoring') {
+            res.render('industries/healthcare/fitness-wellness-monitoring.html', { layout: '' });
+        }
+        else if (id === 'medication-management') {
+            res.render('industries/healthcare/medication-management.html', { layout: '' });
+        }
+        else if (id === 'elderly-care') {
+            res.render('industries/healthcare/elderly-care.html', { layout: '' });
+        }
+        else if (id === 'hospital-asset-tracking') {
+            res.render('industries/healthcare/hospital-asset-tracking.html', { layout: '' });
+        }
+        else if (id === 'patient-environment-monitoring') {
+            res.render('industries/healthcare/patient-environment-monitoring.html', { layout: '' });
+        }
+        else if (id === 'surgical-assistance') {
+            res.render('industries/healthcare/surgical-assistance.html', { layout: '' });
+        }
+        else if (id === 'emergency-response') {
+            res.render('industries/healthcare/emergency-response.html', { layout: '' });
+        }
+        else if (id === 'blog-1') {
+            res.render('industries/healthcare/blog1.html', { layout: '' });
+        }
+        else if (id === 'blog-2') {
+            res.render('industries/healthcare/blog2.html', { layout: '' });
+        }
+        else if (id === 'blog-3') {
+            res.render('industries/healthcare/blog3.html', { layout: '' });
+        }
+        else {
+            res.redirect("/404");
+        }
+
+
+    });
 
     /*self.app.get('/solutions/:id', function (req, res) {
         res.render('solutions.html',{layout:''});
