@@ -393,11 +393,10 @@ Routes.prototype.init = function () {
                 html: content, 
             }, function (err, stat) {
                 if (err) {
-                    self.logger.error(err)
+                    console.log(new Date() + "| error in mail sent =>",err)
                     res.json({ status: false, result: "Email Triggered Failed" })
                 } else {
                     // res.json({ status: true, result: "Email Triggered" })
-                    // self.logger.info(subject, ", Email sent to ", to)
                     let userInfo = transporter.sendMail({
                         from:self.app.conf.email.fromEmail,
                         to: fromEmail, 
@@ -405,11 +404,11 @@ Routes.prototype.init = function () {
                         html: userEmailContent, 
                     }, function (err, stat) {
                         if (err) {
-                            self.logger.error(err)
+                            console.log(new Date() + "| error in mail sent =>",err)
                             res.json({ status: false, result: "User Email Triggered Failed" })
                         } else {
                             res.json({ status: true, result: "User Email Triggered" })
-                            self.logger.info(subject, ", User Email sent to ", to)
+                            console.log(new Date() + "| mail sent successfully")
                         }
                     });
                 }
@@ -522,11 +521,10 @@ Routes.prototype.init = function () {
                 html: content, 
             }, function (err, stat) {
                 if (err) {
-                    self.logger.error(err)
+                    console.log(new Date() + "| error in mail sent =>",err)
                     res.json({ status: false, result: "Email Triggered Failed" })
                 } else {
                     // res.json({ status: true, result: "Email Triggered" })
-                    // self.logger.info(subject, ", Email sent to ", to)
                     let userInfo = transporter.sendMail({
                         from:self.app.conf.email.fromEmail,
                         to: userEmail, 
@@ -534,11 +532,11 @@ Routes.prototype.init = function () {
                         html: userEmailContent, 
                     }, function (err, stat) {
                         if (err) {
-                            self.logger.error(err)
+                            console.log(new Date() + "| error in mail sent =>",err)
                             res.json({ status: false, result: "User Email Triggered Failed" })
                         } else {
                             res.json({ status: true, result: "User Email Triggered" })
-                            self.logger.info(subject, ", User Email sent to ", to)
+                            console.log(new Date() + "| mail sent successfully")
                         }
                     });
                    
@@ -650,11 +648,10 @@ Routes.prototype.init = function () {
                 html: content, 
             }, function (err, stat) {
                 if (err) {
-                    self.logger.error(err)
+                    console.log(new Date() + "| error in mail sent =>",err)
                     res.json({ status: false, result: "Email Triggered Failed" })
                 } else {
                     // res.json({ status: true, result: "Email Triggered" })
-                    // self.logger.info(subject, ", Email sent to ", to)
                     let userInfo = transporter.sendMail({
                         from:self.app.conf.email.fromEmail,
                         to: userEmail, 
@@ -662,11 +659,12 @@ Routes.prototype.init = function () {
                         html: userEmailContent, 
                     }, function (err, stat) {
                         if (err) {
-                            self.logger.error(err)
+                          
+                            console.log(new Date() + "| error in mail sent =>",err)
                             res.json({ status: false, result: "User Email Triggered Failed" })
                         } else {
                             res.json({ status: true, result: "User Email Triggered" })
-                            self.logger.info(subject, ", User Email sent to ", to)
+                            console.log(new Date() + "| mail sent successfully")
                         }
                     });
                    
