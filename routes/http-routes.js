@@ -201,6 +201,56 @@ Routes.prototype.init = function () {
         res.render('solutions.html',{layout:''});
     });*/
 
+    
+    self.app.get('/retail', function (req, res) {
+        res.render('industries/retail/retail-inventory-management.html', { layout: '' });
+    });
+
+    self.app.get('/retail/:id', function (req, res) {
+        var id = req['params']['id']
+        
+       
+        if (id === 'smart-shelves') {
+            res.render('industries/retail/smart-shelves.html', { layout: '' });
+        }
+        else if (id === 'automated-checkout') {
+            res.render('industries/retail/automated-checkout.html', { layout: '' });
+        }
+        else if (id === 'inventory-tracking') {
+            res.render('industries/retail/inventory-tracking.html', { layout: '' });
+        }
+        else if (id === 'supply-chain-visibility') {
+            res.render('industries/retail/supply-chain-visibility.html', { layout: '' });
+        }
+        else if (id === 'predictive-maintenance') {
+            res.render('industries/retail/predictive-maintenance.html', { layout: '' });
+        }
+        else if (id === 'security-loss-prevention') {
+            res.render('industries/retail/security-loss-prevention.html', { layout: '' });
+        }
+        else if (id === 'personalized-marketing') {
+            res.render('industries/retail/personalized-marketing.html', { layout: '' });
+        }
+        else if (id === 'environmental-monitoring') {
+            res.render('industries/retail/environmental-monitoring.html', { layout: '' });
+        }
+        else if (id === 'smart-mirrors') {
+            res.render('industries/retail/smart-mirrors.html', { layout: '' });
+        }
+        else if (id === 'blog-1') {
+            res.render('industries/retail/blog1.html', { layout: '' });
+        }
+        else if (id === 'blog-2') {
+            res.render('industries/retail/blog2.html', { layout: '' });
+        }
+        else if (id === 'blog-3') {
+            res.render('industries/retail/blog3.html', { layout: '' });
+        }
+        else {
+            res.redirect("/404");
+        }
+    });
+
 
     self.app.get('/company', function (req, res) {
         res.render('company.html', { layout: '' });
