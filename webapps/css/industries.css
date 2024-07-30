@@ -1349,7 +1349,7 @@ p.contact_success_box{
 }
 
 #newsletter-form #submit-button-newsletter {
-    width: 165px;
+    /* width: 165px; */
 	height:65px;
     background: #fff;
 	border: none;

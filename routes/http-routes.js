@@ -95,8 +95,7 @@ Routes.prototype.init = function () {
 
     self.app.get('/industries/:id', function (req, res) {
         var id = req['params']['id']
-
-
+// Industrial automation
         if (id === 'predictive-maintenance') {
             res.render('industries/predictive.html', { layout: '' });
         }
@@ -140,6 +139,63 @@ Routes.prototype.init = function () {
 
     });
 
+    self.app.get('/healthcare', function (req, res) {
+        res.render('industries/healthcare/healthcaremonitoring.html', { layout: '' });
+    });
+
+    self.app.get('/healthcare/:id', function (req, res) {
+        var id = req['params']['id']
+        
+        // Health Care Monitoring
+        
+        // if (id === 'healthcare-monitoring') {
+        //     res.render('industries/healthcare/healthcaremonitoring.html', { layout: '' });
+        // }
+        if (id === 'remote-patient-monitoring') {
+            res.render('industries/healthcare/remote-patient-monitoring.html', { layout: '' });
+        }
+        else if (id === 'chronic-design-management') {
+            res.render('industries/healthcare/chronic-design-management.html', { layout: '' });
+        }
+        else if (id === 'telemedicine') {
+            res.render('industries/healthcare/telemedicine.html', { layout: '' });
+        }
+        else if (id === 'fitness-wellness-monitoring') {
+            res.render('industries/healthcare/fitness-wellness-monitoring.html', { layout: '' });
+        }
+        else if (id === 'medication-management') {
+            res.render('industries/healthcare/medication-management.html', { layout: '' });
+        }
+        else if (id === 'elderly-care') {
+            res.render('industries/healthcare/elderly-care.html', { layout: '' });
+        }
+        else if (id === 'hospital-asset-tracking') {
+            res.render('industries/healthcare/hospital-asset-tracking.html', { layout: '' });
+        }
+        else if (id === 'patient-environment-monitoring') {
+            res.render('industries/healthcare/patient-environment-monitoring.html', { layout: '' });
+        }
+        else if (id === 'surgical-assistance') {
+            res.render('industries/healthcare/surgical-assistance.html', { layout: '' });
+        }
+        else if (id === 'emergency-response') {
+            res.render('industries/healthcare/emergency-response.html', { layout: '' });
+        }
+        else if (id === 'blog-1') {
+            res.render('industries/healthcare/blog1.html', { layout: '' });
+        }
+        else if (id === 'blog-2') {
+            res.render('industries/healthcare/blog2.html', { layout: '' });
+        }
+        else if (id === 'blog-3') {
+            res.render('industries/healthcare/blog3.html', { layout: '' });
+        }
+        else {
+            res.redirect("/404");
+        }
+
+
+    });
 
     /*self.app.get('/solutions/:id', function (req, res) {
         res.render('solutions.html',{layout:''});
@@ -226,6 +282,7 @@ Routes.prototype.init = function () {
     });
 
 
+   
 
 
     //Elastic Email
@@ -337,11 +394,10 @@ Routes.prototype.init = function () {
                 html: content, 
             }, function (err, stat) {
                 if (err) {
-                    self.logger.error(err)
+                    console.log(new Date() + "| error in mail sent =>",err)
                     res.json({ status: false, result: "Email Triggered Failed" })
                 } else {
                     // res.json({ status: true, result: "Email Triggered" })
-                    // self.logger.info(subject, ", Email sent to ", to)
                     let userInfo = transporter.sendMail({
                         from:self.app.conf.email.fromEmail,
                         to: fromEmail, 
@@ -349,11 +405,11 @@ Routes.prototype.init = function () {
                         html: userEmailContent, 
                     }, function (err, stat) {
                         if (err) {
-                            self.logger.error(err)
+                            console.log(new Date() + "| error in mail sent =>",err)
                             res.json({ status: false, result: "User Email Triggered Failed" })
                         } else {
                             res.json({ status: true, result: "User Email Triggered" })
-                            self.logger.info(subject, ", User Email sent to ", to)
+                            console.log(new Date() + "| mail sent successfully")
                         }
                     });
                 }
@@ -466,11 +522,10 @@ Routes.prototype.init = function () {
                 html: content, 
             }, function (err, stat) {
                 if (err) {
-                    self.logger.error(err)
+                    console.log(new Date() + "| error in mail sent =>",err)
                     res.json({ status: false, result: "Email Triggered Failed" })
                 } else {
                     // res.json({ status: true, result: "Email Triggered" })
-                    // self.logger.info(subject, ", Email sent to ", to)
                     let userInfo = transporter.sendMail({
                         from:self.app.conf.email.fromEmail,
                         to: userEmail, 
@@ -478,11 +533,11 @@ Routes.prototype.init = function () {
                         html: userEmailContent, 
                     }, function (err, stat) {
                         if (err) {
-                            self.logger.error(err)
+                            console.log(new Date() + "| error in mail sent =>",err)
                             res.json({ status: false, result: "User Email Triggered Failed" })
                         } else {
                             res.json({ status: true, result: "User Email Triggered" })
-                            self.logger.info(subject, ", User Email sent to ", to)
+                            console.log(new Date() + "| mail sent successfully")
                         }
                     });
                    
@@ -594,11 +649,10 @@ Routes.prototype.init = function () {
                 html: content, 
             }, function (err, stat) {
                 if (err) {
-                    self.logger.error(err)
+                    console.log(new Date() + "| error in mail sent =>",err)
                     res.json({ status: false, result: "Email Triggered Failed" })
                 } else {
                     // res.json({ status: true, result: "Email Triggered" })
-                    // self.logger.info(subject, ", Email sent to ", to)
                     let userInfo = transporter.sendMail({
                         from:self.app.conf.email.fromEmail,
                         to: userEmail, 
@@ -606,17 +660,182 @@ Routes.prototype.init = function () {
                         html: userEmailContent, 
                     }, function (err, stat) {
                         if (err) {
-                            self.logger.error(err)
+                          
+                            console.log(new Date() + "| error in mail sent =>",err)
                             res.json({ status: false, result: "User Email Triggered Failed" })
                         } else {
                             res.json({ status: true, result: "User Email Triggered" })
-                            self.logger.info(subject, ", User Email sent to ", to)
+                            console.log(new Date() + "| mail sent successfully")
                         }
                     });
                    
                 }
             });
     });
+
+    self.app.post('/sendnewsletteremail', function (req, res) {
+        var content = req.body.body_text;
+        var userEmail = req.body.email;
+
+
+        var userEmailContent = `<head>
+  <style>body {
+      font-family: 'Playfair Display', serif;
+      font-family: 'Roboto', sans-serif;
+    }
+    .container {
+      width: 100%;
+      background: #E6E6E6;
+    }
+    .industrySection {
+      width: 80%;
+      margin: 0 auto;
+      background: #fff;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    .contentSection {
+      padding: 20px 30px 10px 30px;
+    }
+    .cards {
+      margin-top: 10px;
+      background-color: #fcefef;
+      width: 80%;
+      margin: auto;
+      text-align: center; /* Center align the content */
+    }
+    .cards img {
+      max-width: 65%;
+      height: auto;
+      margin: 3px 0;
+    }
+    .footer-label {
+      color: #cd2122;
+      font-size: 15px;
+      font-weight: 600;
+      width: 100%;
+      text-align: right;
+      margin-right: 10px;
+      margin-top: 13px;
+    }
+    .text-black {
+      color: black;
+    }
+    .social-icons {
+        margin: 0px;
+    list-style: none;
+    padding: 10px 0px 0px 0px;
+ 
+    gap: 10px;
+    }
+    .social-icons li {
+      display: inline-block;
+    }
+    .social-icons li a {
+      text-decoration: none;
+      color: inherit;
+      font-size: 20px; /* Adjust the size of icons */
+    }
+    @media (max-width: 768px) {
+      .cards img {
+        max-width: 50%;
+      }
+      .footer-label {
+        font-size: 13px;
+      }
+    }
+    @media (max-width: 468px) {
+      .footer-label {
+        font-size: 11px;
+        margin-top: 8px;
+      }
+      .title {
+        font-weight: bold;  
+        color: black;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header" style="text-align:center;padding-top:20px !important">
+      <img src="https://boodskap.io/images/assets/boodskap-logo.png"  width="200"  />
+    </div>
+    <div class="industrySection">
+      <div class="contentSection">
+        <p class="text-black" style="font-weight:bold">Dear Subscriber,</p>
+        <p class="text-black">We just wanted to take a moment to thank you for being a valued community member. Your support means the world to us, and we’re grateful to have you with us on this journey.</p>
+        <p class="text-black" style="font-weight:bold;margin-bottom:3px !important">Join Our Community</p>
+        <p class="text-black" style="margin-top:0px !important">We love hearing from you! Follow us on social media platforms to stay updated and join the conversation. Share your thoughts, feedback, and experiences with us. Don’t forget to tag us we might feature you in our next post!</p>
+      </div>
+    </div>
+    <div class="cards">
+        <ul class="social-icons" style="text-align:center; list-style-type:none; padding:0;">
+        <li style="display:inline-block; margin: 0 5px;">
+            <a href="https://www.facebook.com/boodskapiot/" target="_blank" title="Facebook">
+              <img src="https://boodskap.io/images/assets/facebook.png" style="width:30px !important" alt="Facebook">
+            </a>
+          </li>
+          <li style="display:inline-block; margin: 0 5px;">
+            <a href="https://twitter.com/boodskapIOT" target="_blank" title="Twitter">
+              <img src="https://boodskap.io/images/assets/twitter.png" style="width:30px !important" alt="Twitter">
+            </a>
+          </li>
+          <li style="display:inline-block; margin: 0 5px;">
+            <a href="https://www.linkedin.com/company/16180585/" target="_blank" title="Linkedin">
+              <img src="https://boodskap.io/images/assets/linkedin.png" style="width:30px !important"  alt="Linkedin">
+            </a>
+          </li>
+          <li style="display:inline-block; margin: 0 5px;">
+            <a href="https://www.youtube.com/channel/UC1yOEmlV7mBfKI1aHSMk3GQ" target="_blank" title="Youtube">
+              <img src="https://boodskap.io/images/assets/youtube.png"  style="width:30px !important" alt="Youtube">
+            </a>
+          </li>
+        </ul>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <img src="https://boodskap.io/images/powered-by-boodskap.png" />
+        <label class="footer-label">
+        &copy; <span>`+new Date().getFullYear()+`</span>  All rights reserved
+        </label>
+      </div>
+      
+    
+    </div>
+  </div>
+</body>`;
+
+            let transporter = nodemailer.createTransport(self.app.conf.email);
+            let info = transporter.sendMail({
+                from:self.app.conf.email.fromEmail,
+                to: self.app.conf.email.toEmail, 
+                subject: userEmail +' subscribed on Getting News Letter',
+                html: content, 
+            }, function (err, stat) {
+                if (err) {
+                    console.log(new Date() + "| error in mail sent =>",err)
+                    res.json({ status: false, result: "Email Triggered Failed" })
+                } else {
+                    res.json({ status: true, result: "Email Triggered" })
+                    let userInfo = transporter.sendMail({
+                        from:self.app.conf.email.fromEmail,
+                        to: userEmail, 
+                        subject: "A Big Thank You from Boodskap !",
+                        html: userEmailContent, 
+                    }, function (err, stat) {
+                        if (err) {
+                          
+                            console.log(new Date() + "| error in mail sent =>",err)
+                            res.json({ status: false, result: "User Email Triggered Failed" })
+                        } else {
+                            res.json({ status: true, result: "User Email Triggered" })
+                            console.log(new Date() + "| mail sent successfully")
+                        }
+                    });
+                   
+                }
+            });
+    });
+
 
     self.app.get('/404', function (req, res) {
         res.render('404.html', { layout: '', userRole: req.session.role });
