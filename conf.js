@@ -23,7 +23,7 @@ var conf = {
         },
         fromName: 'Platform',
         fromEmail: 'Platform@boodskap.io',
-        toEmail: ['priyadharshinit@boodskap.io']
+        toEmail: ['priyadharshinit@boodskap.io','nancya@boodskap.io']
     },
     captcha : {
         key : "6LcTHzYUAAAAAI9Qqq_q2hqEU99EXLtE0ueaWxGK"
