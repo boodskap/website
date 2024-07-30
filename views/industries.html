@@ -1015,12 +1015,15 @@
                         <!--end success_box -->
                         
                         <!--begin newsletter-form -->
-                        <form id="newsletter-form" class="newsletter-form">
+                        <form id="newsletter-form" class="newsletter-form" action="javascript:void(0)" onsubmit="sendNewsletterEmail()">
 
-                            <input id="email_newsletter" type="email" name="nf_email" placeholder="Enter Your Email Address">  
+                            <input id="email_newsletter" required type="email" name="nf_email" placeholder="Enter Your Email Address" onkeyup="emptySpaceCheck(this);" onkeypress="emptySpaceCheck(this);">  
 
-                            <input type="submit" value="GET STARTED!" class="button-prim" id="submit-button-newsletter">
-
+                            <input type="submit" value="GET LATEST UPDATES" class="button-prim submitBtn p-2" style="border: 2px solid white !important;color: #cd2122 !important;
+                            background-color: #fff !important;
+                            background-color: #ffff;
+                            " id="submit-button-newsletter">
+                         <div class="sentMessage mt-5" style="width:50%;margin:auto"></div>
                         </form>
                         <!--end newsletter-form -->
                     
