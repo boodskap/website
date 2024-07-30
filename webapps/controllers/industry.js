@@ -515,7 +515,6 @@ function sendNewsletterEmail(){
         body_text: content,
     }
 
-    console.log(data);
 
     $.ajax({
         type: 'POST',
