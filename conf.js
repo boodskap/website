@@ -18,12 +18,12 @@ var conf = {
         port: 2525,
         secure: false, 
         auth: {
-            user: "noreply@dtaservices.com", 
-            pass: "13ACF88941BB768C995C70C8C90BB9E5639F",
+            user: "website@boodskap.io", 
+            pass: "15B329BABE5670BAD301D758EF7A2AC9113B",
         },
-        fromName: 'Platform',
+        fromName: 'Boodskap Web',
         fromEmail: 'Platform@boodskap.io',
-        toEmail: ['priyadharshinit@boodskap.io','nancya@boodskap.io']
+        toEmail: ['priyadharshinit@boodskap.io','nancya@boodskap.io', 'info@boodskap.io']
     },
     captcha : {
         key : "6LcTHzYUAAAAAI9Qqq_q2hqEU99EXLtE0ueaWxGK"
