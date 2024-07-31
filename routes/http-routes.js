@@ -140,7 +140,7 @@ Routes.prototype.init = function () {
     });
 
     self.app.get('/healthcare', function (req, res) {
-        res.render('industries/healthcare/healthcaremonitoring.html', { layout: '' });
+        res.render('industries/healthcare/index.html', { layout: '' });
     });
 
     self.app.get('/healthcare/:id', function (req, res) {
@@ -193,9 +193,75 @@ Routes.prototype.init = function () {
         else {
             res.redirect("/404");
         }
+    });
+    // Smart Cities
+
+    self.app.get('/smartcities', function (req, res) {
+        res.render('industries/smartcities/index.html', { layout: '' });
+    });
+
+    self.app.get('/smartcities/:id', function (req, res) {
+        var id = req['params']['id']
+        
+        
+        if (id === 'remote-patient-monitoring') {
+            res.render('industries/smartcities/remote-patient-monitoring.html', { layout: '' });
+        }
+        else if (id === 'smart-lighting') {
+            res.render('industries/smartcities/smart-lighting.html', { layout: '' });
+        }
+        else if (id === 'smart-traffic-management') {
+            res.render('industries/smartcities/smart-traffic-management.html', { layout: '' });
+        }
+        else if (id === 'waste-management') {
+            res.render('industries/smartcities/waste-management.html', { layout: '' });
+        }
+        else if (id === 'environmental-monitoring') {
+            res.render('industries/smartcities/environmental-monitoring.html', { layout: '' });
+        }
+        else if (id === 'smart-parking') {
+            res.render('industries/smartcities/smart-parking.html', { layout: '' });
+        }
+        else if (id === 'hospital-asset-tracking') {
+            res.render('industries/smartcities/hospital-asset-tracking.html', { layout: '' });
+        }
+        else if (id === 'patient-environment-monitoring') {
+            res.render('industries/smartcities/patient-environment-monitoring.html', { layout: '' });
+        }
+        else if (id === 'public-safety') {
+            res.render('industries/smartcities/public-safety.html', { layout: '' });
+        }
+        else if (id === 'smart-utilities') {
+            res.render('industries/smartcities/smart-utilities.html', { layout: '' });
+        }
+        else if (id === 'smart-buildings') {
+            res.render('industries/smartcities/smart-buildings.html', { layout: '' });
+        }
+        else if (id === 'public-transport-management') {
+            res.render('industries/smartcities/public-transport-management.html', { layout: '' });
+        }
+        else if (id === 'smart-water-management') {
+            res.render('industries/smartcities/smart-water-management.html', { layout: '' });
+        }
+        else if (id === 'blog-1') {
+            res.render('industries/smartcities/blog1.html', { layout: '' });
+        }
+        else if (id === 'blog-2') {
+            res.render('industries/smartcities/blog2.html', { layout: '' });
+        }
+        else if (id === 'blog-3') {
+            res.render('industries/smartcities/blog3.html', { layout: '' });
+        }
+        else {
+            res.redirect("/404");
+        }
 
 
     });
+
+
+    
+
 
     /*self.app.get('/solutions/:id', function (req, res) {
         res.render('solutions.html',{layout:''});
