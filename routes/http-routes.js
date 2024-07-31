@@ -263,6 +263,7 @@ Routes.prototype.init = function () {
     
 
 
+
     /*self.app.get('/solutions/:id', function (req, res) {
         res.render('solutions.html',{layout:''});
     });*/
