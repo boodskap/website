@@ -90,47 +90,47 @@ Routes.prototype.init = function () {
     });
 
     self.app.get('/industries', function (req, res) {
-        res.render('industries.html', { layout: '' });
+        res.render('industries/industrial/index.html', { layout: '' });
     });
 
     self.app.get('/industries/:id', function (req, res) {
         var id = req['params']['id']
 // Industrial automation
         if (id === 'predictive-maintenance') {
-            res.render('industries/predictive.html', { layout: '' });
+            res.render('industries/industrial/predictive.html', { layout: '' });
         }
         else if (id === 'asset-tracking') {
-            res.render('industries/ioTAssetTracking.html', { layout: '' });
+            res.render('industries/industrial/ioTAssetTracking.html', { layout: '' });
         }
         else if (id === 'condition-monitoring') {
-            res.render('industries/ioTConditionMonitoring.html', { layout: '' });
+            res.render('industries/industrial/ioTConditionMonitoring.html', { layout: '' });
         }
         else if (id === 'energy-management') {
-            res.render('industries/ioTEnergyManagement.html', { layout: '' });
+            res.render('industries/industrial/ioTEnergyManagement.html', { layout: '' });
         }
         else if (id === 'supply-chain') {
-            res.render('industries/ioTSupplyChain.html', { layout: '' });
+            res.render('industries/industrial/ioTSupplyChain.html', { layout: '' });
         }
         else if (id === 'quality-control') {
-            res.render('industries/ioTQualityControl.html', { layout: '' });
+            res.render('industries/industrial/ioTQualityControl.html', { layout: '' });
         }
         else if (id === 'remote-monitoring') {
-            res.render('industries/ioTRemoteMonitoring.html', { layout: '' });
+            res.render('industries/industrial/ioTRemoteMonitoring.html', { layout: '' });
         }
         else if (id === 'worker-safety') {
-            res.render('industries/ioTWorkerSafety.html', { layout: '' });
+            res.render('industries/industrial/ioTWorkerSafety.html', { layout: '' });
         }
         else if (id === 'smart-manufacturing') {
-            res.render('industries/ioTSmartManufacturing.html', { layout: '' });
+            res.render('industries/industrial/ioTSmartManufacturing.html', { layout: '' });
         }
         else if (id === 'blog-1') {
-            res.render('industries/blog1.html', { layout: '' });
+            res.render('industries/industrial/blog1.html', { layout: '' });
         }
         else if (id === 'blog-2') {
-            res.render('industries/blog2.html', { layout: '' });
+            res.render('industries/industrial/blog2.html', { layout: '' });
         }
         else if (id === 'blog-3') {
-            res.render('industries/blog3.html', { layout: '' });
+            res.render('industries/industrial/blog3.html', { layout: '' });
         }
         else {
             res.redirect("/404");
