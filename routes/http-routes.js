@@ -259,6 +259,63 @@ Routes.prototype.init = function () {
 
     });
 
+    self.app.get('/environmentmonitoring', function (req, res) {
+        res.render('industries/environmentmonitoring/index.html', { layout: '' });
+    });
+
+    self.app.get('/smartcities/:id', function (req, res) {
+        var id = req['params']['id']
+        
+        
+        if (id === 'air-quality-monitoring') {
+            res.render('industries/environmentmonitoring/air-quality-monitoring.html', { layout: '' });
+        }
+        else if (id === 'water-quality-monitoring') {
+            res.render('industries/environmentmonitoring/water-quality-monitoring.html', { layout: '' });
+        }
+        else if (id === 'soil-moisture-monitoring') {
+            res.render('industries/environmentmonitoring/soil-moisture-monitoring.html', { layout: '' });
+        }
+        else if (id === 'weather-monitoring') {
+            res.render('industries/environmentmonitoring/weather-monitoring.html', { layout: '' });
+        }
+        else if (id === 'noise-monitoring') {
+            res.render('industries/environmentmonitoring/noise-monitoring.html', { layout: '' });
+        }
+        else if (id === 'radiation-monitoring') {
+            res.render('industries/environmentmonitoring/radiation-monitoring.html', { layout: '' });
+        }
+        else if (id === 'wildlife-monitoring') {
+            res.render('industries/environmentmonitoring/wildlife-monitoring.html', { layout: '' });
+        }
+        else if (id === 'forest-fire-detection') {
+            res.render('industries/environmentmonitoring/forest-fire-detection.html', { layout: '' });
+        }
+        else if (id === 'pollution-monitoring') {
+            res.render('industries/environmentmonitoring/pollution-monitoring.html', { layout: '' });
+        }
+        else if (id === 'smart-buildings') {
+            res.render('industries/environmentmonitoring/smart-buildings.html', { layout: '' });
+        }
+        else if (id === 'climate-change-monitoring') {
+            res.render('industries/environmentmonitoring/climate-change-monitoring.html', { layout: '' });
+        }
+        else if (id === 'blog-1') {
+            res.render('industries/environmentmonitoring/blog1.html', { layout: '' });
+        }
+        else if (id === 'blog-2') {
+            res.render('industries/environmentmonitoring/blog2.html', { layout: '' });
+        }
+        else if (id === 'blog-3') {
+            res.render('industries/environmentmonitoring/blog3.html', { layout: '' });
+        }
+        else {
+            res.redirect("/404");
+        }
+
+
+    });
+
 
     
 
