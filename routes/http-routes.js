@@ -19,7 +19,7 @@ Routes.prototype.init = function () {
 
     
     self.app.get('/', function (req, res) {
-        res.render('home-v2.html', { layout: '' });
+        res.render('index.html', { layout: '' });
     });
 
     self.app.get('/platform', function (req, res) {
@@ -263,7 +263,7 @@ Routes.prototype.init = function () {
         res.render('industries/environmentmonitoring/index.html', { layout: '' });
     });
 
-    self.app.get('/smartcities/:id', function (req, res) {
+    self.app.get('/environmentmonitoring/:id', function (req, res) {
         var id = req['params']['id']
         
         
