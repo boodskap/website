@@ -19,7 +19,7 @@ Routes.prototype.init = function () {
 
     
     self.app.get('/', function (req, res) {
-        res.render('home-v2.html', { layout: '' });
+        res.render('index.html', { layout: '' });
     });
 
     self.app.get('/platform', function (req, res) {
@@ -90,47 +90,47 @@ Routes.prototype.init = function () {
     });
 
     self.app.get('/industries', function (req, res) {
-        res.render('industries.html', { layout: '' });
+        res.render('industries/industrial/index.html', { layout: '' });
     });
 
     self.app.get('/industries/:id', function (req, res) {
         var id = req['params']['id']
 // Industrial automation
         if (id === 'predictive-maintenance') {
-            res.render('industries/predictive.html', { layout: '' });
+            res.render('industries/industrial/predictive.html', { layout: '' });
         }
         else if (id === 'asset-tracking') {
-            res.render('industries/ioTAssetTracking.html', { layout: '' });
+            res.render('industries/industrial/ioTAssetTracking.html', { layout: '' });
         }
         else if (id === 'condition-monitoring') {
-            res.render('industries/ioTConditionMonitoring.html', { layout: '' });
+            res.render('industries/industrial/ioTConditionMonitoring.html', { layout: '' });
         }
         else if (id === 'energy-management') {
-            res.render('industries/ioTEnergyManagement.html', { layout: '' });
+            res.render('industries/industrial/ioTEnergyManagement.html', { layout: '' });
         }
         else if (id === 'supply-chain') {
-            res.render('industries/ioTSupplyChain.html', { layout: '' });
+            res.render('industries/industrial/ioTSupplyChain.html', { layout: '' });
         }
         else if (id === 'quality-control') {
-            res.render('industries/ioTQualityControl.html', { layout: '' });
+            res.render('industries/industrial/ioTQualityControl.html', { layout: '' });
         }
         else if (id === 'remote-monitoring') {
-            res.render('industries/ioTRemoteMonitoring.html', { layout: '' });
+            res.render('industries/industrial/ioTRemoteMonitoring.html', { layout: '' });
         }
         else if (id === 'worker-safety') {
-            res.render('industries/ioTWorkerSafety.html', { layout: '' });
+            res.render('industries/industrial/ioTWorkerSafety.html', { layout: '' });
         }
         else if (id === 'smart-manufacturing') {
-            res.render('industries/ioTSmartManufacturing.html', { layout: '' });
+            res.render('industries/industrial/ioTSmartManufacturing.html', { layout: '' });
         }
         else if (id === 'blog-1') {
-            res.render('industries/blog1.html', { layout: '' });
+            res.render('industries/industrial/blog1.html', { layout: '' });
         }
         else if (id === 'blog-2') {
-            res.render('industries/blog2.html', { layout: '' });
+            res.render('industries/industrial/blog2.html', { layout: '' });
         }
         else if (id === 'blog-3') {
-            res.render('industries/blog3.html', { layout: '' });
+            res.render('industries/industrial/blog3.html', { layout: '' });
         }
         else {
             res.redirect("/404");
@@ -140,7 +140,7 @@ Routes.prototype.init = function () {
     });
 
     self.app.get('/healthcare', function (req, res) {
-        res.render('industries/healthcare/healthcaremonitoring.html', { layout: '' });
+        res.render('industries/healthcare/index.html', { layout: '' });
     });
 
     self.app.get('/healthcare/:id', function (req, res) {
@@ -193,9 +193,133 @@ Routes.prototype.init = function () {
         else {
             res.redirect("/404");
         }
+    });
+    // Smart Cities
+
+    self.app.get('/smartcities', function (req, res) {
+        res.render('industries/smartcities/index.html', { layout: '' });
+    });
+
+    self.app.get('/smartcities/:id', function (req, res) {
+        var id = req['params']['id']
+        
+        
+        if (id === 'remote-patient-monitoring') {
+            res.render('industries/smartcities/remote-patient-monitoring.html', { layout: '' });
+        }
+        else if (id === 'smart-lighting') {
+            res.render('industries/smartcities/smart-lighting.html', { layout: '' });
+        }
+        else if (id === 'smart-traffic-management') {
+            res.render('industries/smartcities/smart-traffic-management.html', { layout: '' });
+        }
+        else if (id === 'waste-management') {
+            res.render('industries/smartcities/waste-management.html', { layout: '' });
+        }
+        else if (id === 'environmental-monitoring') {
+            res.render('industries/smartcities/environmental-monitoring.html', { layout: '' });
+        }
+        else if (id === 'smart-parking') {
+            res.render('industries/smartcities/smart-parking.html', { layout: '' });
+        }
+        else if (id === 'hospital-asset-tracking') {
+            res.render('industries/smartcities/hospital-asset-tracking.html', { layout: '' });
+        }
+        else if (id === 'patient-environment-monitoring') {
+            res.render('industries/smartcities/patient-environment-monitoring.html', { layout: '' });
+        }
+        else if (id === 'public-safety') {
+            res.render('industries/smartcities/public-safety.html', { layout: '' });
+        }
+        else if (id === 'smart-utilities') {
+            res.render('industries/smartcities/smart-utilities.html', { layout: '' });
+        }
+        else if (id === 'smart-buildings') {
+            res.render('industries/smartcities/smart-buildings.html', { layout: '' });
+        }
+        else if (id === 'public-transport-management') {
+            res.render('industries/smartcities/public-transport-management.html', { layout: '' });
+        }
+        else if (id === 'smart-water-management') {
+            res.render('industries/smartcities/smart-water-management.html', { layout: '' });
+        }
+        else if (id === 'blog-1') {
+            res.render('industries/smartcities/blog1.html', { layout: '' });
+        }
+        else if (id === 'blog-2') {
+            res.render('industries/smartcities/blog2.html', { layout: '' });
+        }
+        else if (id === 'blog-3') {
+            res.render('industries/smartcities/blog3.html', { layout: '' });
+        }
+        else {
+            res.redirect("/404");
+        }
 
 
     });
+
+    self.app.get('/environmentmonitoring', function (req, res) {
+        res.render('industries/environmentmonitoring/index.html', { layout: '' });
+    });
+
+    self.app.get('/environmentmonitoring/:id', function (req, res) {
+        var id = req['params']['id']
+        
+        
+        if (id === 'air-quality-monitoring') {
+            res.render('industries/environmentmonitoring/air-quality-monitoring.html', { layout: '' });
+        }
+        else if (id === 'water-quality-monitoring') {
+            res.render('industries/environmentmonitoring/water-quality-monitoring.html', { layout: '' });
+        }
+        else if (id === 'soil-moisture-monitoring') {
+            res.render('industries/environmentmonitoring/soil-moisture-monitoring.html', { layout: '' });
+        }
+        else if (id === 'weather-monitoring') {
+            res.render('industries/environmentmonitoring/weather-monitoring.html', { layout: '' });
+        }
+        else if (id === 'noise-monitoring') {
+            res.render('industries/environmentmonitoring/noise-monitoring.html', { layout: '' });
+        }
+        else if (id === 'radiation-monitoring') {
+            res.render('industries/environmentmonitoring/radiation-monitoring.html', { layout: '' });
+        }
+        else if (id === 'wildlife-monitoring') {
+            res.render('industries/environmentmonitoring/wildlife-monitoring.html', { layout: '' });
+        }
+        else if (id === 'forest-fire-detection') {
+            res.render('industries/environmentmonitoring/forest-fire-detection.html', { layout: '' });
+        }
+        else if (id === 'pollution-monitoring') {
+            res.render('industries/environmentmonitoring/pollution-monitoring.html', { layout: '' });
+        }
+        else if (id === 'smart-buildings') {
+            res.render('industries/environmentmonitoring/smart-buildings.html', { layout: '' });
+        }
+        else if (id === 'climate-change-monitoring') {
+            res.render('industries/environmentmonitoring/climate-change-monitoring.html', { layout: '' });
+        }
+        else if (id === 'blog-1') {
+            res.render('industries/environmentmonitoring/blog1.html', { layout: '' });
+        }
+        else if (id === 'blog-2') {
+            res.render('industries/environmentmonitoring/blog2.html', { layout: '' });
+        }
+        else if (id === 'blog-3') {
+            res.render('industries/environmentmonitoring/blog3.html', { layout: '' });
+        }
+        else {
+            res.redirect("/404");
+        }
+
+
+    });
+
+
+    
+
+
 
     /*self.app.get('/solutions/:id', function (req, res) {
         res.render('solutions.html',{layout:''});
