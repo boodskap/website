@@ -312,6 +312,61 @@ Routes.prototype.init = function () {
 
     });
 
+    self.app.get('/automotive', function (req, res) {
+        res.render('industries/automotive/index.html', { layout: '' });
+    });
+
+    self.app.get('/automotive/:id', function (req, res) {
+        var id = req['params']['id']
+        
+        
+        if (id === 'fleet-management') {
+            res.render('industries/automotive/fleet-management.html', { layout: '' });
+        }
+        else if (id === 'telematics') {
+            res.render('industries/automotive/telematics.html', { layout: '' });
+        }
+        else if (id === 'electric-vehicle-management') {
+            res.render('industries/automotive/electric-vehicle-management.html', { layout: '' });
+        }
+        else if (id === 'vehicle-to-everything') {
+            res.render('industries/automotive/vehicle-to-everything.html', { layout: '' });
+        }
+        else if (id === 'predictive-maintenance') {
+            res.render('industries/automotive/predictive-maintenance.html', { layout: '' });
+        }
+        else if (id === 'connected-infotainment') {
+            res.render('industries/automotive/connected-infotainment.html', { layout: '' });
+        }
+        else if (id === 'autonomous-vehicles') {
+            res.render('industries/automotive/autonomous-vehicles.html', { layout: '' });
+        }
+        else if (id === 'ubi') {
+            res.render('industries/automotive/ubi.html', { layout: '' });
+        }
+        else if (id === 'traffic-management') {
+            res.render('industries/automotive/traffic-management.html', { layout: '' });
+        }
+        else if (id === 'smart-parking') {
+            res.render('industries/automotive/smart-parking.html', { layout: '' });
+        }
+      
+        else if (id === 'blog-1') {
+            res.render('industries/automotive/blog1.html', { layout: '' });
+        }
+        else if (id === 'blog-2') {
+            res.render('industries/automotive/blog2.html', { layout: '' });
+        }
+        else if (id === 'blog-3') {
+            res.render('industries/automotive/blog3.html', { layout: '' });
+        }
+        else {
+            res.redirect("/404");
+        }
+
+
+    });
+
     self.app.get('/environmentmonitoring', function (req, res) {
         res.render('industries/environmentmonitoring/index.html', { layout: '' });
     });
