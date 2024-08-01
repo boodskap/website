@@ -477,6 +477,55 @@ Routes.prototype.init = function () {
     }
     });
 
+    self.app.get('/energy', function (req, res) {
+        res.render('industries/energy/index.html', { layout: '' });
+    });
+
+    self.app.get('/energy/:id', function (req, res) {
+    var id = req['params']['id']
+    
+   
+    if (id === 'smart-metering') {
+        res.render('industries/energy/smart-metering.html', { layout: '' });
+    }
+    else if (id === 'energy-usage-optimization') {
+        res.render('industries/energy/energy-usage-optimization.html', { layout: '' });
+    }
+    else if (id === 'demand-response-management') {
+        res.render('industries/energy/demand-response-management.html', { layout: '' });
+    }
+    else if (id === 'renewable-energy') {
+        res.render('industries/energy/renewable-energy.html', { layout: '' });
+    }
+    else if (id === 'building-energy') {
+        res.render('industries/energy/building-energy.html', { layout: '' });
+    }
+    else if (id === 'grid-monitoring') {
+        res.render('industries/energy/grid-monitoring.html', { layout: '' });
+    }
+    else if (id === 'electric-vehicle') {
+        res.render('industries/energy/electric-vehicle.html', { layout: '' });
+    }
+    else if (id === 'leak-detection') {
+        res.render('industries/energy/leak-detection.html', { layout: '' });
+    }
+    else if (id === 'smart-lighting') {
+        res.render('industries/energy/smart-lighting', { layout: '' });
+    }
+    else if (id === 'blog-1') {
+        res.render('industries/energy/blog1.html', { layout: '' });
+    }
+    else if (id === 'blog-2') {
+        res.render('industries/energy/blog2.html', { layout: '' });
+    }
+    else if (id === 'blog-3') {
+        res.render('industries/energy/blog3.html', { layout: '' });
+    }
+    else {
+        res.redirect("/404");
+    }
+    });
+
     self.app.get('/company', function (req, res) {
         res.render('company.html', { layout: '' });
     });
