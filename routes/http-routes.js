@@ -526,6 +526,59 @@ Routes.prototype.init = function () {
     }
     });
 
+    self.app.get('/security', function (req, res) {
+        res.render('industries/security/index.html', { layout: '' });
+    });
+
+    self.app.get('/security/:id', function (req, res) {
+    var id = req['params']['id']
+    
+   
+    if (id === 'video-surveillance') {
+        res.render('industries/security/video-surveillance.html', { layout: '' });
+    }
+    else if (id === 'access-control') {
+        res.render('industries/security/access-control.html', { layout: '' });
+    }
+    else if (id === 'intrusion-detection') {
+        res.render('industries/security/intrusion-detection.html', { layout: '' });
+    }
+    else if (id === 'perimeter-security') {
+        res.render('industries/security/perimeter-security.html', { layout: '' });
+    }
+    else if (id === 'smart-alarms') {
+        res.render('industries/security/smart-alarms.html', { layout: '' });
+    }
+    else if (id === 'fire-detection') {
+        res.render('industries/security/fire-detection.html', { layout: '' });
+    }
+    else if (id === 'environmental-monitoring') {
+        res.render('industries/security/environmental-monitoring.html', { layout: '' });
+    }
+    else if (id === 'asset-protection') {
+        res.render('industries/security/asset-protection.html', { layout: '' });
+    }
+    else if (id === 'building-management') {
+        res.render('industries/security/building-management.html', { layout: '' });
+    }
+    else if (id === 'wearable-security') {
+        res.render('industries/security/wearable-security.html', { layout: '' });
+    }
+    else if (id === 'blog-1') {
+        res.render('industries/security/blog1.html', { layout: '' });
+    }
+    else if (id === 'blog-2') {
+        res.render('industries/security/blog2.html', { layout: '' });
+    }
+    else if (id === 'blog-3') {
+        res.render('industries/security/blog3.html', { layout: '' });
+    }
+    else {
+        res.redirect("/404");
+    }
+    });
+
+
     self.app.get('/company', function (req, res) {
         res.render('company.html', { layout: '' });
     });
