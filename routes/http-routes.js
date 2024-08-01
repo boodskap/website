@@ -252,11 +252,11 @@ Routes.prototype.init = function () {
     });
 
     
-self.app.get('/agriculture', function (req, res) {
+    self.app.get('/agriculture', function (req, res) {
     res.render('industries/agriculture/index.html', { layout: '' });
-});
+    });
 
-self.app.get('/agriculture/:id', function (req, res) {
+    self.app.get('/agriculture/:id', function (req, res) {
     var id = req['params']['id']
     
    
@@ -299,9 +299,59 @@ self.app.get('/agriculture/:id', function (req, res) {
     else {
         res.redirect("/404");
     }
-});
+    });
 
+    self.app.get('/wearable', function (req, res) {
+        res.render('industries/wearable/index.html', { layout: '' });
+    });
 
+    self.app.get('/wearable/:id', function (req, res) {
+    var id = req['params']['id']
+    
+   
+    if (id === 'fitness-activity') {
+        res.render('industries/wearable/fitness-activity.html', { layout: '' });
+    }
+    else if (id === 'health-monitoring') {
+        res.render('industries/wearable/health-monitoring.html', { layout: '' });
+    }
+    else if (id === 'sleep-tracking') {
+        res.render('industries/wearable/sleep-tracking.html', { layout: '' });
+    }
+    else if (id === 'stress-monitoring') {
+        res.render('industries/wearable/stress-monitoring.html', { layout: '' });
+    }
+    else if (id === 'medical-alerts') {
+        res.render('industries/wearable/medical-alerts.html', { layout: '' });
+    }
+    else if (id === 'rehabilation-monitoring') {
+        res.render('industries/wearable/rehabilation-monitoring.html', { layout: '' });
+    }
+    else if (id === 'workplace-safety') {
+        res.render('industries/wearable/workplace-safety.html', { layout: '' });
+    }
+    else if (id === 'augmented-reality') {
+        res.render('industries/wearable/augmented-reality.html', { layout: '' });
+    }
+    else if (id === 'sports-performance-monitoring') {
+        res.render('industries/wearable/sports-performance-monitoring.html', { layout: '' });
+    }
+    else if (id === 'remote-patient-monitoring') {
+        res.render('industries/wearable/remote-patient-monitoring.html', { layout: '' });
+    }
+    else if (id === 'blog-1') {
+        res.render('industries/wearable/blog1.html', { layout: '' });
+    }
+    else if (id === 'blog-2') {
+        res.render('industries/wearable/blog2.html', { layout: '' });
+    }
+    else if (id === 'blog-3') {
+        res.render('industries/wearable/blog3.html', { layout: '' });
+    }
+    else {
+        res.redirect("/404");
+    }
+    });
 
     self.app.get('/company', function (req, res) {
         res.render('company.html', { layout: '' });
