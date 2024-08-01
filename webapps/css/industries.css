@@ -1921,3 +1921,18 @@ ul.partners-mentions li img:hover {
   	}
 
 }
+
+ /* Content padding */
+.sub-content-padding{
+	padding-top:70px !important;
+}
+
+@media (max-width: 768px) {
+	.main-content-padding{
+		padding-top: 30px !important;
+        padding-bottom: 40px !important;
+	}
+	.sub-content-padding{
+		padding-top:0px !important;
+   }
+}
