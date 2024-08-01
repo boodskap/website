@@ -259,6 +259,59 @@ Routes.prototype.init = function () {
 
     });
 
+      // Smart Cities
+
+      self.app.get('/smarthome', function (req, res) {
+        res.render('industries/smarthome/index.html', { layout: '' });
+    });
+
+    self.app.get('/smarthome/:id', function (req, res) {
+        var id = req['params']['id']
+        
+        
+        if (id === 'smart-thermostats') {
+            res.render('industries/smarthome/smart-thermostats.html', { layout: '' });
+        }
+        else if (id === 'smart-lighting') {
+            res.render('industries/smarthome/smart-lighting.html', { layout: '' });
+        }
+        else if (id === 'smart-security-systems') {
+            res.render('industries/smarthome/smart-security-systems.html', { layout: '' });
+        }
+        else if (id === 'smart-appliances') {
+            res.render('industries/smarthome/smart-appliances.html', { layout: '' });
+        }
+        else if (id === 'smart-home-hubs') {
+            res.render('industries/smarthome/smart-home-hubs.html', { layout: '' });
+        }
+        else if (id === 'smart-irrigation-systems') {
+            res.render('industries/smarthome/smart-irrigation-systems.html', { layout: '' });
+        }
+        else if (id === 'smart-smoke-detectors') {
+            res.render('industries/smarthome/smart-smoke-detectors.html', { layout: '' });
+        }
+        else if (id === 'smart-doorbells') {
+            res.render('industries/smarthome/smart-doorbells.html', { layout: '' });
+        }
+        else if (id === 'smart-entertainment-systems') {
+            res.render('industries/smarthome/smart-entertainment-systems.html', { layout: '' });
+        }
+        else if (id === 'blog-1') {
+            res.render('industries/smarthome/blog1.html', { layout: '' });
+        }
+        else if (id === 'blog-2') {
+            res.render('industries/smarthome/blog2.html', { layout: '' });
+        }
+        else if (id === 'blog-3') {
+            res.render('industries/smarthome/blog3.html', { layout: '' });
+        }
+        else {
+            res.redirect("/404");
+        }
+
+
+    });
+
     self.app.get('/environmentmonitoring', function (req, res) {
         res.render('industries/environmentmonitoring/index.html', { layout: '' });
     });
@@ -476,6 +529,108 @@ Routes.prototype.init = function () {
         res.redirect("/404");
     }
     });
+
+    self.app.get('/energy', function (req, res) {
+        res.render('industries/energy/index.html', { layout: '' });
+    });
+
+    self.app.get('/energy/:id', function (req, res) {
+    var id = req['params']['id']
+    
+   
+    if (id === 'smart-metering') {
+        res.render('industries/energy/smart-metering.html', { layout: '' });
+    }
+    else if (id === 'energy-usage-optimization') {
+        res.render('industries/energy/energy-usage-optimization.html', { layout: '' });
+    }
+    else if (id === 'demand-response-management') {
+        res.render('industries/energy/demand-response-management.html', { layout: '' });
+    }
+    else if (id === 'renewable-energy') {
+        res.render('industries/energy/renewable-energy.html', { layout: '' });
+    }
+    else if (id === 'building-energy') {
+        res.render('industries/energy/building-energy.html', { layout: '' });
+    }
+    else if (id === 'grid-monitoring') {
+        res.render('industries/energy/grid-monitoring.html', { layout: '' });
+    }
+    else if (id === 'electric-vehicle') {
+        res.render('industries/energy/electric-vehicle.html', { layout: '' });
+    }
+    else if (id === 'leak-detection') {
+        res.render('industries/energy/leak-detection.html', { layout: '' });
+    }
+    else if (id === 'smart-lighting') {
+        res.render('industries/energy/smart-lighting', { layout: '' });
+    }
+    else if (id === 'blog-1') {
+        res.render('industries/energy/blog1.html', { layout: '' });
+    }
+    else if (id === 'blog-2') {
+        res.render('industries/energy/blog2.html', { layout: '' });
+    }
+    else if (id === 'blog-3') {
+        res.render('industries/energy/blog3.html', { layout: '' });
+    }
+    else {
+        res.redirect("/404");
+    }
+    });
+
+    self.app.get('/security', function (req, res) {
+        res.render('industries/security/index.html', { layout: '' });
+    });
+
+    self.app.get('/security/:id', function (req, res) {
+    var id = req['params']['id']
+    
+   
+    if (id === 'video-surveillance') {
+        res.render('industries/security/video-surveillance.html', { layout: '' });
+    }
+    else if (id === 'access-control') {
+        res.render('industries/security/access-control.html', { layout: '' });
+    }
+    else if (id === 'intrusion-detection') {
+        res.render('industries/security/intrusion-detection.html', { layout: '' });
+    }
+    else if (id === 'perimeter-security') {
+        res.render('industries/security/perimeter-security.html', { layout: '' });
+    }
+    else if (id === 'smart-alarms') {
+        res.render('industries/security/smart-alarms.html', { layout: '' });
+    }
+    else if (id === 'fire-detection') {
+        res.render('industries/security/fire-detection.html', { layout: '' });
+    }
+    else if (id === 'environmental-monitoring') {
+        res.render('industries/security/environmental-monitoring.html', { layout: '' });
+    }
+    else if (id === 'asset-protection') {
+        res.render('industries/security/asset-protection.html', { layout: '' });
+    }
+    else if (id === 'building-management') {
+        res.render('industries/security/building-management.html', { layout: '' });
+    }
+    else if (id === 'wearable-security') {
+        res.render('industries/security/wearable-security.html', { layout: '' });
+    }
+    else if (id === 'blog-1') {
+        res.render('industries/security/blog1.html', { layout: '' });
+    }
+    else if (id === 'blog-2') {
+        res.render('industries/security/blog2.html', { layout: '' });
+    }
+    else if (id === 'blog-3') {
+        res.render('industries/security/blog3.html', { layout: '' });
+    }
+    else {
+        res.redirect("/404");
+    }
+    });
+
 
     self.app.get('/company', function (req, res) {
         res.render('company.html', { layout: '' });
