@@ -259,6 +259,59 @@ Routes.prototype.init = function () {
 
     });
 
+      // Smart Cities
+
+      self.app.get('/smarthome', function (req, res) {
+        res.render('industries/smarthome/index.html', { layout: '' });
+    });
+
+    self.app.get('/smarthome/:id', function (req, res) {
+        var id = req['params']['id']
+        
+        
+        if (id === 'smart-thermostats') {
+            res.render('industries/smarthome/smart-thermostats.html', { layout: '' });
+        }
+        else if (id === 'smart-lighting') {
+            res.render('industries/smarthome/smart-lighting.html', { layout: '' });
+        }
+        else if (id === 'smart-security-systems') {
+            res.render('industries/smarthome/smart-security-systems.html', { layout: '' });
+        }
+        else if (id === 'smart-appliances') {
+            res.render('industries/smarthome/smart-appliances.html', { layout: '' });
+        }
+        else if (id === 'smart-home-hubs') {
+            res.render('industries/smarthome/smart-home-hubs.html', { layout: '' });
+        }
+        else if (id === 'smart-irrigation-systems') {
+            res.render('industries/smarthome/smart-irrigation-systems.html', { layout: '' });
+        }
+        else if (id === 'smart-smoke-detectors') {
+            res.render('industries/smarthome/smart-smoke-detectors.html', { layout: '' });
+        }
+        else if (id === 'smart-doorbells') {
+            res.render('industries/smarthome/smart-doorbells.html', { layout: '' });
+        }
+        else if (id === 'smart-entertainment-systems') {
+            res.render('industries/smarthome/smart-entertainment-systems.html', { layout: '' });
+        }
+        else if (id === 'blog-1') {
+            res.render('industries/smarthome/blog1.html', { layout: '' });
+        }
+        else if (id === 'blog-2') {
+            res.render('industries/smarthome/blog2.html', { layout: '' });
+        }
+        else if (id === 'blog-3') {
+            res.render('industries/smarthome/blog3.html', { layout: '' });
+        }
+        else {
+            res.redirect("/404");
+        }
+
+
+    });
+
     self.app.get('/environmentmonitoring', function (req, res) {
         res.render('industries/environmentmonitoring/index.html', { layout: '' });
     });
