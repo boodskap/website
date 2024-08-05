@@ -27,6 +27,16 @@
 
         box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
     }
+    @media (max-width: 992px) {
+    .zn_res_menu_visible #zn-res-menu, .zn_res_menu_visible #zn-res-menu li ul {
+        overflow-x:hidden !important;
+    }
+    .zn_res_menu_go_back{
+        line-height:19.8px !important;
+    }
+
+
+}
 </style>
 
 <header id="header" class="site-header cta_button" data-header-style="1">
@@ -251,46 +261,105 @@
                                                 <a href="http://developer.boodskap.io/docs"
                                                     target="_blank">Documentation</a>
                                             </p>
-                                            <!-- <p title="">
-                                                <a href="https://github.com/BoodskapPlatform" target="_blank" >Libraries</a>
-                                            </p> -->
+                                        
                                             <p title="">
                                                 <a href="https://www.youtube.com/channel/UC1yOEmlV7mBfKI1aHSMk3GQ"
                                                     target="_blank">Video Tutorials</a>
                                             </p>
-                                            <!-- <p title="">
-                                                <a href="https://hub.docker.com/r/boodskapiot/platform" target="_blank">Download Platform</a>
-                                            </p> -->
-                                            <!-- <p title="">
-                                                <a href="/iot-starter-kits" >IoT Starter Kits</a>
-                                            </p>
-                                            <p title="">
-                                                <a href="/faq" >FAQ</a>
-                                            </p> -->
+                                           
                                         </div>
-                                        <ul class="sub-menu clearfix">
+                                        <ul class="sub-menu clearfix" style="line-height: 28px !important;">
                                             <li title="">
                                                 <a href="http://developer.boodskap.io/docs"
                                                     target="_blank">Documentation</a>
                                             </li>
-                                            <!-- <li title="">
-                                                <a href="https://github.com/BoodskapPlatform" target="_blank" >Libraries</a>
-                                            </li> -->
+                                         
                                             <li title="">
                                                 <a href="https://www.youtube.com/channel/UC1yOEmlV7mBfKI1aHSMk3GQ"
                                                     target="_blank">Video Tutorials</a>
                                             </li>
-                                            <!-- <li title="">
-                                                <a href="https://hub.docker.com/r/boodskapiot/platform" target="_blank">Download Platform</a>
-                                            </li>
-                                            <li title="">
-                                                <a href="/iot-starter-kits" >IoT Starter Kits</a>
-                                            </li>
-                                            <li title="">
-                                                <a href="/faq" >FAQ</a>
-                                            </li> -->
+                                          
                                         </ul>
                                     </li>
+                                  
+                                    
+                                    <li class="menu-item-has-children topMenu">
+                                        <a href="/industries">INDUSTRIES</a>
+                                        <div class="mobMenu">
+                                            <p title="Industrial Automation">
+                                                <a href="/industries">INDUSTRIAL AUTOMATION</a>
+                                            </p>
+                                            <p title="Healthcare Monitoring">
+                                                <a href="/healthcare">HEALTH CARE MONITORING</a>
+                                            </p>
+                                            <p title="Smart Cities">
+                                                <a href="/smartcities">SMART CITIES</a>
+                                            </p>
+                                            <p title="Smart Home Automation">
+                                                <a href="/smarthome">SMART HOME AUTOMATION</a>
+                                            </p>
+                                            <p title="Automotive and Transportation">
+                                                <a href="/automotive">AUTOMOTIVE AND TRANSPORTATION</a>
+                                            </p>
+                                            <p title="Environmental Monitoring">
+                                                <a href="/environmentmonitoring">ENVIRONMENTAL MONITORING</a>
+                                            </p>
+                                            <p title="Retail and Inventory Management">
+                                                <a href="/retail">RETAIL AND INVENTORY MANAGEMENT</a>
+                                            </p>
+                                            <p title="Agriculture and Farming">
+                                                <a href="/agriculture">AGRICULTURE AND FARMING</a>
+                                            </p>
+                                            <p title="Wearable Technology">
+                                                <a href="/wearable">WEARABLE TECHNOLOGY</a>
+                                            </p>
+                                            <p title="Energy Management">
+                                                <a href="/energy">ENERGY MANAGEMENT</a>
+                                            </p>
+                                            <p title="Security and Surveillance">                                            
+                                                <a href="/security">SECURITY AND SURVEILLANCE</a>
+                                            </p>
+                                           
+                                        </div>
+                                        <ul class="sub-menu clearfix" style="line-height: 28px !important;">                                           
+                                            <li title="Industrial Automation">
+                                                <a href="/industries">INDUSTRIAL AUTOMATION</a>
+                                            </li>
+                                            <li title="Healthcare Monitoring">
+                                                <a href="/healthcare">HEALTH CARE MONITORING</a>
+                                            </li>
+                                            <li title="Smart Cities">
+                                                <a href="/smartcities">SMART CITIES</a>
+                                            </li>
+                                            <li title="Smart Home Automation">
+                                                <a href="/smarthome">SMART HOME AUTOMATION</a>
+                                            </li>
+                                            <li title="Automotive and Transportation">
+                                                <a href="/automotive">AUTOMOTIVE AND TRANSPORTATION</a>
+                                            </li>
+                                            <li title="Environmental Monitoring">
+                                                <a href="/environmentmonitoring">ENVIRONMENTAL MONITORING</a>
+                                            </li>
+                                            <li title="Retail and Inventory Management">                                            
+                                                <a href="/retail">RETAIL AND INVENTORY MANAGEMENT</a>
+                                            </li>
+                                            <li title="Agriculture and Farming">                                            
+                                                <a href="/agriculture">AGRICULTURE AND FARMING</a>
+                                            </li>
+                                            <li title="Wearable Technology">                                            
+                                                <a href="/wearable">WEARABLE TECHNOLOGY</a>
+                                            </li>
+                                            <li title="Energy Management">                                            
+                                                <a href="/energy">ENERGY MANAGEMENT</a>
+                                            </li>
+                                            <li title="Security and Surveillance">                                            
+                                                <a href="/security">SECURITY AND SURVEILLANCE</a>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+
+                                    
                                     <li class="menu-item-has-children topMenu">
                                         <a href="/products">Solutions</a>
                                         <div class="mobMenu">
@@ -332,7 +401,7 @@
                                                 <a href="/products/iot-button">IoT BUTTON</a>
                                             </p>
                                         </div>
-                                        <ul class="sub-menu clearfix">
+                                        <ul class="sub-menu clearfix" style="line-height: 28px !important;">
                                             <li title="Facility Management">
                                                 <a href="/products/facility-management">FACILITY MANAGEMENT</a>
                                             </li>
@@ -372,102 +441,7 @@
 
                                         </ul>
                                     </li>
-                                    
-                                    <li class="menu-item-has-children topMenu">
-                                        <a href="/industries">INDUSTRIES</a>
-                                        <div class="mobMenu">
-                                            <p title="Industrial Automation">
-                                                <a href="/industries">INDUSTRIAL AUTOMATION</a>
-                                            </p>
-                                            <p title="Healthcare Monitoring">
-                                                <a href="/healthcare">HEALTH CARE MONITORING</a>
-                                            </p>
-                                            <p title="Smart Cities">
-                                                <a href="/smartcities">SMART CITIES</a>
-                                            </p>
-                                            <p title="Smart Home Automation">
-                                                <a href="/smarthome">SMART HOME AUTOMATION</a>
-                                            </p>
-                                            <p title="Automotive and Transportation">
-                                                <a href="/automotive">AUTOMOTIVE AND TRANSPORTATION</a>
-                                            </p>
-                                            <p title="Environmental Monitoring">
-                                                <a href="/environmentmonitoring">ENVIRONMENTAL MONITORING</a>
-                                            </p>
-                                            <p title="Retail and Inventory Management">
-                                                <a href="/retail">RETAIL AND INVENTORY MANAGEMENT</a>
-                                            </p>
-                                            <p title="Agriculture and Farming">
-                                                <a href="/agriculture">AGRICULTURE AND FARMING</a>
-                                            </p>
-                                            <p title="Wearable Technology">
-                                                <a href="/wearable">WEARABLE TECHNOLOGY</a>
-                                            </p>
-                                            <p title="Energy Management">
-                                                <a href="/energy">ENERGY MANAGEMENT</a>
-                                            </p>
-                                            <p title="Security and Surveillance">                                            
-                                                <a href="/security">SECURITY AND SURVEILLANCE</a>
-                                            </p>
-                                           
-                                        </div>
-                                        <ul class="sub-menu clearfix">                                           
-                                            <li title="Industrial Automation">
-                                                <a href="/industries">INDUSTRIAL AUTOMATION</a>
-                                            </li>
-                                            <li title="Healthcare Monitoring">
-                                                <a href="/healthcare">HEALTH CARE MONITORING</a>
-                                            </li>
-                                            <li title="Smart Cities">
-                                                <a href="/smartcities">SMART CITIES</a>
-                                            </li>
-                                            <li title="Smart Home Automation">
-                                                <a href="/smarthome">SMART HOME AUTOMATION</a>
-                                            </li>
-                                            <li title="Automotive and Transportation">
-                                                <a href="/automotive">AUTOMOTIVE AND TRANSPORTATION</a>
-                                            </li>
-                                            <li title="Environmental Monitoring">
-                                                <a href="/environmentmonitoring">ENVIRONMENTAL MONITORING</a>
-                                            </li>
-                                            <li title="Retail and Inventory Management">                                            
-                                                <a href="/retail">RETAIL AND INVENTORY MANAGEMENT</a>
-                                            </li>
-                                            <li title="Agriculture and Farming">                                            
-                                                <a href="/agriculture">AGRICULTURE AND FARMING</a>
-                                            </li>
-                                            <li title="Wearable Technology">                                            
-                                                <a href="/wearable">WEARABLE TECHNOLOGY</a>
-                                            </li>
-                                            <li title="Energy Management">                                            
-                                                <a href="/energy">ENERGY MANAGEMENT</a>
-                                            </li>
-                                            <li title="Security and Surveillance">                                            
-                                                <a href="/security">SECURITY AND SURVEILLANCE</a>
-                                            </li>
-
-                                        </ul>
-                                    </li>
-
-                                    
-
-                                    <!--<li class="menu-item-has-children topMenu">
-                                        <a
-                                            href="#">Solutions</a>
-                                        <ul class="sub-menu clearfix">
-                                            <li><a href="/solutions/manufacturing">MANUFACTURING</a></li>
-                                            <li><a href="/solutions/oil-gas">OIL & GAS</a></li>
-                                            <li><a href="/solutions/utilities">UTILITIES</a></li>
-                                            <li><a href="/solutions/banking">BANKING</a></li>
-                                            <li><a href="/solutions/aerospace-defense">AEROSPACE & DEFENSE</a></li>
-                                            <li><a href="/solutions/healthcare">HEALTHCARE</a></li>
-                                            <li><a href="/solutions/retail">RETAIL</a></li>
-                                            <li><a href="/solutions/telecommunications">TELECOMMUNICATIONS</a></li>
-                                            <li><a href="/solutions/smart-cities">SMART CITIES</a></li>
-                                            <li><a href="/solutions/transportation">TRANSPORTATION</a></li>
-                                        </ul>
-                                    </li>-->
-                                    <!--                                    <li class="menu-item-has-children topMenu">-->
+                                 
                                     <li class="topMenu"><a href="/services">Services</a>
                                     </li>
                                     <li class="topMenu">
@@ -480,19 +454,13 @@
                                             
                                            
                                         </div>
-                                        <ul class="sub-menu clearfix">
+                                        <ul class="sub-menu clearfix" style="line-height: 28px !important;">
                                             <li class=""><a href="/contact-us">Contact US</a>
                                             </li>
-                                            <!-- <li><a href="/our-team">OUR TEAM</a>
-                                            </li>
-                                            <li><a href="/careers">CAREERS</a>
-                                            </li>
-                                            <li><a href="/latest-news">LATEST NEWS</a></li>
-                                            <li><a href="/events">EVENTS</a></li> -->
+                                        
                                         </ul>
                                     </li>
-                                    <!-- <li class="topMenu"><a href="/contact-us">Contact US</a>
-                                    </li> -->
+                                   
                                     <li class="topMenu"><a href="/pricing">PRICING</a>
                                     </li>
                                 </ul>
