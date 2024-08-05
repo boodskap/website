@@ -785,7 +785,9 @@ body .kl-ioscaption--style4 .more:hover:before {background: rgba(205,33,34,0.9);
 	#main-menu > ul ul { position: static; opacity: 1 !important; visibility: visible !important; background: transparent;}
 	#main-menu > ul li { float:none; width: 100%; margin-left: 0;  padding-left: 0; padding: 5px 0;}
 
-	#zn-res-menu .zn-close-menu-button { display: inline-block; padding: 0 !important; position: absolute; right: 0; top: 0; height: 47px; width: 49px !important; border-left: solid 1px #ccc; z-index: 11111;}
+	#zn-res-menu .zn-close-menu-button {
+		 display: inline-block; padding: 0 !important; position: absolute; right: 0; top: 0; height: 47px;border-right: 1px solid #ccc; width: 49px !important; border-left: solid 1px #ccc; z-index: 11111;
+		}
 	#zn-res-menu .zn-close-menu-button span { position: absolute; top: 50%; left: 50%; -webkit-transform: translate3d(-50%, -50%,0); transform: translate3d(-50%, -50%,0);}
 }
 
