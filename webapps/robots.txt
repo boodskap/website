@@ -1,11 +1,4 @@
 User-agent: *
-Allow: /
-
-User-agent: GoogleBot
-Allow: /
-
-User-agent: GoogleBot-Mobile
-Allow: /
-
-User-agent: GoogleBot-Image
-Allow: /
+Disallow: 
+Disallow: /cgi-bin/
+Sitemap: https://boodskap.io/sitemap.xml
