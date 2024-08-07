@@ -138,6 +138,7 @@ Routes.prototype.init = function () {
 
 
     });
+        // Health Care Monitoring
 
     self.app.get('/healthcare', function (req, res) {
         res.render('industries/healthcare/index.html', { layout: '' });
@@ -146,11 +147,7 @@ Routes.prototype.init = function () {
     self.app.get('/healthcare/:id', function (req, res) {
         var id = req['params']['id']
         
-        // Health Care Monitoring
         
-        // if (id === 'healthcare-monitoring') {
-        //     res.render('industries/healthcare/healthcaremonitoring.html', { layout: '' });
-        // }
         if (id === 'remote-patient-monitoring') {
             res.render('industries/healthcare/remote-patient-monitoring.html', { layout: '' });
         }
@@ -259,8 +256,7 @@ Routes.prototype.init = function () {
 
     });
 
-      // Smart Cities
-
+      // Smart Home
       self.app.get('/smarthome', function (req, res) {
         res.render('industries/smarthome/index.html', { layout: '' });
     });
@@ -311,6 +307,7 @@ Routes.prototype.init = function () {
 
 
     });
+      // Automotive
 
     self.app.get('/automotive', function (req, res) {
         res.render('industries/automotive/index.html', { layout: '' });
@@ -366,6 +363,8 @@ Routes.prototype.init = function () {
 
 
     });
+
+     // Environmental Monitoring
 
     self.app.get('/environmentmonitoring', function (req, res) {
         res.render('industries/environmentmonitoring/index.html', { layout: '' });
@@ -424,16 +423,7 @@ Routes.prototype.init = function () {
 
     });
 
-
-    
-
-
-
-    /*self.app.get('/solutions/:id', function (req, res) {
-        res.render('solutions.html',{layout:''});
-    });*/
-
-    
+//Retail   
     self.app.get('/retail', function (req, res) {
         res.render('industries/retail/index.html', { layout: '' });
     });
@@ -483,7 +473,7 @@ Routes.prototype.init = function () {
         }
     });
 
-    
+  //Agriculture  
     self.app.get('/agriculture', function (req, res) {
     res.render('industries/agriculture/index.html', { layout: '' });
     });
@@ -532,6 +522,8 @@ Routes.prototype.init = function () {
         res.redirect("/404");
     }
     });
+
+    //Wearable
 
     self.app.get('/wearable', function (req, res) {
         res.render('industries/wearable/index.html', { layout: '' });
@@ -584,7 +576,7 @@ Routes.prototype.init = function () {
         res.redirect("/404");
     }
     });
-
+//Energy
     self.app.get('/energy', function (req, res) {
         res.render('industries/energy/index.html', { layout: '' });
     });
@@ -724,22 +716,6 @@ Routes.prototype.init = function () {
     self.app.get('/pricing-dh-aed', function (req, res) {
         res.render('pricing-aed.html', { layout: '' });
     });
-
-    // self.app.get('/pricing-section', function (req, res) {
-    //     res.render('pricing-section.html',{layout:''});
-    // });
-    // self.app.get('/pricing-inr-section', function (req, res) {
-    //     res.render('pricing-inr-section.html',{layout:''});
-    // });
-    // self.app.get('/pricing-eur-section', function (req, res) {
-    //     res.render('pricing-eur-section.html',{layout:''});
-    // });
-    // self.app.get('/pricing-aed-section', function (req, res) {
-    //     res.render('pricing-aed-section.html',{layout:''});
-    // });
-    // self.app.get('/pricing-chf-section', function (req, res) {
-    //     res.render('pricing-chf-section.html',{layout:''});
-    // });  
 
     self.app.get('/contact-us', function (req, res) {
         res.render('contact-us', { layout: '' });
@@ -1269,6 +1245,11 @@ Routes.prototype.init = function () {
           <li style="display:inline-block; margin: 0 5px;">
             <a href="https://www.linkedin.com/company/16180585/" target="_blank" title="Linkedin">
               <img src="https://boodskap.io/images/assets/linkedin.png" style="width:30px !important"  alt="Linkedin">
+            </a>
+          </li>
+           <li style="display:inline-block; margin: 0 5px;">
+            <a href="https://www.instagram.com/boodskapiot/" target="_blank" title="Instagram">
+              <img src="https://boodskap.io/images/assets/instagram.png" style="width:30px !important" alt="Instagram">
             </a>
           </li>
           <li style="display:inline-block; margin: 0 5px;">

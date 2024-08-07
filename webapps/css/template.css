@@ -6504,6 +6504,8 @@ margin: 0; line-height: 1.3; height: 0; -webkit-transform: translateY(-20px); -m
 .socialbox .fa-twitter {color: #00BDEC;}
 .socialbox.sb-facebook:hover {background: #3B5998;}
 .socialbox .fa-facebook-f {color: #3B5998;}
+.socialbox.sb-instagram:hover {background: #3B5998;}
+.socialbox .fa-instagram {color: #3B5998;}
 .socialbox.sb-dribbble:hover {background: #EF5B92;}
 .socialbox .fa-dribbble {color: #EF5B92;}
 .socialbox.sb-envato:hover {background: #7fb841;}
@@ -6532,7 +6534,7 @@ margin: 0; line-height: 1.3; height: 0; -webkit-transform: translateY(-20px); -m
 
 /* Eos Homepage */
 .poppins {font-family: "Poppins", Helvetica, Arial, sans-serif;}
-.custom-p {font-family: "Poppins", Helvetica, Arial, sans-serif; font-size: 1rem; color: #868686;}
+.custom-p {font-size: 1rem; color: #868686;}
 .find-out .kl-icon {font-size: 32px; margin-right: 12px;}
 .find-out span {vertical-align: middle; display: inline-block;}
 .find-out .text {font-weight: 700;}
