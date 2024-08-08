@@ -178,7 +178,7 @@ function sendAccessEmail() {
                         $(".sentMessage").html("")
                     }, 2000);
                 $(".submitBtn").removeAttr('disabled');
-                grecaptcha.reset();
+                // grecaptcha.reset();
             },
             error: function (e) {
 
@@ -189,7 +189,7 @@ function sendAccessEmail() {
                         $(".sentMessage").html("")
                     }, 2000);
                 $(".submitBtn").removeAttr('disabled');
-                grecaptcha.reset()
+                // grecaptcha.reset()
             }
         })
 }
