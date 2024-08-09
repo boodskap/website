@@ -9,6 +9,7 @@ var conf = {
     domainKey: '',
     apiKey: '',
     googleAnalytics: '',
+    cdnUrl: 'https://cdn.jsdelivr.net/gh/boodskap/website@main/webapps',
     elasticEmail : {
         apiKey : '3fbf8ce8-1d5c-417c-8311-9c5651caaa3c',
         username : 'platform@boodskap.io'
@@ -23,7 +24,7 @@ var conf = {
         },
         fromName: 'Boodskap Web',
         fromEmail: 'Platform@boodskap.io',
-        toEmail: ['priyadharshinit@boodskap.io','nancya@boodskap.io', 'info@boodskap.io']
+        toEmail: ['priyadharshinit@boodskap.io']
     },
     captcha : {
         key : "6LcTHzYUAAAAAI9Qqq_q2hqEU99EXLtE0ueaWxGK"
