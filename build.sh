@@ -1,2 +1,4 @@
 #!/bin/bash
-docker build -t boodskapiot/website:1.0.8 .
+VERSION=1.1.8
+docker build -t boodskapiot/website:$VERSION .
+docker push boodskapiot/website:$VERSION
