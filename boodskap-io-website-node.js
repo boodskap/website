@@ -44,13 +44,13 @@ var controllerOptions = {
     // }
 };
 
-app.use('/css', express.static(__dirname + '/webapps/css', options));
-app.use('/images', express.static(__dirname + '/webapps/images', options));
-app.use('/plugins', express.static(__dirname + '/webapps/js', options));
-app.use('/fonts', express.static(__dirname + '/webapps/fonts', options));
-app.use('/js', express.static(__dirname + '/webapps/js', options));
+//app.use('/css', express.static(__dirname + '/webapps/css', options));
+//app.use('/images', express.static(__dirname + '/webapps/images', options));
+//app.use('/plugins', express.static(__dirname + '/webapps/js', options));
+//app.use('/fonts', express.static(__dirname + '/webapps/fonts', options));
+//app.use('/js', express.static(__dirname + '/webapps/js', options));
+//app.use('/controllers', express.static(__dirname + '/webapps/js', controllerOptions));
 
-app.use('/controllers', express.static(__dirname + '/webapps/js', controllerOptions));
 app.use(express.static(__dirname + '/webapps', controllerOptions));
 
 

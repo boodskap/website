@@ -22,6 +22,30 @@ Routes.prototype.init = function () {
         res.render('index.html', { layout: '' });
     });
 
+    self.app.get('/css/', function(req, res) {
+        res.redirect('https://cdn.jsdelivr.net/gh/boodskap/website@main/webapps/css/');
+    });
+
+    self.app.get('/images/', function(req, res) {
+        res.redirect('https://cdn.jsdelivr.net/gh/boodskap/website@main/webapps/images/');
+    });
+
+    self.app.get('/plugins/', function(req, res) {
+        res.redirect('https://cdn.jsdelivr.net/gh/boodskap/website@main/webapps/js/');
+    });
+
+    self.app.get('/fonts/', function(req, res) {
+        res.redirect('https://cdn.jsdelivr.net/gh/boodskap/website@main/webapps/fonts/');
+    });
+
+    self.app.get('/js/', function(req, res) {
+        res.redirect('https://cdn.jsdelivr.net/gh/boodskap/website@main/webapps/js/');
+    });
+
+    self.app.get('/controllers/', function(req, res) {
+        res.redirect('https://cdn.jsdelivr.net/gh/boodskap/website@main/webapps/js/');
+    });
+
     self.app.get('/platform', function (req, res) {
         res.render('platform.html', { layout: '' });
     });
