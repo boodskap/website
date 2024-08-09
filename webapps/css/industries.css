@@ -62,14 +62,14 @@ ul li i{
 	padding-right: 5px;
 }
 
-p {
+/* p {
 	font-size: 17px;
     line-height: 28px;
 	font-weight: 400;
 	color: #7c8595;
 	margin-bottom:15px;
 	font-family: 'Open Sans', sans-serif;
-}
+} */
 
 a,
 a:hover,
@@ -84,7 +84,7 @@ a:hover{
 	color: #017df7;
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -93,7 +93,6 @@ h6 {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   margin-top: 0;
   margin-bottom:20px;
-  /* color: #071e55; */
   font-weight: 600;
 }
 
@@ -119,7 +118,7 @@ h5 {
 
 h6 {
 	font-size: 18px;
-}
+} */
 
 h2.section-title {
     margin-bottom: 10px;
