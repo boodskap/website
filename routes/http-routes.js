@@ -19,7 +19,7 @@ Routes.prototype.init = function () {
 
     
     self.app.get('/', function (req, res) {
-        res.render('index.html', { layout: '' });
+        res.render('index.html', { layout: '', cdnUrl: self.app.conf.cdnUrl });
     });
 
     self.app.get('/css/', function(req, res) {
