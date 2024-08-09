@@ -823,7 +823,7 @@ Routes.prototype.init = function () {
  <body>
     <div class="container">
        <div class="header" style="text-align:center;padding-top:20px !important">
-          <img src="https://boodskap.io/images/assets/boodskap-logo.png"  width="200"  />
+          <img src="`+self.app.conf.cdnUrl+`/images/assets/boodskap-logo.png"  width="200"  />
        </div>
        <div class="industrySection">
           <div class="contentSection">
@@ -838,7 +838,7 @@ Routes.prototype.init = function () {
        </div>
        <div class="cards">
           <div style="display: flex;">
-             <img src="https://boodskap.io/images/powered-by-boodskap.png" />
+             <img src="`+self.app.conf.cdnUrl+`/images/powered-by-boodskap.png" />
              <label class="footer-label">
              &copy; <span>`+new Date().getFullYear()+`</span>  All rights reserved
              </label>
@@ -952,7 +952,7 @@ Routes.prototype.init = function () {
      <body>
         <div class="container">
            <div class="header" style="text-align:center;padding-top:20px !important">
-              <img src="https://boodskap.io/images/assets/boodskap-logo.png"  width="200"  />
+              <img src="`+self.app.conf.cdnUrl+`/images/assets/boodskap-logo.png"  width="200"  />
            </div>
            <div class="industrySection">
               <div class="contentSection">
@@ -967,7 +967,7 @@ Routes.prototype.init = function () {
            </div>
            <div class="cards">
               <div style="display: flex;">
-                 <img src="https://boodskap.io/images/powered-by-boodskap.png" />
+                 <img src="`+self.app.conf.cdnUrl+`/images/powered-by-boodskap.png" />
                  <label class="footer-label">
                  &copy; <span>`+new Date().getFullYear()+`</span>  All rights reserved
                  </label>
@@ -1079,7 +1079,7 @@ Routes.prototype.init = function () {
  <body>
     <div class="container">
        <div class="header" style="text-align:center;padding-top:20px !important">
-          <img src="https://boodskap.io/images/assets/boodskap-logo.png"  width="200"  />
+          <img src="`+self.app.conf.cdnUrl+`/images/assets/boodskap-logo.png"  width="200"  />
        </div>
        <div class="industrySection">
           <div class="contentSection">
@@ -1094,7 +1094,7 @@ Routes.prototype.init = function () {
        </div>
        <div class="cards">
           <div style="display: flex;">
-             <img src="https://boodskap.io/images/powered-by-boodskap.png" />
+             <img src="`+self.app.conf.cdnUrl+`/images/powered-by-boodskap.png" />
              <label class="footer-label">
              &copy; <span>`+new Date().getFullYear()+`</span>  All rights reserved
              </label>
@@ -1220,7 +1220,7 @@ Routes.prototype.init = function () {
 <body>
   <div class="container">
     <div class="header" style="text-align:center;padding-top:20px !important">
-      <img src="https://boodskap.io/images/assets/boodskap-logo.png"  width="200"  />
+      <img src="`+self.app.conf.cdnUrl+`/images/assets/boodskap-logo.png"  width="200"  />
     </div>
     <div class="industrySection">
       <div class="contentSection">
@@ -1234,32 +1234,32 @@ Routes.prototype.init = function () {
         <ul class="social-icons" style="text-align:center; list-style-type:none; padding:0;">
         <li style="display:inline-block; margin: 0 5px;">
             <a href="https://www.facebook.com/boodskapiot/" target="_blank" title="Facebook">
-              <img src="https://boodskap.io/images/assets/facebook.png" style="width:30px !important" alt="Facebook">
+              <img src="`+self.app.conf.cdnUrl+`/images/assets/facebook.png" style="width:30px !important" alt="Facebook">
             </a>
           </li>
           <li style="display:inline-block; margin: 0 5px;">
             <a href="https://twitter.com/boodskapIOT" target="_blank" title="Twitter">
-              <img src="https://boodskap.io/images/assets/twitter.png" style="width:30px !important" alt="Twitter">
+              <img src="`+self.app.conf.cdnUrl+`/images/assets/twitter.png" style="width:30px !important" alt="Twitter">
             </a>
           </li>
           <li style="display:inline-block; margin: 0 5px;">
             <a href="https://www.linkedin.com/company/16180585/" target="_blank" title="Linkedin">
-              <img src="https://boodskap.io/images/assets/linkedin.png" style="width:30px !important"  alt="Linkedin">
+              <img src="`+self.app.conf.cdnUrl+`/images/assets/linkedin.png" style="width:30px !important"  alt="Linkedin">
             </a>
           </li>
            <li style="display:inline-block; margin: 0 5px;">
             <a href="https://www.instagram.com/boodskapiot/" target="_blank" title="Instagram">
-              <img src="https://boodskap.io/images/assets/instagram.png" style="width:30px !important" alt="Instagram">
+              <img src="`+self.app.conf.cdnUrl+`/images/assets/instagram.png" style="width:30px !important" alt="Instagram">
             </a>
           </li>
           <li style="display:inline-block; margin: 0 5px;">
             <a href="https://www.youtube.com/channel/UC1yOEmlV7mBfKI1aHSMk3GQ" target="_blank" title="Youtube">
-              <img src="https://boodskap.io/images/assets/youtube.png"  style="width:30px !important" alt="Youtube">
+              <img src="`+self.app.conf.cdnUrl+`/images/assets/youtube.png"  style="width:30px !important" alt="Youtube">
             </a>
           </li>
         </ul>
       <div style="display: flex; justify-content: space-between; align-items: center;">
-        <img src="https://boodskap.io/images/powered-by-boodskap.png" />
+        <img src="`+self.app.conf.cdnUrl+`/images/powered-by-boodskap.png" />
         <label class="footer-label">
         &copy; <span>`+new Date().getFullYear()+`</span>  All rights reserved
         </label>

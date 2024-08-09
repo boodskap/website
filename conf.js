@@ -24,7 +24,7 @@ var conf = {
         },
         fromName: 'Boodskap Web',
         fromEmail: 'Platform@boodskap.io',
-        toEmail: ['priyadharshinit@boodskap.io','nancya@boodskap.io', 'info@boodskap.io']
+        toEmail: ['priyadharshinit@boodskap.io']
     },
     captcha : {
         key : "6LcTHzYUAAAAAI9Qqq_q2hqEU99EXLtE0ueaWxGK"
