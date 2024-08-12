@@ -1,3 +1,25 @@
+<style>
+    .linkShareBtn {
+        /* width: 100px !important;
+        height: 39px !important; */
+        color: #fff;
+        font-weight: bold !important;
+        margin-bottom: 15px;
+        display: inline-block;
+        background-color: #cd2122;
+        /* padding: 5px 8px; */
+        border-radius: 50% !important;
+        padding: 1px 10px !important;
+    }
+
+    .linkShareBtn:hover {
+        background-color: #a41a1b;
+        color: #fff;
+        cursor: pointer;
+
+    }
+</style>
+
 
 <!-- Footer - Default Style 1 -->
 <footer id="footer" data-footer-style="1">
@@ -7,8 +29,8 @@
         <div class="row">
             <div class="col-sm-12 col-md-2 text-center">
                 <a href="/" class="mb-2">
-                <img src="<%=cdnUrl%>/images/boodskap-logo.png" data-src="<%=cdnUrl%>/images/boodskap-logo.png" class="anim--grayscale" alt="Boodskap"
-                     title="Boodskap" style="filter: grayscale(100%);" />
+                    <img src="<%=cdnUrl%>/images/boodskap-logo.png" data-src="<%=cdnUrl%>/images/boodskap-logo.png"
+                        class="anim--grayscale" alt="Boodskap" title="Boodskap" style="filter: grayscale(100%);" />
                 </a>
             </div>
             <div class="col-sm-12 col-md-10">
@@ -16,7 +38,7 @@
                     <!-- twitter feeds -->
                     <div class="tweets" id="twitterFeed"><small>Please wait whilst our latest tweets load</small>
                     </div>
-                   <!-- <a href="https://twitter.com/boodskapIOT" class="twitter-follow-button" data-show-count="false">Follow
+                    <!-- <a href="https://twitter.com/boodskapIOT" class="twitter-follow-button" data-show-count="false">Follow
                         @boodskapIOT</a>-->
                     <!-- twitter script -->
                     <script>
@@ -61,11 +83,21 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.youtube.com/channel/UC1yOEmlV7mBfKI1aHSMk3GQ" target="_blank" title="Youtube">
+                        <a href="https://www.youtube.com/channel/UC1yOEmlV7mBfKI1aHSMk3GQ" target="_blank"
+                            title="Youtube">
                             <i class="fab fa-youtube"></i>
                         </a>
                     </li>
+                    <li>
+                        <a target="_blank" class="linkShareBtn" title="Share">
+                            <!-- <span> Share</span> -->
+                            <i class="fas fa-share-alt"></i>
+                        </a>
+                    </li>
+
                 </ul>
+
+
             </div>
             <!--/ col-sm-12 col-md-6 mb-30 -->
         </div>
@@ -73,26 +105,51 @@
 
         <div class="row bottom">
             <div class="col-sm-12 col-md-6">
-                    <ul class="nav footerLinks">
-                        <li><a href="/privacy-policy">Privacy Policy</a></li><li>|</li>
-                        <li><a href="/terms-condition">Terms & Conditions</a></li><li>|</li>
-                        <li><a href="/eula">EULA</a></li><li>|</li>
-                        <li><a href="/returns-refund-policy">Returns & Refund Policy</a></li>
-                    </ul>
+                <ul class="nav footerLinks">
+                    <li><a href="/privacy-policy">Privacy Policy</a></li>
+                    <li>|</li>
+                    <li><a href="/terms-condition">Terms & Conditions</a></li>
+                    <li>|</li>
+                    <li><a href="/eula">EULA</a></li>
+                    <li>|</li>
+                    <li><a href="/returns-refund-policy">Returns & Refund Policy</a></li>
+                    <li>|</li>
+                    <li><a href="/faq">FAQ</a></li>
+                </ul>
             </div>
 
-                <div class="col-sm-12 col-md-6 text-right">
-                    <a href="/"><img src="<%=cdnUrl%>/images/powered-by-boodskap.png" data-src="<%=cdnUrl%>/images/powered-by-boodskap.png" alt="Footer" style="height: 25px;  vertical-align: middle;"></a>
-                        <span style="font-size: 12px">
-                            © <span class="currentYear"></span> All rights reserved.
-                        </span>
+            <div class="col-sm-12 col-md-6 text-right">
+                <a href="/"><img src="<%=cdnUrl%>/images/powered-by-boodskap.png"
+                        data-src="<%=cdnUrl%>/images/powered-by-boodskap.png" alt="Footer"
+                        style="height: 25px;  vertical-align: middle;"></a>
+                <span style="font-size: 12px">
+                    © <span class="currentYear"></span> All rights reserved.
+                </span>
 
-                </div>
             </div>
-            <!--/ col-sm-12 -->
         </div>
-        <!--/ row -->
+        <!--/ col-sm-12 -->
+    </div>
+    <!--/ row -->
     </div>
     <!--/ container -->
 </footer>
 <!--/ Footer - Default Style 1 -->
+
+<script>
+    const shareButton = document.querySelector('.linkShareBtn');
+ 
+    if (navigator.share) {
+  shareButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    navigator.share({
+      title: document.title,
+      text: "🚀 Transform Your Business with Boodskap.io! 🌐 Unlock the full potential of IoT with Boodskap.io! Our powerful platform-as-a-service offers seamless integration, real-time data processing, and scalable solutions to enhance your operations. From smart device management to advanced analytics, Boodskap.io is your gateway to a connected future. 🔗✨🔍 Discover more: www.boodskap.io",
+      url: window.location.href
+    })
+      
+  });
+} else {
+//   console.log('Web Share API not supported');
+}
+</script>
