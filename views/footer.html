@@ -7,9 +7,7 @@
         margin-bottom: 15px;
         display: inline-block;
         background-color: #cd2122;
-        /* padding: 5px 8px; */
         border-radius: 50% !important;
-        padding: 1px 10px !important;
     }
 
     .linkShareBtn:hover {
@@ -27,39 +25,7 @@
 
 
         <div class="row">
-            <div class="col-sm-12 col-md-2 text-center">
-                <a href="/" class="mb-2">
-                    <img src="<%=cdnUrl%>/images/boodskap-logo.png" data-src="<%=cdnUrl%>/images/boodskap-logo.png"
-                        class="anim--grayscale" alt="Boodskap" title="Boodskap" style="filter: grayscale(100%);" />
-                </a>
-            </div>
-            <div class="col-sm-12 col-md-10">
-                <div class="twitterFeed">
-                    <!-- twitter feeds -->
-                    <div class="tweets" id="twitterFeed"><small>Please wait whilst our latest tweets load</small>
-                    </div>
-                    <!-- <a href="https://twitter.com/boodskapIOT" class="twitter-follow-button" data-show-count="false">Follow
-                        @boodskapIOT</a>-->
-                    <!-- twitter script -->
-                    <script>
-                        !function (d, s, id) {
-                            var js, fjs = d.getElementsByTagName(s)[0];
-                            if (!d.getElementById(id)) {
-                                js = d.createElement(s);
-                                js.id = id;
-                                js.src = "//platform.twitter.com/widgets.js";
-                                fjs.parentNode.insertBefore(js, fjs);
-                            }
-                        }(document, "script", "twitter-wjs");
-                    </script>
-                    <!--/ twitter script -->
-                </div>
-                <!--/ twitter-feed -->
-            </div>
-            <!--/ col-sm-12 col-md-6 -->
-
-
-
+           
             <div class="col-sm-12 text-center">
                 <ul class="social-icons" style="float: none">
                     <li>
@@ -89,10 +55,10 @@
                         </a>
                     </li>
                     <li>
-                        <a target="_blank" class="linkShareBtn" title="Share">
+                        <button target="_blank" class="linkShareBtn" title="Share">
                             <!-- <span> Share</span> -->
                             <i class="fas fa-share-alt"></i>
-                        </a>
+                        </button>
                     </li>
 
                 </ul>
