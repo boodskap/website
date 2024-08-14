@@ -755,7 +755,8 @@ Routes.prototype.init = function () {
             var fromName = req.body.fromName;
             var to = req.body.to;
             var content = req.body.body_text;
-            var subject = req.body.subject;
+            var email_subject = req.body.email_subject;
+            
            
     var userEmailContent = `<head>
     <style>
@@ -823,7 +824,7 @@ Routes.prototype.init = function () {
  <body>
     <div class="container">
        <div class="header" style="text-align:center;padding-top:20px !important">
-          <img src="`+self.app.conf.cdnUrl+`/images/assets/boodskap-logo.png"  width="200"  />
+          <img src="https://boodskap.io/images/assets/boodskap-logo.png"  width="200"  />
        </div>
        <div class="industrySection">
           <div class="contentSection">
@@ -838,7 +839,7 @@ Routes.prototype.init = function () {
        </div>
        <div class="cards">
           <div style="display: flex;">
-             <img src="`+self.app.conf.cdnUrl+`/images/powered-by-boodskap.png" />
+             <img src="https://boodskap.io/images/powered-by-boodskap.png" />
              <label class="footer-label">
              &copy; <span>`+new Date().getFullYear()+`</span>  All rights reserved
              </label>
@@ -851,7 +852,7 @@ Routes.prototype.init = function () {
                 // from: '"' + fromName + '" <' + fromEmail + '>', 
                 from:self.app.conf.email.fromEmail,
                 to: self.app.conf.email.toEmail, 
-                subject: fromName +' is trying to contact you',
+                subject: fromName +' is trying to contact you' + (email_subject ?email_subject : "") ,
                 html: content, 
             }, function (err, stat) {
                 if (err) {
@@ -885,7 +886,7 @@ Routes.prototype.init = function () {
         var content = req.body.body_text;
         var userName = req.body.userName;
         var userEmail = req.body.userEmail;
-  
+        var email_subject = req.body.email_subject;
         var userEmailContent = `<head>
         <style>
            body {
@@ -952,7 +953,7 @@ Routes.prototype.init = function () {
      <body>
         <div class="container">
            <div class="header" style="text-align:center;padding-top:20px !important">
-              <img src="`+self.app.conf.cdnUrl+`/images/assets/boodskap-logo.png"  width="200"  />
+              <img src="https://boodskap.io/images/assets/boodskap-logo.png"  width="200"  />
            </div>
            <div class="industrySection">
               <div class="contentSection">
@@ -967,7 +968,7 @@ Routes.prototype.init = function () {
            </div>
            <div class="cards">
               <div style="display: flex;">
-                 <img src="`+self.app.conf.cdnUrl+`/images/powered-by-boodskap.png" />
+                 <img src="https://boodskap.io/images/powered-by-boodskap.png" />
                  <label class="footer-label">
                  &copy; <span>`+new Date().getFullYear()+`</span>  All rights reserved
                  </label>
@@ -979,7 +980,7 @@ Routes.prototype.init = function () {
             let info = transporter.sendMail({
                 from:self.app.conf.email.fromEmail,
                 to: self.app.conf.email.toEmail, 
-                subject: userName +' is interested in Industrial IoT',
+                subject: userName +' is interested in Industrial IoT' + (email_subject ?email_subject : ""),
                 html: content, 
             }, function (err, stat) {
                 if (err) {
@@ -1011,7 +1012,7 @@ Routes.prototype.init = function () {
         var content = req.body.body_text;
         var userName = req.body.name;
         var userEmail = req.body.email;
-
+        var email_subject = req.body.email_subject;
 
     var userEmailContent = `<head>
     <style>
@@ -1079,7 +1080,7 @@ Routes.prototype.init = function () {
  <body>
     <div class="container">
        <div class="header" style="text-align:center;padding-top:20px !important">
-          <img src="`+self.app.conf.cdnUrl+`/images/assets/boodskap-logo.png"  width="200"  />
+          <img src="https://boodskap.io/images/assets/boodskap-logo.png"  width="200"  />
        </div>
        <div class="industrySection">
           <div class="contentSection">
@@ -1094,7 +1095,7 @@ Routes.prototype.init = function () {
        </div>
        <div class="cards">
           <div style="display: flex;">
-             <img src="`+self.app.conf.cdnUrl+`/images/powered-by-boodskap.png" />
+             <img src="https://boodskap.io/images/powered-by-boodskap.png" />
              <label class="footer-label">
              &copy; <span>`+new Date().getFullYear()+`</span>  All rights reserved
              </label>
@@ -1106,7 +1107,7 @@ Routes.prototype.init = function () {
             let info = transporter.sendMail({
                 from:self.app.conf.email.fromEmail,
                 to: self.app.conf.email.toEmail, 
-                subject: userName +' wants to Get in touch with you',
+                subject: userName +' wants to Get in touch with you' + (email_subject ?email_subject : ""),
                 html: content, 
             }, function (err, stat) {
                 if (err) {
@@ -1137,7 +1138,7 @@ Routes.prototype.init = function () {
     self.app.post('/sendnewsletteremail', function (req, res) {
         var content = req.body.body_text;
         var userEmail = req.body.email;
-
+        var email_subject = req.body.email_subject;
 
         var userEmailContent = `<head>
   <style>body {
@@ -1220,7 +1221,7 @@ Routes.prototype.init = function () {
 <body>
   <div class="container">
     <div class="header" style="text-align:center;padding-top:20px !important">
-      <img src="`+self.app.conf.cdnUrl+`/images/assets/boodskap-logo.png"  width="200"  />
+      <img src="https://boodskap.io/images/assets/boodskap-logo.png"  width="200"  />
     </div>
     <div class="industrySection">
       <div class="contentSection">
@@ -1234,32 +1235,32 @@ Routes.prototype.init = function () {
         <ul class="social-icons" style="text-align:center; list-style-type:none; padding:0;">
         <li style="display:inline-block; margin: 0 5px;">
             <a href="https://www.facebook.com/boodskapiot/" target="_blank" title="Facebook">
-              <img src="`+self.app.conf.cdnUrl+`/images/assets/facebook.png" style="width:30px !important" alt="Facebook">
+              <img src="https://boodskap.io/images/assets/facebook.png" style="width:30px !important" alt="Facebook">
             </a>
           </li>
           <li style="display:inline-block; margin: 0 5px;">
             <a href="https://twitter.com/boodskapIOT" target="_blank" title="Twitter">
-              <img src="`+self.app.conf.cdnUrl+`/images/assets/twitter.png" style="width:30px !important" alt="Twitter">
+              <img src="https://boodskap.io/images/assets/twitter.png" style="width:30px !important" alt="Twitter">
             </a>
           </li>
           <li style="display:inline-block; margin: 0 5px;">
             <a href="https://www.linkedin.com/company/16180585/" target="_blank" title="Linkedin">
-              <img src="`+self.app.conf.cdnUrl+`/images/assets/linkedin.png" style="width:30px !important"  alt="Linkedin">
+              <img src="https://boodskap.io/images/assets/linkedin.png" style="width:30px !important"  alt="Linkedin">
             </a>
           </li>
            <li style="display:inline-block; margin: 0 5px;">
             <a href="https://www.instagram.com/boodskapiot/" target="_blank" title="Instagram">
-              <img src="`+self.app.conf.cdnUrl+`/images/assets/instagram.png" style="width:30px !important" alt="Instagram">
+              <img src="https://boodskap.io/images/assets/instagram.png" style="width:30px !important" alt="Instagram">
             </a>
           </li>
           <li style="display:inline-block; margin: 0 5px;">
             <a href="https://www.youtube.com/channel/UC1yOEmlV7mBfKI1aHSMk3GQ" target="_blank" title="Youtube">
-              <img src="`+self.app.conf.cdnUrl+`/images/assets/youtube.png"  style="width:30px !important" alt="Youtube">
+              <img src="https://boodskap.io/images/assets/youtube.png"  style="width:30px !important" alt="Youtube">
             </a>
           </li>
         </ul>
       <div style="display: flex; justify-content: space-between; align-items: center;">
-        <img src="`+self.app.conf.cdnUrl+`/images/powered-by-boodskap.png" />
+        <img src="https://boodskap.io/images/powered-by-boodskap.png" />
         <label class="footer-label">
         &copy; <span>`+new Date().getFullYear()+`</span>  All rights reserved
         </label>
@@ -1274,7 +1275,7 @@ Routes.prototype.init = function () {
             let info = transporter.sendMail({
                 from:self.app.conf.email.fromEmail,
                 to: self.app.conf.email.toEmail, 
-                subject: userEmail +' subscribed on Getting News Letter',
+                subject: userEmail +' subscribed on Getting News Letter' + (email_subject ?email_subject : ""),
                 html: content, 
             }, function (err, stat) {
                 if (err) {

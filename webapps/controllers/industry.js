@@ -104,10 +104,10 @@ function sendAccessEmail() {
     <body>
         <div class="container">
             <div class="header" style="text-align:center;padding-top:20px !important">
-                <img src="<%=cdnUrl%>/images/assets/boodskap-logo.png"  width="200"  />
+                <img src="https://boodskap.io/images/assets/boodskap-logo.png"  width="200"  />
             </div>
             <div class="industrySection">
-                <h1>Industrial IoT | Get Your Free Access</h1>
+                <h1>Get Your Free Access `+email_subject+`</h1>
                 <table>
                     <tbody>
                         <tr>
@@ -141,7 +141,7 @@ function sendAccessEmail() {
             </div>
             <div class="cards">
                 <div style="display: flex;">
-                    <img src="<%=cdnUrl%>/images/powered-by-boodskap.png" />
+                    <img src="https://boodskap.io/images/powered-by-boodskap.png" />
                     <label class="footer-label">
                        &copy; <span>`+new Date().getFullYear()+`</span>  All rights reserved
                     </label>
@@ -156,8 +156,8 @@ function sendAccessEmail() {
             userCompany:  $("#userCompany").val(),
             userDevice: $("#userDevice").val() ,
             body_text: content,
+            email_subject : email_subject ? email_subject : ""
         }
-
 
         $.ajax({
             type: 'POST',
@@ -301,10 +301,10 @@ function sendGetinTouchEmail() {
     <body>
         <div class="container">
             <div class="header" style="text-align:center;padding-top:20px !important">
-                <img src="<%=cdnUrl%>/images/assets/boodskap-logo.png"  width="200"  />
+                <img src="https://boodskap.io/images/assets/boodskap-logo.png"  width="200"  />
             </div>
             <div class="industrySection">
-                <h1>Get in touch</h1>
+                <h1>Get in touch `+email_subject+`</h1>
                 <table>
                     <tbody>
                         <tr>
@@ -333,7 +333,7 @@ function sendGetinTouchEmail() {
             </div>
             <div class="cards">
                 <div style="display: flex;">
-                    <img src="<%=cdnUrl%>/images/powered-by-boodskap.png" />
+                    <img src="https://boodskap.io/images/powered-by-boodskap.png" />
                     <label class="footer-label">
                        &copy; <span>`+new Date().getFullYear()+`</span>  All rights reserved
                     </label>
@@ -347,6 +347,7 @@ function sendGetinTouchEmail() {
             phone:  $("#phone").val(),
             message:  $("#message").val(),
             body_text: content,
+            email_subject : email_subject ? email_subject : ""
         }
 
 
@@ -487,10 +488,10 @@ function sendNewsletterEmail(){
 <body>
     <div class="container">
         <div class="header" style="text-align:center;padding-top:20px !important">
-            <img src="<%=cdnUrl%>/images/assets/boodskap-logo.png"  width="200"  />
+            <img src="https://boodskap.io/images/assets/boodskap-logo.png"  width="200"  />
         </div>
         <div class="industrySection">
-            <h1>Getting Newsletter | Subscribed</h1>
+            <h1>Getting Newsletter | Subscribed `+email_subject+`</h1>
             <table>
                 <tbody>
                     <tr>
@@ -502,7 +503,7 @@ function sendNewsletterEmail(){
         </div>
         <div class="cards">
             <div style="display: flex;">
-                <img src="<%=cdnUrl%>/images/powered-by-boodskap.png" />
+                <img src="https://boodskap.io/images/powered-by-boodskap.png" />
                 <label class="footer-label">
                    &copy; <span>`+new Date().getFullYear()+`</span>  All rights reserved
                 </label>
@@ -513,6 +514,7 @@ function sendNewsletterEmail(){
     var data = {
         email: $("#email_newsletter").val() ,
         body_text: content,
+        email_subject : email_subject ? email_subject : ""
     }
 
 

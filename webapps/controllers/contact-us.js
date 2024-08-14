@@ -121,10 +121,10 @@ function sendEmail() {
     <body>
         <div class="container">
             <div class="header" style="text-align:center;padding-top:20px !important">
-                <img src="<%=cdnUrl%>/images/assets/boodskap-logo.png"  width="200"  />
+                <img src="https://boodskap.io/images/assets/boodskap-logo.png"  width="200"  />
             </div>
             <div class="contactSection">
-                <h1>Contact Us</h1>
+                <h1>Contact Us `+email_subject+`</h1>
                 <table>
                     <tbody>
                         <tr>
@@ -160,7 +160,7 @@ function sendEmail() {
             </div>
             <div class="cards">
                 <div style="display: flex;">
-                    <img src="<%=cdnUrl%>/images/powered-by-boodskap.png" />
+                    <img src="https://boodskap.io/images/powered-by-boodskap.png" />
                     <label class="footer-label">
                        &copy; <span>`+new Date().getFullYear()+`</span>  All rights reserved
                     </label>
@@ -174,7 +174,8 @@ function sendEmail() {
             to: 'contactus',
             subject:  $("#cf_subject").val(),
             body_text: content,
-            auth : g_response
+            auth : g_response,
+            email_subject : email_subject ? email_subject : ""
         }
 
 
