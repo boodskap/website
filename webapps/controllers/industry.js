@@ -104,7 +104,7 @@ function sendAccessEmail() {
     <body>
         <div class="container">
             <div class="header" style="text-align:center;padding-top:20px !important">
-                <img src="https://boodskap.io/images/assets/boodskap-logo.png"  width="200"  />
+                <img src="<%=cdnUrl%>/images/assets/boodskap-logo.png"  width="200"  />
             </div>
             <div class="industrySection">
                 <h1>Industrial IoT | Get Your Free Access</h1>
@@ -141,7 +141,7 @@ function sendAccessEmail() {
             </div>
             <div class="cards">
                 <div style="display: flex;">
-                    <img src="https://boodskap.io/images/powered-by-boodskap.png" />
+                    <img src="<%=cdnUrl%>/images/powered-by-boodskap.png" />
                     <label class="footer-label">
                        &copy; <span>`+new Date().getFullYear()+`</span>  All rights reserved
                     </label>
@@ -301,7 +301,7 @@ function sendGetinTouchEmail() {
     <body>
         <div class="container">
             <div class="header" style="text-align:center;padding-top:20px !important">
-                <img src="https://boodskap.io/images/assets/boodskap-logo.png"  width="200"  />
+                <img src="<%=cdnUrl%>/images/assets/boodskap-logo.png"  width="200"  />
             </div>
             <div class="industrySection">
                 <h1>Get in touch</h1>
@@ -333,7 +333,7 @@ function sendGetinTouchEmail() {
             </div>
             <div class="cards">
                 <div style="display: flex;">
-                    <img src="https://boodskap.io/images/powered-by-boodskap.png" />
+                    <img src="<%=cdnUrl%>/images/powered-by-boodskap.png" />
                     <label class="footer-label">
                        &copy; <span>`+new Date().getFullYear()+`</span>  All rights reserved
                     </label>
@@ -487,7 +487,7 @@ function sendNewsletterEmail(){
 <body>
     <div class="container">
         <div class="header" style="text-align:center;padding-top:20px !important">
-            <img src="https://boodskap.io/images/assets/boodskap-logo.png"  width="200"  />
+            <img src="<%=cdnUrl%>/images/assets/boodskap-logo.png"  width="200"  />
         </div>
         <div class="industrySection">
             <h1>Getting Newsletter | Subscribed</h1>
@@ -502,7 +502,7 @@ function sendNewsletterEmail(){
         </div>
         <div class="cards">
             <div style="display: flex;">
-                <img src="https://boodskap.io/images/powered-by-boodskap.png" />
+                <img src="<%=cdnUrl%>/images/powered-by-boodskap.png" />
                 <label class="footer-label">
                    &copy; <span>`+new Date().getFullYear()+`</span>  All rights reserved
                 </label>
