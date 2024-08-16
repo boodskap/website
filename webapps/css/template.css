@@ -17,12 +17,6 @@ body {
 	background-color: #fbfbfb;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-weight:normal;
-}
-
-
 a {color: #000; -webkit-transition: color .25s ease-in-out; transition: color .25s ease-in-out;}
 a:hover {color: #CD2122; text-decoration:none;}
 a:focus,
