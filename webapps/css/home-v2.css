@@ -1,3 +1,6 @@
+body{
+	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
 .btn-outlined {
 	color: #000 !important;
 	border-width: 2px;
