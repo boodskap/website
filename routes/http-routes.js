@@ -682,6 +682,23 @@ Routes.prototype.init = function () {
     self.app.get('/company', function (req, res) {
         res.render('company.html', { layout: '', cdnUrl: self.app.conf.cdnUrl });
     });
+    self.app.get('/partners', function (req, res) {
+        res.render('partners.html', { layout: '', cdnUrl: self.app.conf.cdnUrl });
+    });
+
+    self.app.get('/partners/:id', function (req, res) {
+
+        var id = req['params']['id']
+
+        if (id === 'yudash') {
+            res.render('partners/yudash.html', { layout: '', cdnUrl: self.app.conf.cdnUrl });
+        }
+        else {
+            res.redirect("/404");
+        }
+        });
+
+
     self.app.get('/services', function (req, res) {
         res.render('services.html', { layout: '', cdnUrl: self.app.conf.cdnUrl });
     });
