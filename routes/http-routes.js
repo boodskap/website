@@ -693,7 +693,7 @@ Routes.prototype.init = function () {
         if (id === 'yudash') {
             res.render('partners/yudash.html', { layout: '', cdnUrl: self.app.conf.cdnUrl });
         }
-        if (id === 'zedbee') {
+        else if (id === 'zedbee') {
             res.render('partners/zedbee.html', { layout: '', cdnUrl: self.app.conf.cdnUrl });
         }
         else {
