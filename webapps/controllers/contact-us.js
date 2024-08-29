@@ -175,7 +175,8 @@ function sendEmail() {
             subject:  $("#cf_subject").val(),
             body_text: content,
             auth : g_response,
-            email_subject : email_subject ? email_subject : ""
+            email_subject : email_subject ? email_subject : "",
+            email_fromName : email_fromName ? email_fromName:""
         }
 
 

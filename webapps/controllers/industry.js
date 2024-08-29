@@ -156,7 +156,8 @@ function sendAccessEmail() {
             userCompany:  $("#userCompany").val(),
             userDevice: $("#userDevice").val() ,
             body_text: content,
-            email_subject : email_subject ? email_subject : ""
+            email_subject : email_subject ? email_subject : "",
+            email_fromName : email_fromName ? email_fromName:""
         }
 
         $.ajax({
@@ -347,7 +348,8 @@ function sendGetinTouchEmail() {
             phone:  $("#phone").val(),
             message:  $("#message").val(),
             body_text: content,
-            email_subject : email_subject ? email_subject : ""
+            email_subject : email_subject ? email_subject : "",
+            email_fromName : email_fromName ? email_fromName:""
         }
 
 
@@ -514,7 +516,8 @@ function sendNewsletterEmail(){
     var data = {
         email: $("#email_newsletter").val() ,
         body_text: content,
-        email_subject : email_subject ? email_subject : ""
+        email_subject : email_subject ? email_subject : "",
+        email_fromName : email_fromName ? email_fromName:""
     }
 
 
