@@ -737,6 +737,10 @@ Routes.prototype.init = function () {
         res.render('pricing-aed.html', { layout: '', cdnUrl: self.app.conf.cdnUrl });
     });
 
+    self.app.get('/pricing-chf', function (req, res) {
+        res.render('pricing-chf.html', { layout: '', cdnUrl: self.app.conf.cdnUrl });
+    });
+
     self.app.get('/contact-us', function (req, res) {
         res.render('contact-us', { layout: '', cdnUrl: self.app.conf.cdnUrl });
     });
@@ -776,6 +780,7 @@ Routes.prototype.init = function () {
             var to = req.body.to;
             var content = req.body.body_text;
             var email_subject = req.body.email_subject;
+            var email_fromName = req.body.email_fromName;
             
            
     var userEmailContent = `<head>
@@ -870,7 +875,7 @@ Routes.prototype.init = function () {
             let transporter = nodemailer.createTransport(self.app.conf.email);
             let info = transporter.sendMail({
                 // from: '"' + fromName + '" <' + fromEmail + '>', 
-                from:self.app.conf.email.fromEmail,
+                from:(email_fromName ? email_fromName:"") + self.app.conf.email.fromEmail,
                 to: self.app.conf.email.toEmail, 
                 subject: fromName +' is trying to contact you' + (email_subject ?email_subject : "") ,
                 html: content, 
@@ -881,7 +886,7 @@ Routes.prototype.init = function () {
                 } else {
                     // res.json({ status: true, result: "Email Triggered" })
                     let userInfo = transporter.sendMail({
-                        from:self.app.conf.email.fromEmail,
+                        from:(email_fromName ? email_fromName:"") + self.app.conf.email.fromEmail,
                         to: fromEmail, 
                         subject: "Thank You for Reaching Boodskap – We'll Respond Shortly",
                         html: userEmailContent, 
@@ -907,6 +912,7 @@ Routes.prototype.init = function () {
         var userName = req.body.userName;
         var userEmail = req.body.userEmail;
         var email_subject = req.body.email_subject;
+        var email_fromName = req.body.email_fromName;
         var userEmailContent = `<head>
         <style>
            body {
@@ -998,7 +1004,7 @@ Routes.prototype.init = function () {
      </body>`
             let transporter = nodemailer.createTransport(self.app.conf.email);
             let info = transporter.sendMail({
-                from:self.app.conf.email.fromEmail,
+                from: (email_fromName ? email_fromName:"") + self.app.conf.email.fromEmail,
                 to: self.app.conf.email.toEmail, 
                 subject: userName +' is interested in Industrial IoT' + (email_subject ?email_subject : ""),
                 html: content, 
@@ -1009,7 +1015,7 @@ Routes.prototype.init = function () {
                 } else {
                     // res.json({ status: true, result: "Email Triggered" })
                     let userInfo = transporter.sendMail({
-                        from:self.app.conf.email.fromEmail,
+                        from:(email_fromName ? email_fromName:"") + self.app.conf.email.fromEmail,
                         to: userEmail, 
                         subject: "Thank You for Reaching Boodskap – We'll Respond Shortly",
                         html: userEmailContent, 
@@ -1033,6 +1039,7 @@ Routes.prototype.init = function () {
         var userName = req.body.name;
         var userEmail = req.body.email;
         var email_subject = req.body.email_subject;
+        var email_fromName = req.body.email_fromName;
 
     var userEmailContent = `<head>
     <style>
@@ -1125,7 +1132,7 @@ Routes.prototype.init = function () {
  </body>`
             let transporter = nodemailer.createTransport(self.app.conf.email);
             let info = transporter.sendMail({
-                from:self.app.conf.email.fromEmail,
+                from:(email_fromName ? email_fromName:"") + self.app.conf.email.fromEmail,
                 to: self.app.conf.email.toEmail, 
                 subject: userName +' wants to Get in touch with you' + (email_subject ?email_subject : ""),
                 html: content, 
@@ -1136,7 +1143,7 @@ Routes.prototype.init = function () {
                 } else {
                     // res.json({ status: true, result: "Email Triggered" })
                     let userInfo = transporter.sendMail({
-                        from:self.app.conf.email.fromEmail,
+                        from:(email_fromName ? email_fromName:"") + self.app.conf.email.fromEmail,
                         to: userEmail, 
                         subject: "Thank You for Reaching Boodskap – We'll Respond Shortly",
                         html: userEmailContent, 
@@ -1159,6 +1166,7 @@ Routes.prototype.init = function () {
         var content = req.body.body_text;
         var userEmail = req.body.email;
         var email_subject = req.body.email_subject;
+        var email_fromName = req.body.email_fromName;
 
         var userEmailContent = `<head>
   <style>body {
@@ -1293,7 +1301,7 @@ Routes.prototype.init = function () {
 
             let transporter = nodemailer.createTransport(self.app.conf.email);
             let info = transporter.sendMail({
-                from:self.app.conf.email.fromEmail,
+                from:(email_fromName ? email_fromName:"") + self.app.conf.email.fromEmail,
                 to: self.app.conf.email.toEmail, 
                 subject: userEmail +' subscribed on Getting News Letter' + (email_subject ?email_subject : ""),
                 html: content, 
@@ -1304,7 +1312,7 @@ Routes.prototype.init = function () {
                 } else {
                     res.json({ status: true, result: "Email Triggered" })
                     let userInfo = transporter.sendMail({
-                        from:self.app.conf.email.fromEmail,
+                        from:(email_fromName ? email_fromName:"") + self.app.conf.email.fromEmail,
                         to: userEmail, 
                         subject: "A Big Thank You from Boodskap !",
                         html: userEmailContent, 
